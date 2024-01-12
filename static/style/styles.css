@@ -1,0 +1,26 @@
+body {
+    background-color: #f5e7e9 ;
+    margin: 0;
+    padding: 0;
+}
+
+/* title-navBar */
+h1{
+    color: #f5e7e9;
+}
+
+
+/* Regiter button  */
+.container-text {
+    padding: 10%;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #f4afcf ;
+    color: #f5e7e9;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10%;
+}
