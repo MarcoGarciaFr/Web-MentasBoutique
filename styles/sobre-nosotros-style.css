@@ -1,0 +1,168 @@
+
+body{
+    background-color: beige;
+}
+
+.contenedor{
+width: 98%;
+max-width: 10000px;
+margin: 20px auto;
+display: grid;
+grid-gap: 20px;
+
+}
+
+.header{
+    color: rgb(0, 0, 0);
+    font-family: 'Della Respira', serif;
+    padding: 20px;
+    
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+    
+}
+.encabezados{
+    font-family: 'Libre Baskerville', serif;
+    color: rgb(0, 0, 0);
+}
+.encabezados1{
+    font-family: 'Libre Baskerville', serif;
+}
+#logo{
+    width: 150px;;
+    height:160px;
+    padding:5%;
+}
+.contenido{
+    background-color: rgb(234, 126, 17);
+    color: rgb(0, 0, 0);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-radius: 14px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+.widget-1{
+     background-color: rgb(142, 88, 224);
+     
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: center;
+    padding:5%;
+    border-radius: 14px;
+    padding-top: 15px;
+    
+
+}
+.widget-2{
+   background-color: rgb(151, 202, 138);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+    align-content: center;
+    padding:5%;
+    border-radius: 14px;
+    padding-top: 15px;
+}
+.widget-3{
+    
+    background-color: rgb(252, 23, 23);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: center;
+    
+    padding:5%;
+    border-radius: 14px;
+    padding-top: 15px;
+}
+.lista{
+    padding-left: 35%;
+    text-align: left;
+}
+.equipo{
+
+    grid-column: 2 / 3;
+    justify-self: center;
+    padding-top: 15px;
+    
+    
+}
+.card-body{
+    
+    background-color:rgb(255, 255, 255);
+    color: navy;
+    margin: 0 auto;
+    padding: 5%;
+    text-align: left;
+    }
+
+.btn-primary{
+    background-color: rgb(0, 51, 255);
+    border: none;
+}
+.btn-primary1{
+    background-color: antiquewhite;
+    text-align: center;
+}
+ 
+
+
+.integrante1 {
+    
+    grid-column: 1 / 2;
+    text-align: center;
+    
+}
+.integrante2{
+    
+    grid-column: 2 / 3;
+    text-align: center;
+}
+.integrante3{
+
+    grid-column: 3 / 4;
+    text-align: center;
+}
+.integrante4{
+
+    grid-column: 1 / 2;
+    text-align: center;
+}
+.integrante5{
+
+    grid-column: 2 / 3;
+    text-align: center;
+}
+.integrante6{
+
+    grid-column: 3 / 4;
+    text-align: center;
+}
+
+.formulario{
+    background-color: rgb(0, 51, 255);
+    color: antiquewhite;
+    grid-column: 1 / 4;
+    text-align: center;
+    margin-top: 10%;
+    padding: 50px;
+            border-radius: 20px;
+
+}
+
+.form-control{
+    margin: auto;
+}
+
+
+.foto{
+    width: 200px;;
+    height: 200px;
+
+}
