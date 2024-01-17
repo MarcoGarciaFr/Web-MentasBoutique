@@ -1,0 +1,373 @@
+:root {
+  --font-onest: 'Onest', sans-serif;
+  --font-yeseva: 'Yeseva One', serif;
+  --font-borel: 'Borel', cursive;
+  --color1: #f5e7e9;
+  --color2: #f4afcf;
+  --color3: #a8dae3;
+  --color4: #cab8f2;
+  --color5: #54248f;
+}
+body {
+  margin: 0;
+  background-color: white;
+}
+
+h1{
+  font-family: var(--font-borel);
+  font-size: clamp(10px, 5vw, 40px);
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: clamp(10px, 5vw, 40px);;
+  font-weight: lighter;
+  vertical-align: bottom;
+}
+
+p{
+  font-family: var(--font-onest);
+  font-size: clamp(10px, 1.3vw, 20px);
+  text-align: left;
+}
+
+.info-banner-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  background-color: var(--color1);
+}
+
+.icon-info{
+  width: 40px;
+  height: auto;
+}
+
+
+
+
+/*CAROUSEL STYLES*/
+
+.carousel-container {
+  box-sizing: border-box;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+
+}
+
+.card-container {
+  display: none;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 90%;
+
+}
+.card-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  margin: auto;
+  border: solid gray 0px;
+  /* width: -moz-fit-content;
+  width: fit-content; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 25%;
+}
+
+.img-card {
+  width: min(max(72px, 100%), 300px);
+  height: auto;
+}
+
+.product {
+  font-family: 'Yeseva One', serif;
+  border: 0px;
+  margin: 0.2vw 0px;
+  text-align: center;
+  font-size: min(max(1.5vw, 10px), 20px)
+}
+
+.description {
+  font-family: 'Yeseva One', serif;
+  border: 0px;
+  margin: 0px;
+  font-size: min(max(1.5vw, 10px), 20px);
+  text-align: center;
+
+}
+
+.price {
+  font-family: var(--font-onest);
+  border: 0px;
+  margin: 0.2vw 0px;
+  font-size: min(max(1.5vw, 10px), 20px)
+}
+
+.btn-buy {
+  padding: min(max(.65vw, 5px), 10px) min(max(1.4vw, 10px), 25px);
+  border: solid 0px black;
+  border-radius: 2px;
+  background-color: var(--color4);
+  margin-top: .2vw;
+  cursor: pointer;
+  font-family: var(--font-yeseva);
+  font-size: min(max(1.3vw, 10px), 18px);
+  color: white;
+}
+
+
+.btn-next,
+.btn-next:hover {
+  width: 20px;
+  height: 30px;
+  margin-right: 20px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0px;
+
+
+}
+
+.arrow-next {
+  transform: rotate(90deg);
+  width: 20px;
+  height: 20px;
+}
+
+.btn-prev,
+.btn-prev:hover {
+  width: 20px;
+  height: 30px;
+  margin-left: 20px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.arrow-prev {
+  transform: rotate(-90deg);
+  width: 20px;
+  height: 20px;
+}
+
+.active {
+  display: flex;
+}
+
+.review {
+  position: fixed;
+  /* top: 300px; */
+  width: 500px;
+  height: 500px;
+}
+
+.review1 {
+  position: fixed;
+  /* top: 300px; */
+  width: 500px;
+  height: 500px;
+}
+
+dialog::backdrop {
+  background: rgba(243, 239, 239, 80%)
+}
+
+.img-rev {
+  width: 200px;
+  height: auto;
+
+}
+
+
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+
+  }
+}
+
+.animated-in {
+  animation: slideIn 2s ease-in ;
+}
+
+.animated-out {
+  animation: slideToLeft 2s ease-out ;
+}
+
+
+
+
+@media only screen and (max-width: 380px) {
+
+  .btn-next,
+  .btn-next:hover {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border: 0;
+   
+    cursor: pointer;
+    padding: 0px;
+
+
+  }
+
+  .arrow-next {
+    transform: rotate(90deg);
+    width: 10px;
+    height: 10px;
+  }
+
+  .btn-prev,
+  .btn-prev:hover {
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    border: 0;
+   
+    cursor: pointer;
+    padding: 0px;
+  }
+
+  .arrow-prev {
+    transform: rotate(-90deg);
+    width: 10px;
+    height: 10px;
+  }
+
+
+
+  .img-card {
+    width: max(50px, 100%);
+    height: auto;
+  }
+
+  .product {
+    font-family: 'Yeseva One', serif;
+    border: 0px;
+    margin: 0.2vw 0px;
+    text-align: center;
+    font-size: min(max(1.5vw, 10px), 8px)
+  }
+
+  .description {
+    font-family: 'Yeseva One', serif;
+    border: 0px;
+    margin: 0px;
+    font-size: min(max(1.5vw, 10px), 8px)
+  }
+
+  .price {
+    font-family: var(--font-onest);
+    border: 0px;
+    margin: 0.2vw 0px;
+    font-size: min(max(1.5vw, 10px), 8px)
+  }
+
+  .btn-buy {
+    padding: min(max(.65vw, 3px), 5px) min(max(1.4vw, 5px), 8px);
+    border: solid 0px black;
+    border-radius: 2px;
+
+    margin-top: .2vw;
+    cursor: pointer;
+    font-family: var(--font-yeseva);
+    font-size: min(max(1.3vw, 10px), 8px)
+  }
+
+}
+
+@media only screen and (max-width: 175px) {
+
+  #product2,
+  #product3 {
+    display: none;
+  }
+
+  .card {
+    margin: auto;
+    border: solid gray 0px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+
+  .img-card {
+    width: min(max(50px, 100%), 100px);
+    height: auto;
+  }
+
+  .product {
+    font-family: 'Yeseva One', serif;
+    border: 0px;
+    margin: 0.2vw 0px;
+    text-align: center;
+    font-size: min(max(1.5vw, 10px), 8px)
+  }
+
+  .description {
+    font-family: 'Yeseva One', serif;
+    border: 0px;
+    margin: 0px;
+    font-size: min(max(1.5vw, 10px), 8px)
+  }
+
+  .price {
+    font-family: var(--font-onest);
+    border: 0px;
+    margin: 0.2vw 0px;
+    font-size: min(max(1.5vw, 10px), 8px)
+  }
+
+  .btn-buy {
+    padding: min(max(.65vw, 3px), 5px) min(max(1.4vw, 5px), 8px);
+    border: solid 0px black;
+    border-radius: 2px;
+   
+    margin-top: .2vw;
+    cursor: pointer;
+    font-family: var(--font-yeseva);
+    font-size: min(max(1.3vw, 10px), 8px)
+  }
+}
+
+
