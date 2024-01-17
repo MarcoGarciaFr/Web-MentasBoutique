@@ -8,7 +8,7 @@ form.addEventListener('submit', async event => {
     if (!form.checkValidity()) {
       event.stopPropagation();
     } else {
-      // Handle form submission asynchronously
+    
       saveData();
       form.innerHTML=` <div id="successMessage" style="display: block;">
       <p>¡Envío exitoso! Gracias por tu mensaje.</p>
@@ -29,10 +29,10 @@ const messageData = {
 }
 
 const saveData = () =>{
-    const name = document.getElementById("name");
-    const lastName = document.getElementById("lastName");
-    const mail = document.getElementById("mail");
-    const message = document.getElementById("message");
+    const name = document.getElementById("name").value;
+    const lastName = document.getElementById("lastName").value;
+    const mail = document.getElementById("mail").value;
+    const message = document.getElementById("message").value;
 
     messageData.name = name
     messageData.lastName = lastName
@@ -41,6 +41,8 @@ const saveData = () =>{
 
     console.log(messageData);
 
+    let jsonMessageData = JSON.stringify(messageData);
+    console.log(jsonMessageData);
 }
 
 
