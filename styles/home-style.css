@@ -11,43 +11,343 @@
 body {
   margin: 0;
   background-color: white;
+  font-family: var(--font-onest); /*se asigna para todos los elementos este tipo de letra por default*/
+  width: 100%;
+  height: 100vh; /*100% de la altura de la ventana gráfica.*/
 }
 
-h1{
+/*A continuación se hará la primera sección de la página de inicio*/
+
+/*La primera sección está contenida en un div con la clase seccion--uno, esta sección se dividirá en dos partes.
+- La primera parte constituye los elementos de eslogan, btn descrubir, y dos íconos de envíos y pago seguro.
+- La segunda parte constituye solamente la imagen.*/
+
+/*PRIMERA SECCIÓN*/
+.seccion--uno{
+  /*contenedor de toda la primera sección, es decir, de las 2 partes que incluyen a los elementos y la imagen*/
+      display: flex; /*se hace flexible el contenedor*/
+      flex-direction: row; /*Es row para que se muestren las dos partes una después de otra*/
+      background-color: var(--color1); /*de acuerdo con la guía de diseño este color es de fondo*/
+      max-width: 100%; /*Para que se ajusto al tamaño de la ventana*/
+  }
+  
+  /*PRIMERA PARTE*/
+  #primera--parte{
+      /*todo este contenedor será flexible y se buscará en primera instancia que todos los elementos estén centrados y en columna*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 20px 20px 20px 20px;
+  }
+  
+  
+  .eslogan{
+      /*esta clase engloba el texto del eslogan y el botón*/
+      font-family: var(--font-borel); /*El eslogan es el único elemento que tiene una familia de letra diferente*/
+      font-size: clamp(10px, 1.4vw, 30px); /*Con la función clamp se establece un tamaño de fuente que crezca con el tamaño del viewport, pero no se reduzca debajo de un mínimo y no se incremente por encima de un máximo.*/
+  }
+  
+  /*El segundo elemento es el botón*/
+  #btn--descubrelo{
+      background-color: var(--color3);
+      cursor: pointer;
+      border-radius: 10px;
+      font-family: var(--font-onest); /*debido a que en la clase eslogan se le ponía Borel, aquí se le coloca nuevamente el tipo de letra Onest al btn*/
+      height: 80px;
+      width: 300px;
+      font-size: x-large;
+      margin-top: 50px;
+      border: 0; /*de esta manera el botón no tendrá borde*/
+  }
+  
+  #btn--descubrelo:hover{
+      /*este estilo le da un hover al botón*/
+      background-color: var(--color4);
+  }
+  
+  /*El tercer elemento son los íconos seguidos de texto*/
+  
+  #iconos{ /*Este id hace referencia al contenedor de ambos ícono+texto*/
+      display: flex;
+      flex-direction: row;
+      align-self: end; /*esta propiedad anula el align-items: center y ubica los íconos al final del contenedor*/
+  } 
+  
+  
+  #envio, #pago{ /*Estos ids son de los contenedores de (ícono + texto) para envío y pago de manera correspondiente*/
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+  }
+  
+  .icon--uno{ /*con esta clase se modifica el tamaño de los íconos*/ 
+      height: 40px;
+      width: auto;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  
+  .texto{ /*Esta clase es para los contenedores de envío y pago, que incluyen SOLO los dos textos*/
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      margin: 0px 0px 0px 0px;
+  }
+  
+  .first{ /*clase correspondiente a los textos en negritas de envío y pago*/
+      margin: 0px 0px 0px 0px;
+      text-align: center;
+      font-size: clamp(5px, 18px, 25px);
+      align-self: flex-start;
+  }
+  
+  .second{ /*clase correspondiente a los textos normales de envío y pago*/
+      font-size: clamp(5px, 13px, 18px);
+      margin: 0px 20px 0px 0px;
+      width: 180px;
+  }
+  
+  /*SEGUNDA PARTE*/
+  /*Esta sección solo incluye la imagen*/
+  
+  .imagen--container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 70%;
+  }
+  
+  #imagen--banner{
+      max-width: 100%; /*La imagen tendrá como máximo ancho el 100% del viewport*/
+  }
+
+/*Responsividad de  PRIMERA SECCIÓN*/
+/*Para hacer la responsividad se usará la regla-at @media */
+
+@media (max-width: 480px) { 
+    .seccion--uno{
+        display: flex;
+        flex-direction: row;
+        background-color: var(--color1) ; 
+        max-width: 100%; /*Para que se ajuste al tamaño de la ventana*/
+    }
+    
+    /*PRIMERA PARTE*/
+    #primera--parte{
+        /*todo este contenedor será flexible y se buscará en primera instancia que todos los elementos estén centrados y en columna*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    
+    .eslogan{
+        /*esta clase engloba el texto del eslogan y el botón*/
+        font-family: var(--font-borel); /*El eslogan es el único elemento que tiene una familia de letra diferente*/
+        font-size: clamp(10px, 15px, 20px); 
+    }
+    
+    /*El segundo elemento es el botón*/
+    #btn--descubrelo{
+        background-color: var(--color3);
+        cursor: pointer;
+        border-radius: 10px;
+        font-family: var(--font-onest); 
+        height: 40px;
+        width: 150px;
+        font-size: clamp(15px, 20px, 25px);
+        margin-top: 50px;
+        border: 0;
+    }
+    
+    #btn--descubrelo:hover{
+        background-color: var(--color4);
+    }
+    
+    /*El tercer elemento son los íconos seguidos de texto*/
+    
+    #iconos{ /*Este id hace referencia al contenedor de ambos ícono+texto*/
+        display: flex;
+        flex-direction: row;
+        align-self: end; /*esta propiedad anula el align-items: center y ubica los íconos al final del contenedor*/
+    } 
+    
+    
+    #envio, #pago{ /*Estos ids son de los contenedores de (ícono + texto) para envío y pago de manera correspondiente*/
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 100%;
+    }
+    
+    .icon--uno{ /*con esta clase se modifica el tamaño de los íconos*/ 
+        height: clamp(15px, 30px, 40px);
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .texto{ /*Esta clase es para los contenedores de envío y pago, que incluyen SOLO los dos textos*/
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    .first{ /*clase correspondiente a los textos en negritas de envío y pago*/
+        margin: 0px 0px 0px 0px;
+        font-size: clamp(5px, 15px, 25px);
+        align-self: flex-start;
+        width: clamp(80px, 100px, 125px);
+        text-align: left;
+    }
+    
+    .second{ /*clase correspondiente a los textos normales de envío y pago*/
+        font-size: clamp(5px, 10px, 18px);
+        margin: 0px 30px 0px 0px;
+        width: clamp(80px, 100px, 125px);
+    }
+    
+    /*SEGUNDA PARTE*/
+    .imagen--container{
+        display: none;
+    }
+} /*cierre de media query celular 480 px*/
+
+@media (max-width: 768px) { 
+  .seccion--uno{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color1) ; 
+    max-width: 100%; /*Para que se ajuste al tamaño de la ventana*/
+  }
+
+  /*PRIMERA PARTE*/
+  #primera--parte{
+      /*todo este contenedor será flexible y se buscará en primera instancia que todos los elementos estén centrados y en columna*/
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      max-width: 100%;
+  }
+
+
+  .eslogan{
+      /*esta clase engloba el texto del eslogan y el botón*/
+      font-family: var(--font-borel); /*El eslogan es el único elemento que tiene una familia de letra diferente*/
+      font-size: clamp(10px, 15px, 20px); 
+  }
+
+  /*El segundo elemento es el botón*/
+  #btn--descubrelo{
+      background-color: var(--color3);
+      cursor: pointer;
+      border-radius: 10px;
+      font-family: var(--font-onest); 
+      height: 40px;
+      width: 150px;
+      font-size: clamp(15px, 20px, 25px);
+      margin-top: 50px;
+      border: 0;
+  }
+
+  #btn--descubrelo:hover{
+      background-color: var(--color4);
+  }
+
+  /*El tercer elemento son los íconos seguidos de texto*/
+
+  #iconos{ /*Este id hace referencia al contenedor de ambos ícono+texto*/
+      display: flex;
+      flex-direction: row;
+      align-self: end; /*esta propiedad anula el align-items: center y ubica los íconos al final del contenedor*/
+  } 
+
+
+  #envio, #pago{ /*Estos ids son de los contenedores de (ícono + texto) para envío y pago de manera correspondiente*/
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      max-width: 100%;
+  }
+
+  .icon--uno{ /*con esta clase se modifica el tamaño de los íconos*/ 
+      height: clamp(15px, 30px, 40px);
+      width: auto;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
+  .texto{ /*Esta clase es para los contenedores de envío y pago, que incluyen SOLO los dos textos*/
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      margin: 0px 0px 0px 0px;
+  }
+
+  .first{ /*clase correspondiente a los textos en negritas de envío y pago*/
+      margin: 0px 0px 0px 0px;
+      font-size: clamp(5px, 15px, 25px);
+      align-self: flex-start;
+      width: clamp(80px, 100px, 125px);
+      text-align: left;
+  }
+
+  .second{ /*clase correspondiente a los textos normales de envío y pago*/
+      font-size: clamp(5px, 10px, 18px);
+      margin: 0px 30px 0px 0px;
+      width: clamp(80px, 100px, 125px);
+  }
+
+  /*SEGUNDA PARTE*/
+  .imagen--container{
+      max-width: 50%;
+  }
+
+} /*cierre de media query 768px*/
+
+
+/*Se procederá a darle estilos a la segunda sección de la página de inicio que se constituye por lo siguiente: 
+  ° Todo contenido dentro de clase .carousel en una etiqueta section
+    - Un contenedor del título "Novedades" con clase .title-container
+    - Un contenedor del carrusel con clase .carousel-container
+      + Botón (se representará por una imagen de flecha) con clase .btn-prev
+      + 3 Contenedores de card con clase .card-container y el primer container tendrá clase .active Cada contenedor tendrá:
+        * Tres contenedores con clase .card y un id #product1, #product2, #product3, según corresponda
+          -- Cada .card estará constituid0 de: imagen (contenida en una etiqueta ancor con clase .card-link) con .img-card, precio (contenido en etiqueta p con .price), producto (contenido en un h4 con .product), descripción (contenido en un p con .description) y botón comprar con clase .btn-buy
+  ° Botón con class .btn-next que contenga una img con clase .arrow-next
+*/
+
+/*SEGUNDA SECCIÓN - CARRUSEL*/
+
+.title-container{
+  /*Contiene el título de Novedades*/
   font-family: var(--font-borel);
   font-size: clamp(10px, 5vw, 40px);
   border: 0;
   margin: 0;
   padding: 0;
-
   width: 100%;
   height: clamp(10px, 5vw, 40px);;
   font-weight: lighter;
   vertical-align: bottom;
 }
-
-p{
-  font-family: var(--font-onest);
-  font-size: clamp(10px, 1.3vw, 20px);
-  text-align: left;
-}
-
-.info-banner-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-
-  background-color: var(--color1);
-}
-
-.icon-info{
-  width: 40px;
-  height: auto;
-}
-
-
-
 
 /*CAROUSEL STYLES*/
 
@@ -59,8 +359,6 @@ p{
   align-items: center;
   width: 100%;
   justify-content: space-between;
-
-
 }
 
 .card-container {
@@ -68,8 +366,8 @@ p{
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 90%;
-
 }
+
 .card-link{
   display: flex;
   align-items: center;
@@ -86,7 +384,6 @@ p{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   width: 25%;
 }
 
@@ -141,8 +438,6 @@ p{
   background-color: transparent;
   cursor: pointer;
   padding: 0px;
-
-
 }
 
 .arrow-next {
@@ -172,13 +467,14 @@ p{
   display: flex;
 }
 
+/*REVISARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR*/
 .review {
   position: fixed;
   /* top: 300px; */
   width: 500px;
   height: 500px;
 }
-
+/*REVISARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR*/
 .review1 {
   position: fixed;
   /* top: 300px; */
@@ -232,86 +528,79 @@ dialog::backdrop {
 
 @media only screen and (max-width: 380px) {
 
-  .btn-next,
-  .btn-next:hover {
-    width: 10px;
-    height: 10px;
-    margin-right: 5px;
-    border: 0;
-   
-    cursor: pointer;
-    padding: 0px;
+    .btn-next,
+    .btn-next:hover {
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+      border: 0;
+      cursor: pointer;
+      padding: 0px;
+    }
 
+    .arrow-next {
+      transform: rotate(90deg);
+      width: 10px;
+      height: 10px;
+    }
 
-  }
+    .btn-prev,
+    .btn-prev:hover {
+      width: 10px;
+      height: 10px;
+      margin-left: 5px;
+      border: 0;  
+      cursor: pointer;
+      padding: 0px;
+    }
 
-  .arrow-next {
-    transform: rotate(90deg);
-    width: 10px;
-    height: 10px;
-  }
+    .arrow-prev {
+      transform: rotate(-90deg);
+      width: 10px;
+      height: 10px;
+    }
 
-  .btn-prev,
-  .btn-prev:hover {
-    width: 10px;
-    height: 10px;
-    margin-left: 5px;
-    border: 0;
-   
-    cursor: pointer;
-    padding: 0px;
-  }
+    .img-card {
+      width: max(50px, 100%);
+      height: auto;
+    }
 
-  .arrow-prev {
-    transform: rotate(-90deg);
-    width: 10px;
-    height: 10px;
-  }
+    .product {
+      font-family: 'Yeseva One', serif;
+      border: 0px;
+      margin: 0.2vw 0px;
+      text-align: center;
+      font-size: min(max(1.5vw, 10px), 8px)
+    }
 
+    .description {
+      font-family: 'Yeseva One', serif;
+      border: 0px;
+      margin: 0px;
+      font-size: min(max(1.5vw, 10px), 8px)
+    }
 
+    .price {
+      font-family: var(--font-onest);
+      border: 0px;
+      margin: 0.2vw 0px;
+      font-size: min(max(1.5vw, 10px), 8px)
+    }
 
-  .img-card {
-    width: max(50px, 100%);
-    height: auto;
-  }
+    .btn-buy {
+      padding: min(max(.65vw, 3px), 5px) min(max(1.4vw, 5px), 8px);
+      border: solid 0px black;
+      border-radius: 2px;
 
-  .product {
-    font-family: 'Yeseva One', serif;
-    border: 0px;
-    margin: 0.2vw 0px;
-    text-align: center;
-    font-size: min(max(1.5vw, 10px), 8px)
-  }
-
-  .description {
-    font-family: 'Yeseva One', serif;
-    border: 0px;
-    margin: 0px;
-    font-size: min(max(1.5vw, 10px), 8px)
-  }
-
-  .price {
-    font-family: var(--font-onest);
-    border: 0px;
-    margin: 0.2vw 0px;
-    font-size: min(max(1.5vw, 10px), 8px)
-  }
-
-  .btn-buy {
-    padding: min(max(.65vw, 3px), 5px) min(max(1.4vw, 5px), 8px);
-    border: solid 0px black;
-    border-radius: 2px;
-
-    margin-top: .2vw;
-    cursor: pointer;
-    font-family: var(--font-yeseva);
-    font-size: min(max(1.3vw, 10px), 8px)
-  }
+      margin-top: .2vw;
+      cursor: pointer;
+      font-family: var(--font-yeseva);
+      font-size: min(max(1.3vw, 10px), 8px)
+    }
 
 }
 
 @media only screen and (max-width: 175px) {
-
   #product2,
   #product3 {
     display: none;
@@ -362,7 +651,6 @@ dialog::backdrop {
     padding: min(max(.65vw, 3px), 5px) min(max(1.4vw, 5px), 8px);
     border: solid 0px black;
     border-radius: 2px;
-   
     margin-top: .2vw;
     cursor: pointer;
     font-family: var(--font-yeseva);
@@ -370,4 +658,218 @@ dialog::backdrop {
   }
 }
 
+/***************************************************************/
+/*CUARTA SECCIÓN*/
+p{
+  font-family: var(--font-onest);
+  font-size: clamp(10px, 1.3vw, 20px);
+  text-align: left;
+}
+
+
+.info-banner-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color1);
+}
+
+.icon-info{
+  width: 40px;
+  height: auto;
+}
+
+/***************************************************************/
+/*QUINTA SECCIÓN*/
+
+.seccion--quinta{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.center{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.imagen--container--reviews{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+}
+
+#imagen--reviews{
+  width: 100%;
+}
+
+
+.reviews--quinta{
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+  cursor: default;
+  transition: all 400ms ease;
+  margin: 30px 10px 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.reviews--quinta:hover{
+  box-shadow: 0px 5px 40px rgba(0,0,0,0.4);
+  transform: translateY(-3%)
+}
+
+#nombre--review--quinta{
+  margin: 10px 20px 10px 10px;
+  align-self: flex-start;
+}
+
+
+.stars--quinta{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex-wrap: wrap;
+}
+
+.container--stars{
+  display: flex;
+  flex-direction: row;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.moreinfo{
+  background-color: #a8dae3;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: 'Onest', sans-serif; /*debido a que en la clase eslogan se le ponía Borel, aquí se le coloca nuevamente el tipo de letra Onest al btn*/
+  height: 40px;
+  width: 150px;
+  font-size: large;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 0;
+}
+
+.moreinfo:hover{
+  /*este estilo le da un hover al botón*/
+  background-color:#cab8f2 ;
+}
+
+
+/***************************************************************/
+/*SEXTA SECCIÓN*/
+
+.seccion--seis{
+  background: linear-gradient(90deg, var(--color2),var(--color4),var(--color4));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#centro{
+  background-color: #f4afcf ;
+  width: 60%;
+  max-height: 70%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+}
+
+.texto--seis{
+  margin-bottom: 10px;
+  font-size: clamp(30px, 35px, 45px);
+}
+
+#btn--dos{
+  background-color: #a8dae3;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: 'Onest', sans-serif; /*debido a que en la clase eslogan se le ponía Borel, aquí se le coloca nuevamente el tipo de letra Onest al btn*/
+  height: 60px;
+  width: 200px;
+  font-size: clamp(15px, 20px, 25px);
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border: 0;
+
+}
+
+#btn--dos:hover{
+  /*este estilo le da un hover al botón*/
+  background-color:#cab8f2 ;
+}
+
+
+/*Responsividad de  SEXTA SECCIÓN*/
+/*Para hacer la responsividad se usará la regla-at @media */
+
+@media (max-width:480px){ /*Para CELULARES, solo se hará esta responsividad ya que, mayor a 480px, el diseño es responsivo en pantalla gracias a flexbox*/
+  .seccion--seis{
+    background: linear-gradient(90deg, var(--color2),var(--color4),var(--color4));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #centro{
+    background-color: #f4afcf ;
+    width: 60%;
+    max-height: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+  }
+  
+  .texto--seis{
+    margin-bottom: 10px;
+    font-size: clamp(10px, 15px, 25px);
+  }
+  
+  #btn--dos{
+    background-color: #a8dae3;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: var(--font-onest); /*debido a que en la clase eslogan se le ponía Borel, aquí se le coloca nuevamente el tipo de letra Onest al btn*/
+    height: 20px;
+    width: 70px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border: 0;
+    font-size: clamp(10px, 10px, 25px);
+  }
+  
+  #btn--dos:hover{
+    /*este estilo le da un hover al botón*/
+    background-color:#cab8f2 ;
+  }
+} /*cierre de media query celular 480 px*/
 
