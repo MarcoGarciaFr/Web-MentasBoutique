@@ -658,6 +658,13 @@ dialog::backdrop {
   }
 }
 
+/*  TERCERA SECCIÓN */
+
+
+
+
+
+
 /***************************************************************/
 /*CUARTA SECCIÓN*/
 p{
@@ -680,21 +687,19 @@ p{
 }
 
 /***************************************************************/
-/*QUINTA SECCIÓN*/
+/*QUINTA SECCIÓN*/ 
+/*Esta sección corresponde a los reviews e incluye cuatro cards*/
 
-.seccion--quinta{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
+.seccion--quinta{ /*Esta clase engloba a toda la sección de reviews*/
+  display: flex; /*se hace flexible para que todos los elementos se puedan organizar*/
+  flex-direction: row; /*la dirección es row para que queden en fila todas las cards*/
+  align-content: space-around;
   overflow: hidden;
 }
 
-.center{
+.center{ /*Esta clase hará que los reviews tengan un */
   display: flex;
   flex-direction: row;
-  margin-left: 20%;
-  margin-right: 20%;
 }
 
 .imagen--container--reviews{
