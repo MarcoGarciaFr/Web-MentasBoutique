@@ -63,13 +63,23 @@ nota: el else statement hace exactamente lo mismo pero adaptado para la ultima c
 //Programa para desplegar cartas al hacer click sobre un elemento
 //la carta desplegada es un elemento HTML dialog, modificado con CSS para ocupar el viewport actual del usuario
 
-const review = document.querySelector(".card-dialog")
-const reviewCard= document.querySelector(".review-link")
+const careInfo = document.querySelector(".care-info-card")
+const careCard= document.querySelector(".care-info")
 
-reviewCard.addEventListener("click", () =>{
-    review.showModal()
+const packingInfo = document.querySelector(".packing-info-card")
+const packingCard = document.querySelector(".packing-info")
+const divPrueba = document.querySelector(".div-prueba")
+
+
+careCard.addEventListener("click", () =>{
+    careInfo.showModal()
 
 })
 
+packingCard.addEventListener("click", () =>{
+    packingInfo.showModal();
+
+
+})
 
 
