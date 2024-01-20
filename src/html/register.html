@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/login-styles.css">
-    <title>Sing up</title>
+    <link rel="stylesheet" href="../../styles/login-styles.css">
+    <!-- google font links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&family=Onest&family=Yeseva+One&display=swap" rel="stylesheet">
+    <title>Sign up</title>
 </head>
 <body>
     <nav>
@@ -12,43 +16,32 @@
     </nav>
     <div class="form-wrapper">
         <div class="form-side">
-            <form class="my-form">
+            <form id="register-form" class="my-form">
                 <div class="form-welcome-row">
                     <h2>Regístrate</h2>
                     <div class="text-field">
-                        <div>
-                            <input id="name" type="text" name="name" placeholder="Nombre">
-                        </div>
+                        <input id="name" type="text" name="name" placeholder="Nombre">
                     </div>
                     <div class="text-field">
-                        <div>
-                            <input id="email" type="email" name="email" placeholder="Email*">
-                        </div>
+                        <input id="email" type="email" name="email" placeholder="Email*">
                     </div>
                     <div class="text-field">
-                        <div>
-                            <input id="password" type="password" name="password" placeholder="Contraseña*">
-                        </div>
+                        <input id="password" type="password" name="password" placeholder="Contraseña*">
                     </div>
                     <div class="text-field">
-                        <div>
-                            <input id="again-password" type="password" name="password" placeholder="Repetir contraseña*">
-                        </div>
+                        <input id="again-password" type="password" name="password" placeholder="Repetir contraseña*">
                     </div>
-                   
-                    <button type="submit" class="my-form__button">
-                        Registrarse
-                    </button>
+                    <button type="submit" class="my-form__button">Registrarse</button>
                     <div class="my-form__actions">
                         <p>¿Ya tienes cuenta? <a href="./login.html">Inicia sesión</a></p>
                     </div>
                 </div>                    
             </form>
         </div>
-        <!-- Right side -->
         <div class="info-side">
-            <img src="#" alt="mentas-btq" class="mockup">
+            <img src="../../assets/home-assets/charm.webp" alt="mentas-btq" class="mockup">
         </div>
     </div>
+    <script src="../scripts/register-validation.js"></script>
 </body>
 </html>

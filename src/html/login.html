@@ -4,48 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login up</title>
-    <link rel="stylesheet" href="../styles/login-styles.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="../../styles/login-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&family=Montserrat:wght@500&family=Roboto:wght@700&display=swap" rel="stylesheet"> -->
 </head>
 <body>
     <nav>
         <h1>Barra de navegación</h1>
-        </nav>
+    </nav>
     <div class="form-wrapper">
         <div class="form-side">
             <form class="my-form">
                 <div class="form-welcome-row">
                     <h2>Inicia sesión</h2>
-                       <div class="text-field">
-                        <div>
-                            <input id="email" type="email" name="email" placeholder="Email*">
-                        </div>
+                    <div class="text-field">
+                        <input id="email" type="email" name="email" placeholder="Email*">
                     </div>
                     <div class="text-field">
-                        <div>
-                            <input id="password" type="password" name="password" placeholder="Contraseña*">
-                        </div>
+                        <input id="password" type="password" name="password" placeholder="Contraseña*">
                     </div>
                     <div class="text-field-forgot-password">
                         <a href="#">¿Olvidaste tu contraseña?</a>
                     </div>
-                    <button type="submit" class="my-form__button">
-                        Iniciar Sesión
-                    </button>
+                    <button type="submit" class="my-form__button">Iniciar Sesión</button>
                     <div class="my-form__actions">
-                        <p>¿Aún no eres miembro? <a href="./register.html">Regístrate</a></p>
+                        <p id="not-member">¿Aún no eres miembro? <a href="./register.html">Regístrate</a></p>
                     </div>
                 </div>                    
             </form>
         </div>
-        <!-- Right side -->
         <div class="info-side">
-            <img src="#" alt="mentas-btq" class="mockup">
+            <img src="../../assets/home-assets/charm.webp" alt="mentas-btq" class="mockup">
         </div>
     </div>
 </body>
