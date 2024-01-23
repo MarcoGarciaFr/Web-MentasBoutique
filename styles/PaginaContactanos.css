@@ -1,0 +1,263 @@
+/**Reiniciando espacios de mi página*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/**Fuentes para usar en mi página*/
+:root {
+    --font-primary: "Borel", sans-serif;
+
+    --font-secondary: "Onest", sans-serif;
+
+    --font-tertiary: "Yeseva One", sans-serif;
+}
+
+/* *Estructura de la página con GRID */
+.contenedor {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "header            header"
+        "message           message"
+        "smedia            contenedor-formulario"
+        "smedia            form-container"
+        "footer            footer";
+}
+
+/**Estilos de header*/
+.contenedor .header {
+    background-color: #f4afcf;
+    grid-area: header;
+}
+
+/**Estilos para contenedor de mensaje de contáctanos*/
+.contenedor .message {
+    background: rgb(244, 175, 207);
+    background: linear-gradient(180deg, rgba(244, 175, 207, 1) 2%, rgba(202, 184, 242, 1) 73%, rgba(202, 184, 242, 0) 100%);
+    height: 300px;
+    margin: 20px 20px 20px 20px;
+    font-family: var(--font-primary);
+    font-size: 40px;
+    grid-area: message;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenedor .smedia {
+    font-family: var(--font-primary);
+}
+
+/**Estilos para contenedor de redes*/
+.contenedor .smedia {
+    background: white;
+    font-family: var(--font-secondary);
+    font-size: 30px;
+    grid-area: smedia;
+
+    margin: 20px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.smedia {
+    padding: 0 200px;
+    margin: 1px;
+    font-family: var(--font-primary);
+}
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin: 0;
+    padding: 10px 10px;
+    font-family: var(--font-primary);
+
+}
+
+.smedia h1 {
+
+    margin: 10px;
+    font-family: var(--font-primary);
+}
+
+/* Alinea el logo a la izquierda y ajusta el espacio entre el logo y el texto */
+.logo-row .facebook-logo,
+.logo-row .instagram-logo,
+.logo-row .tiktok-logo {
+    margin-right: 10px;
+}
+
+/* Ajusta el estilo del logo para que no afecte el diseño general */
+.logo-row img {
+    max-width: 40px;
+    /* Ajusta el ancho máximo según sea necesario */
+}
+
+/**Estilos para losgos de redes*/
+/* Estilos logo de Facebook */
+.facebook-logo img {
+    height: 30px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.facebook-logo img:hover {
+    transform: scale(1.2);
+}
+
+.facebook-logo img {
+    cursor: pointer;
+}
+
+/* Estilos logo de Instagram */
+.instagram-logo img {
+    height: 30px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.instagram-logo img:hover {
+    transform: scale(1.2);
+}
+
+.instagram-logo img {
+    cursor: pointer;
+}
+
+/* Estilos de logo de Tik Tok */
+.tiktok-logo img {
+    height: 30px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.tiktok-logo img:hover {
+    transform: scale(1.2);
+}
+
+.tiktok-logo img {
+    cursor: pointer;
+}
+
+/**Estilos Formulario*/
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    /* Opcional: ajusta la altura según tus necesidades */
+}
+
+
+form {
+    font-family: var(--font-secondary);
+}
+
+.col-md-4 input {
+    width: 250px;
+    padding: 10px;
+    color: #54248f;
+}
+
+.contenedor-formulario h2 {
+    font: 40px;
+    color: #54248f;
+    margin-bottom: 10px;
+    padding-right: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: var(--font-secondary);
+    
+
+}
+
+textarea {
+    max-width: 499px;
+}
+
+.btn.btn-primary {
+    padding: 17px 15px;
+    width: 180px;
+    align-self: center;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    background:#54248f;
+    margin-top: 10px;
+    border: none;
+    margin: 15px 15px 15px 15px;
+
+}
+
+.contenedor-btn .col-12 {
+    display: flex;
+    justify-content: center;
+    align-items:last baseline; 
+    height: 10vh; 
+   padding-right: 240px;
+}
+  
+label{
+    color: #54248f;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.form-control{
+    background-color: white;
+    color:#54248f;
+}
+
+
+
+
+/**Estilos para footer*/
+
+.contenedor .footer {
+    background-color: #cab8f2;
+    /* Cambia a tu color preferido */
+    grid-area: footer;
+    padding: 10px;
+
+}
+
+/* *Responsive (Falta mejorar) */
+
+/* Estilos para tamaños de pantalla de 480px o menos (móviles)*/
+
+@media (max-width: 480px) {
+    .contenedor {
+        grid-template-areas:
+            "header"
+            "message"
+            "form-container"
+            "smedia"
+            "footer";
+        grid-template-columns: 1fr;
+        /* Cambia a una sola columna en pantallas de 480px o menos */
+    }
+
+    
+
+   
+}
