@@ -223,7 +223,7 @@ h2 {
     }
 
     h2 {
-        color: var(--primary-light);
+        color: var(--primary-color);
         font-size: 35px;
         text-align: center;
         margin-bottom: 20px;
@@ -256,7 +256,7 @@ h2 {
         height: 170px;
     }
    .text-field-forgot-password {
-        font-size: 1.9em;
+        font-size: 1.5em;
         color: var(--primary-dark);
         border: none;
         background-color: var(--shadow-color);
@@ -328,5 +328,10 @@ h2 {
         color: var(--primary-light);
         text-decoration: none;
         font-weight: 400;
+    }
+
+    .my-form__actions p#not-member{
+        font-family: var(--font-primary);
+        font-size: 21px;   
     }
 }
