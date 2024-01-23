@@ -1,7 +1,7 @@
 // Selecciona el elemento de formulario con la clase "needs-validation"
 const form = document.querySelector(".needs-validation");
 
-// Define una función para mostrar un mensaje de éxito
+// Define una función para mostrar un mensaje de éxito luego de hacer submit al formulario
 const showSuccessMessage = () => {
     // Obtiene el elemento con el id "successMessage"
     const successMessage = document.getElementById('successMessage');
@@ -14,23 +14,38 @@ const showSuccessMessage = () => {
 
 // Agrega un escuchador de eventos para el envío del formulario
 form.addEventListener('submit', async event => {
-    // Evita el comportamiento predeterminado de envío del formulario
     event.preventDefault();
 
-    // Verifica la validez del formulario
+    // Quita la clase 'was-validated' para restablecer los estilos
+    form.classList.remove('was-validated');
+
+    // Elimina los mensajes de validación existentes
+    form.querySelectorAll('.invalid-feedback').forEach((element) => {
+        element.parentNode.removeChild(element);
+    });
+
     if (!form.checkValidity()) {
-        // Detiene la propagación del evento si el formulario no es válido
         event.stopPropagation();
+
+        // Agrega la clase 'was-validated' para aplicar los estilos de validación
+        form.classList.add('was-validated');
+
+        // Agrega un mensaje de validación debajo de cada campo no válido
+        form.querySelectorAll('.form-control:invalid').forEach((element) => {
+            const validationMessage = document.createElement('div');
+            validationMessage.className = 'invalid-feedback';
+            validationMessage.innerHTML = element.validationMessage;
+            element.parentNode.appendChild(validationMessage);
+        });
+
     } else {
         // Si el formulario es válido, guarda los datos, muestra el mensaje de éxito y reinicia el formulario
         saveData();
         showSuccessMessage();
         form.reset();
     }
-
-    // Agrega la clase 'was-validated' al formulario
-    form.classList.add('was-validated');
 }, false);
+
 
 // Objeto para almacenar datos del mensaje (aunque no se utiliza actualmente en el código)
 const messageData = {
