@@ -1,0 +1,100 @@
+:root {
+  --font-onest: 'Onest', sans-serif;
+  --font-yeseva: 'Yeseva One', serif;
+  --font-borel: 'Borel', cursive;
+  --color1: #f5e7e9;
+  --color2: #f4afcf;
+  --color3: #a8dae3;
+  --color4: #cab8f2;
+  --color5: #54248f;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: var(--font-onest);
+  position: relative; /* Cambiado a posición relativa */
+  
+}
+
+/* Estilos para la barra de navegación fija */
+.navbar {
+
+  background-color: var(--color2); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px var(--color1); /* Sombreado */
+}
+
+/* Ajusta el espacio entre los íconos de la barra de navegación */
+.navbar-nav .nav-link {
+  margin-left: 5px; /* Ajusta el espacio entre los íconos */
+  font-size: 20px; /* Tamaño de los íconos */
+}
+
+/* Ajusta el color del texto de las opciones de la navbar */
+.navbar-nav .nav-link {
+  color: var(--color1);
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+  min-width: 15px; /* Ancho del menú desplegable */
+  background-color: var(--color2); /* Color de fondo del menú desplegable */
+}
+
+.dropdown-menu-horizontal {
+  display: flex;
+  flex-wrap: nowrap;
+  /* Ajusta el espacio entre los elementos del menú desplegable */
+  gap: 10px;
+}
+
+/* Ajusta el estilo de los elementos del menú desplegable */
+.dropdown-menu-horizontal .dropdown-item {
+  white-space: nowrap;
+}
+
+/* Ajusta el margen de los íconos en la derecha */
+.navbar-nav .nav-link:last-child {
+  margin-right: 5px; /* Ajusta el margen del último ícono */
+}
+
+/* Estilos para el footer */
+.footer {
+  background-color: var(--color4);
+  color: black;
+  position: relative;
+  justify-content: space-between; /* Alinea los elementos a ambos lados del contenedor */
+}
+
+/* Ajusta el espacio entre los elementos del menú en el footer */
+.footer a {
+
+  color: black !important; /* Usa !important para asegurar que esta regla prevalezca */
+  margin-right: 5px;
+  font-weight: bold; /* Establece el peso de la fuente a negrita */
+}
+
+.footer .footer:last-child {
+  margin-right: 20px; /* Ajusta el margen del último ícono */
+}
+
+.footer .col-md-6.text-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Estilos para la barra de búsqueda */
+.navbar form {
+  margin-left: 5px; /* Ajusta el espacio entre la lupa y la barra de búsqueda */
+}
+
+.navbar input {
+  background-color: var(--color1); /* Color de fondo de la barra de búsqueda */
+  border: var(--color2); 
+  color: var(--color5); /* Color del texto */
+}
+
+.navbar button {
+  background-color: var(--color4); /* Color del botón de búsqueda */
+  border: var(--color2); 
+  color: black; /* Color del texto del botón de búsqueda */
+}
