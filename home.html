@@ -14,6 +14,10 @@
     rel="stylesheet">
 <!-- Carousel script -->
   <script src="./src/scripts/carousel.js" defer></script>
+<!-- Reviews script -->
+  <script src="./src/scripts/reviews.js" defer></script>
+<!--Icons online-->
+<script src="https://kit.fontawesome.com/2d064f382f.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
@@ -166,44 +170,49 @@
 
       </div>
 
-
-
-
       <button type="button" class="btn-next">
         <img src="./assets/home-assets/triangle.png" class="arrow-next" alt="next">
       </button>
     </div>
   </section>
 
-<!--CUARTA SECCIÓN-->
+<!--TERCERA SECCIÓN-->
 <div class="tercera--seccion">
   <div class="texto--titulo--tercera">
-    <h1 class="titulo--novedades">Nuestras categorías</h1>
-    <p class="texto--introduccion">Lleva contigo un símbolo de aquello que amas.</p>
+    <h1 id="titulo--categorias">Nuestras categorías</h1>
+    <p id="texto--introduccion">Lleva contigo un símbolo de aquello que amas.</p>
   </div>
+
   <div class="container--tarjetas--cuarta">
-    <div class="profesiones">
-      <div class="texto">
-        <h1>UN SÍMBOLO DE TU ESFUERZO Y PASIÓN</h1>
-        <img src="#" alt="Imagen representativa de la categoría profesiones">
+    <div class="categoria">
+      <div class="container--imagen--texto">
+        <div class="container--texto--resaltado">
+          <h1 class="texto--resaltado">UN SÍMBOLO DE TU ESFUERZO Y PASIÓN</h1>
+        </div>
+        <div class="container--imagen--categoria">
+          <img src="./assets/home-assets/charm.webp" alt="Imagen representativa de la categoría profesiones" class="imagen--profesiones"> <!--Cambiar imagen-->
+        </div>
       </div>
-      <div>
-        <h3>Profesiones</h3>
-        <p>Charms perfectos para celebrar tus logros, recordarte tu pasión o como un regalo especial para alguien dedicado a su profesión.</p>
+      <div class="container--titulo--texto">
+        <h3 class="titulo--h3">Profesiones</h3>
+        <p class="texto--p">Charms perfectos para celebrar tus logros, recordarte tu pasión o como un regalo especial para alguien dedicado a su profesión.</p>
       </div>
     </div>
 
-    <div class="mascotas">
-      <div class="profesiones">
-        <div class="texto">
-          <h1>LLEVA EL CARIÑO DE TU MASCOTA A TODAS PARTES</h1>
-          <img src="#" alt="Imagen representativa de la categoría mascotas">
+    <div class="categoria">
+      <div class="container--imagen--texto">
+        <div class="container--texto--resaltado">
+          <h1 class="texto--resaltado">LLEVA CONTIGO EL CARIÑO DE TU MASCOTA A TODAS PARTES</h1>
         </div>
-        <div>
-          <h3>Mascotas</h3>
-          <p>Charms de mascotas diseñados para capturar la esencia especial de tu fiel compañero, un perfecto detalle que celebra el lazo especial que se tiene con ellos.</p>
+        <div class="container--imagen--categoria">
+          <img src="./assets/home-assets/charm.webp" alt="Imagen representativa de la categoría profesiones" class="imagen--profesiones"> <!--Cambiar imagen-->
         </div>
 
+      </div>
+      <div class="container--titulo--texto">
+        <h3 class="titulo--h3">Mascotas</h3>
+        <p class="texto--p">Charms de mascotas diseñados para capturar la esencia especial de tu fiel compañero, un perfecto detalle que celebra el lazo especial que se tiene con ellos.</p>
+      </div>
     </div>
 
   </div>
@@ -233,115 +242,143 @@
 
 
 <!--QUINTA SECCIÓN: En este apartado se encontrarán las reseñas hechas a Menta's Boutique-->
-<div class="seccion--quinta">
+<div class="seccion--quinta"> <!--Envuelve a toda la sección-->
 
-  <div class="center">
+  <div class="center"> 
 
-    <div class="reviews--quinta">
-      <div class="imagen--container--reviews">
+    <div class="reviews--quinta" id="review1" data-name="rev-1"> <!--Es solo una review-->
+      <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
       </div>
-      <h3 id="nombre--review--quinta">Nombre A.</h3>
-      <div class="stars--quinta">
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Una estrella" id="star1">
+      <h3 id="nombre--review--quinta">Nombre A.</h3> 
+      <div class="stars--quinta"> <!--Es el contenedor de todas las estrellitas-->
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Una estrella">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Dos estrellas" id="star2">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Dos estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Tres estrellas" id="star3">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Tres estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Cuatro estrellas" id="star4">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Cuatro estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Cinco estrellas" id="star5">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Cinco estrellas">
           </div>
       </div>
     </div>
 
-    <div class="reviews--quinta">
-      <div class="imagen--container--reviews">
+    <div class="reviews--quinta" id="review2" > <!--Es solo una review-->
+      <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
       </div>
-      <h3 id="nombre--review--quinta">Nombre A.</h3>
-      <div class="stars--quinta">
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Una estrella" id="star1">
+      <h3 id="nombre--review--quinta">Nombre A.</h3> 
+      <div class="stars--quinta"> <!--Es el contenedor de todas las estrellitas-->
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Una estrella">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Dos estrellas" id="star2">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Dos estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Tres estrellas" id="star3">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Tres estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Cuatro estrellas" id="star4">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Cuatro estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Cinco estrellas" id="star5">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Cinco estrellas">
           </div>
       </div>
-      <button class="moreinfo">Leer más</button>
     </div>
 
-    <div class="reviews--quinta">
-      <div class="imagen--container--reviews">
+    <div class="reviews--quinta review--hidden" id="review3"> <!--Es solo una review-->
+      <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
       </div>
-      <h3 id="nombre--review--quinta">Nombre A.</h3>
-      <div class="stars--quinta">
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Una estrella" id="star1">
+      <h3 id="nombre--review--quinta">Nombre A.</h3> 
+      <div class="stars--quinta"> <!--Es el contenedor de todas las estrellitas-->
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Una estrella">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Dos estrellas" id="star2">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Dos estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Tres estrellas" id="star3">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Tres estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Cuatro estrellas" id="star4">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Cuatro estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Cinco estrellas" id="star5">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Cinco estrellas">
           </div>
       </div>
-      <button class="moreinfo">Leer más</button>
     </div>
 
-    <div class="reviews--quinta">
-      <div class="imagen--container--reviews">
+    <div class="reviews--quinta review--hidden" id="review4"> <!--Es solo una review-->
+      <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
       </div>
-      <h3 id="nombre--review--quinta">Nombre A.</h3>
-      <div class="stars--quinta">
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Una estrella" id="star1">
+      <h3 id="nombre--review--quinta">Nombre A.</h3> 
+      <div class="stars--quinta"> <!--Es el contenedor de todas las estrellitas-->
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Una estrella">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Dos estrellas" id="star2">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Dos estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Tres estrellas" id="star3">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Tres estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Cuatro estrellas" id="star4">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Cuatro estrellas">
           </div>
-          <div class="container--stars">
-              <img src="./assets/home-assets/star.png" alt="Cinco estrellas" id="star5">
+          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
+              <img src="./assets/home-assets/star.png" alt="Cinco estrellas">
           </div>
       </div>
-      <button class="moreinfo">Leer más</button>
     </div>
 
   </div>
+</div>  <!--Fin sección quinta-->
 
-</div>  
+
+<!--
+
+!--Aquí vivirán las preview de los reviews-->
+<!--
+<div class="products-preview">-->
+<!--Contenedor de todas las reviews-->
+<!--
+  <div class="preview active" data-target="rev-1">
+    <i class="fa-solid fa-xmark"></i>
+    <img id="imagen--reviews" src="#" alt="Reseña Charm Medicina">
+    <h3>Nombre A.</h3>
+    <div class="stars">
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo provident!</p>
+    <div class="price">$250.00</div>
+    <div class="buttons">
+      <a href="#" class="buy">Comprar</a>
+      <a href="#" class="cart">Agregar al carrito</a>
+    </div>
+  </div>
+
+</div>
+-->
+
+
 
 <!--REVIEW PRUEBA-->
-
+<!--
   <div class="card">
     <a class="review-link">
       <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
@@ -386,7 +423,7 @@
     </form>
   </dialog>
 
-
+-->
 
   <!--SECCIÓN SEXTA-->
   <div class="seccion--seis">
@@ -395,7 +432,6 @@
         <button id="btn--dos">Descubrir</button>
     </div>
 </div>
-
 
 
 
