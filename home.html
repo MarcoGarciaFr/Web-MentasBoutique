@@ -370,7 +370,7 @@
       </div>
     </div>
 
-    <div class="reviews--quinta" id="review2" > <!--Es solo una review-->
+    <div class="reviews--quinta" id="review2" data-name="rev-2"> <!--Es solo una review-->
       <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
       </div>
@@ -394,7 +394,7 @@
       </div>
     </div>
 
-    <div class="reviews--quinta review--hidden" id="review3"> <!--Es solo una review-->
+    <div class="reviews--quinta review--hidden" id="review3" data-name="rev-3"> <!--Es solo una review-->
       <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
       </div>
@@ -418,7 +418,7 @@
       </div>
     </div>
 
-    <div class="reviews--quinta review--hidden" id="review4"> <!--Es solo una review-->
+    <div class="reviews--quinta review--hidden" id="review4" data-name="rev-4"> <!--Es solo una review-->
       <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
       </div>
@@ -445,17 +445,17 @@
   </div>
 </div>  <!--Fin sección quinta-->
 
+<!--Aquí vivirán las preview de los reviews-->
 
-<!--
-
-!--Aquí vivirán las preview de los reviews-->
-<!--
-<div class="products-preview">-->
-<!--Contenedor de todas las reviews-->
-<!--
-  <div class="preview active" data-target="rev-1">
+<div class="products-preview">
+  <!--Contenedor de todas las reviews-->
+  <!--Primera reseña -->
+  <div class="preview active" data-target="rev-1"> <!--Primera reseña -->
     <i class="fa-solid fa-xmark"></i>
-    <img id="imagen--reviews" src="#" alt="Reseña Charm Medicina">
+    <div id="imagen--preview">
+      <img id="img-preview" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
+    </div>
+    <div class="prueba">
     <h3>Nombre A.</h3>
     <div class="stars">
       <i class="fa-sharp fa-solid fa-star"></i>
@@ -464,66 +464,95 @@
       <i class="fa-sharp fa-solid fa-star"></i>
       <i class="fa-sharp fa-solid fa-star"></i>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo provident!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
+      ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
+      provident!</p>
     <div class="price">$250.00</div>
     <div class="buttons">
       <a href="#" class="buy">Comprar</a>
       <a href="#" class="cart">Agregar al carrito</a>
     </div>
   </div>
-
-</div>
--->
-
-
-
-<!--REVIEW PRUEBA-->
-<!--
-  <div class="card">
-    <a class="review-link">
-      <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-    </a>
-    <p class="price">$300.00</p>
-    <h4 class="product">Collar de perrito</h4>
-    <p class="description">plata 420</p>
-    <button type="button" class="btn-buy"> Comprar </button>
   </div>
 
-
-  <dialog class="card-dialog">
-    <form method="dialog">
-      <h3>Laura</h3>
-      <img src="./assets/charm.webp" alt="" class="img-rev">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit id reprehenderit quaerat, ullam
-        aspernatur nobis doloribus aperiam maiores ipsam consectetur nihil aut inventore iste harum sit eveniet nesciunt
-        laboriosam.</p>
-      <button type="submit">Close</button>
-    </form>
-  </dialog>
-
-
-  <div class="card">
-    <a class="review-link1">
-      <img src="./assets/charm.webp" alt="collar" class="img-card">
-    </a>
-    <p class="price">$300.00</p>
-    <h4 class="product">Collar de perrito</h4>
-    <p class="description">plata 420</p>
-    <button type="button" class="btn-buy"> Comprar </button>
+  <!--Segunda reseña -->
+  <div class="preview active" data-target="rev-2"> <!--Segunda reseña -->
+    <i class="fa-solid fa-xmark"></i>
+    <div id="imagen--preview">
+      <img id="img-preview" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
+    </div>
+    <div class="prueba">
+    <h3>Nombre A.</h3>
+    <div class="stars">
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
+      ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
+      provident!</p>
+    <div class="price">$250.00</div>
+    <div class="buttons">
+      <a href="#" class="buy">Comprar</a>
+      <a href="#" class="cart">Agregar al carrito</a>
+    </div>
+  </div>
   </div>
 
-  <dialog class="review1">
-    <form method="dialog">
-      <h3>Laura</h3>
-      <img src="./assets/charm.webp" alt="" class="img-rev">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit id reprehenderit quaerat, ullam
-        aspernatur nobis doloribus aperiam maiores ipsam consectetur nihil aut inventore iste harum sit eveniet nesciunt
-        laboriosam.</p>
-      <button type="submit">Close</button>
-    </form>
-  </dialog>
+  <!--Tercera reseña -->
+  <div class="preview active" data-target="rev-3"> <!--Tercera reseña -->
+    <i class="fa-solid fa-xmark"></i>
+    <div id="imagen--preview">
+      <img id="img-preview" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
+    </div>
+    <div class="prueba">
+    <h3>Nombre A.</h3>
+    <div class="stars">
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
+      ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
+      provident!</p>
+    <div class="price">$250.00</div>
+    <div class="buttons">
+      <a href="#" class="buy">Comprar</a>
+      <a href="#" class="cart">Agregar al carrito</a>
+    </div>
+  </div>
+  </div>
 
--->
+  <!--Cuarta reseña -->
+  <div class="preview active" data-target="rev-4"> <!--Cuartareseña -->
+    <i class="fa-solid fa-xmark"></i>
+    <div id="imagen--preview">
+      <img id="img-preview" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
+    </div>
+    <div class="prueba">
+    <h3>Nombre A.</h3>
+    <div class="stars">
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
+      ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
+      provident!</p>
+    <div class="price">$250.00</div>
+    <div class="buttons">
+      <a href="#" class="buy">Comprar</a>
+      <a href="#" class="cart">Agregar al carrito</a>
+    </div>
+  </div>
+  </div>
+</div> <!--Fin de las preview-->
 
   <!--SECCIÓN SEXTA-->
   <div class="seccion--seis">
