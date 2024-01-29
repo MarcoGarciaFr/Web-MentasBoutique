@@ -1,6 +1,6 @@
 //traer botones
-const botonNext = document.querySelector(".btn-next")
-const botonPrev = document.querySelector(".btn-prev")
+const botonNext = document.querySelector(".carousel__btn-next")
+const botonPrev = document.querySelector(".carousel__btn-prev")
 
 //array de contenedores de cards
 let cardContainers= document.querySelectorAll(".card-container");

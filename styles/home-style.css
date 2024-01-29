@@ -7,11 +7,12 @@
   --color3: #a8dae3;
   --color4: #cab8f2;
   --color5: #54248f;
-  --big-title-size: clamp(16px, 2.5vw, 60px);
+  --big-title-size: clamp(20px, 2.5vw, 60px);
   /*Con la función clamp se establece un tamaño de fuente que crezca con el tamaño del viewport, pero no se reduzca debajo de un mínimo y no se incremente por encima de un máximo.*/
-  --title-font-size: clamp(12px, 1.5vw, 40px);
-  --text-font-size: clamp(10px, 1.2vw, 30px);
-  --text-font-size-small: clamp(8px, 0.9vw, 20px);
+  --title-font-size: clamp(14px, 1.8vw, 40px);
+  --text-font-size: clamp(12px, 1.2vw, 30px);
+  --text-font-size-small: clamp(8px, 1.2vw, 20px);
+  --title-font-size-mobile: clamp(20px, 8vw, 35px);
 
 }
 
@@ -27,18 +28,22 @@ body {
   /* se agrego para mejor funcionalidad del carousel */
 }
 
-h1 {
+
+
+/*A continuación se hará la primera sección de la página de inicio*/
+
+/******************REUTILIZABLES****************************/
+.title {
   font-size: var(--big-title-size);
   margin-block-start: 0px;
   margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  margin-top: 1.2vw;
+  margin-top: 0;
   margin-bottom: 0;
   font-weight: 0;
   line-height: 1.5;
   font-family: var(--font-borel);
-
 }
 
 p {
@@ -46,28 +51,26 @@ p {
   font-size: var(--text-font-size);
   margin: 0px;
 }
-
-/*A continuación se hará la primera sección de la página de inicio*/
-
-/******************REUTILIZABLES****************************/
-.btn-mentas {
+.btn--mentas {
   background-color: var(--color3);
   
-  border-radius: 5px;
+  border-radius: 10px;
   font-family: var(--font-onest);
   /*debido a que en la clase eslogan se le ponía Borel, aquí se le coloca nuevamente el tipo de letra Onest al btn*/
 
   font-size: var(--text-font-size);
   border: 0;
-  padding: 5px 9px;
+  height: 4.5vw;
+  width: 13.92vw;
   /* margin-top: 50px;*/
 }
 
-.btn-mentas:hover {
+.btn--mentas:hover {
   /*este estilo le da un hover al botón*/
   background-color: var(--color4);
-  color: var(--color1);
+
 }
+
 
 
 /******************FIN REUTILIZABLES*************************/
@@ -108,7 +111,7 @@ p {
   /*El segundo elemento es el botón*/
 
 
-  .btn-mentas--descubrelo {
+  .btn--mentas-descubrelo {
     border-radius: 10px;
     height: clamp(40px, 6.26vw, 160px);
     width: clamp(150px, 23.5vw, 600px);
@@ -181,7 +184,7 @@ p {
 
 @media (max-width: 768px) {
 
-  .btn-mentas--descubrelo {
+  .btn--mentas-descubrelo {
     border-radius: 0.78vw;
     height: clamp(20px, 6.26vw, 160px);
     width: clamp(75px, 23.5vw, 600px);
@@ -236,15 +239,16 @@ p {
 
   }/*MODIFICADO*/
 
-  .seccion-uno__title{
-    font-size: 8vw;
+  .title--size-big-mobile{
+    font-size: var(--title-font-size-mobile);
     width: 70%;
     margin-top: 20%;
-}/*UNICO: clase utilizada solo para la responsividad en movil*/
+}
+/*UNICO: clase utilizada solo para la responsividad en movil*/
 
 
 
-  .btn-mentas--descubrelo {
+  .btn--mentas-descubrelo {
     border-radius: 10px;
     height: 20vw;
     width: 56%;
@@ -310,22 +314,13 @@ p {
 
 /*SEGUNDA SECCIÓN - CARRUSEL*/
 
-.title-container {
-  /*Contiene el título de Novedades*/
-  font-family: var(--font-borel);
-  font-size: clamp(10px, 5vw, 40px);
-  border: 0;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: clamp(10px, 5vw, 40px);
-  ;
-  font-weight: lighter;
-  vertical-align: bottom;
-}
+
 
 /*CAROUSEL STYLES*/
-
+@media (max-width:5000px){
+  .carousel{
+    margin-top: 2vw;
+  }
 .carousel-container {
   box-sizing: border-box;
   padding-top: 10px;
@@ -334,6 +329,11 @@ p {
   align-items: center;
   width: 100%;
   justify-content: space-between;
+}
+
+.carousel__title{
+  text-indent: 4vw;
+  margin-top: 2vw;
 }
 
 .card-container {
@@ -370,16 +370,16 @@ p {
 .product {
   font-family: 'Yeseva One', serif;
   border: 0px;
-  margin: 0.2vw 0px;
+  margin: 0vw 0px;
   text-align: center;
-  font-size: min(max(1.5vw, 10px), 20px)
+  font-size: var(--text-font-size);
 }
 
 .description {
   font-family: 'Yeseva One', serif;
   border: 0px;
   margin: 0px;
-  font-size: min(max(1.5vw, 10px), 20px);
+  font-size: var(--text-font-size);
   text-align: center;
 
 }
@@ -388,7 +388,7 @@ p {
   font-family: var(--font-onest);
   border: 0px;
   margin: 0.2vw 0px;
-  font-size: min(max(1.5vw, 10px), 20px)
+  font-size: var(--text-font-size);
 }
 
 .btn-buy {
@@ -404,8 +404,8 @@ p {
 }
 
 
-.btn-next,
-.btn-next:hover {
+.carousel__btn-next,
+.carousel__btn-next:hover {
   width: 20px;
   height: 30px;
   margin-right: 20px;
@@ -421,8 +421,8 @@ p {
   height: 20px;
 }
 
-.btn-prev,
-.btn-prev:hover {
+.carousel__btn-prev,
+.carousel__btn-prev:hover {
   width: 20px;
   height: 30px;
   margin-left: 20px;
@@ -502,13 +502,13 @@ dialog::backdrop {
   animation: slideToLeft 2s ease-out;
 }
 
+}
 
 
+@media only screen and (max-width: 768px) {
 
-@media only screen and (max-width: 380px) {
-
-  .btn-next,
-  .btn-next:hover {
+  .carousel__btn-next,
+  .carousel__btn-next:hover {
     width: 10px;
     height: 10px;
     margin-right: 5px;
@@ -523,8 +523,8 @@ dialog::backdrop {
     height: 10px;
   }
 
-  .btn-prev,
-  .btn-prev:hover {
+  .carousel__btn-prev,
+  .carousel__btn-prev:hover {
     width: 10px;
     height: 10px;
     margin-left: 5px;
@@ -547,23 +547,25 @@ dialog::backdrop {
   .product {
     font-family: 'Yeseva One', serif;
     border: 0px;
-    margin: 0.2vw 0px;
+    margin: 0vw 0px;
     text-align: center;
-    font-size: min(max(1.5vw, 10px), 8px)
+    font-size: var(--text-font-size);
+   
   }
 
   .description {
     font-family: 'Yeseva One', serif;
     border: 0px;
     margin: 0px;
-    font-size: min(max(1.5vw, 10px), 8px)
+    font-size: var(--text-font-size);;
+    
   }
 
   .price {
-    font-family: var(--font-onest);
+    font-family: var(--text-onest);
     border: 0px;
     margin: 0.2vw 0px;
-    font-size: min(max(1.5vw, 10px), 8px)
+    font-size: var(--text-font-size);;
   }
 
   .btn-buy {
@@ -579,12 +581,15 @@ dialog::backdrop {
 
 }
 
-@media only screen and (max-width: 175px) {
+@media only screen and (max-width: 480px) {
 
-  #product2,
+  .carousel__title{
+    font-size: var(--title-font-size-mobile)
+  }
+  /* #product2,
   #product3 {
     display: none;
-  }
+  } */
 
   .card {
     margin: auto;
@@ -598,34 +603,33 @@ dialog::backdrop {
     justify-content: center;
 
 
-  }
+  }/*MODIFICADO*/
 
   .img-card {
-    width: min(max(50px, 100%), 100px);
+    width: clamp(80px, 25vw, 120px);
     height: auto;
-  }
+  }/*MODIFICADO*/
 
   .product {
     font-family: 'Yeseva One', serif;
     border: 0px;
     margin: 0.2vw 0px;
+    max-width: clamp(75px,25vw,83px) ;
     text-align: center;
-    font-size: min(max(1.5vw, 10px), 8px)
-  }
+    font-size: var(--title-font-size);
+    line-height: 1.2;
+  }/*MODIFICADO*/
 
   .description {
-    font-family: 'Yeseva One', serif;
-    border: 0px;
-    margin: 0px;
-    font-size: min(max(1.5vw, 10px), 8px)
-  }
+    display: none;
+  }/*MODIFICADO*/
 
   .price {
     font-family: var(--font-onest);
     border: 0px;
     margin: 0.2vw 0px;
-    font-size: min(max(1.5vw, 10px), 8px)
-  }
+    font-size: var(--title-font-size);
+  }/*MODIFICADO*/
 
   .btn-buy {
     padding: min(max(.65vw, 3px), 5px) min(max(1.4vw, 5px), 8px);
@@ -641,32 +645,32 @@ dialog::backdrop {
 /***************************************************************/
 /*  TERCERA SECCIÓN */
 
+@media only screen and (max-width:5000px){
+
 .tercera--seccion {
-  margin-top: 25px;
-  /*Margen arriba para que no esté pegado a la segunda sección*/
-  /*  Representa el contenedor al 100% */
-  margin-bottom: 25px;
+  margin-top: 2vw;
 }
 
 .texto--titulo--tercera {
   /*Esta clase engloba a el título y descripción de categorías*/
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
+  margin-bottom: 1vw;
 }
 
 #titulo--categorias {
-  /*Texto de nuestras categorías*/
-  font-family: var(--font-borel);
-  font-size: 30px;
-  margin-bottom: 0px;
+  
+  text-indent: 4vw;
+  margin-top: 2vw;
 }
 
 #texto--introduccion {
   /*Texto descriptivo de la sección*/
   font-family: var(--font-onest);
-  font-size: clamp(5px, 15px, 25px);
+  font-size: var(--title-font-size);
   margin-top: 0;
+  text-indent: 4vw;
 }
 
 .container--tarjetas--cuarta {
@@ -674,320 +678,186 @@ dialog::backdrop {
   display: flex;
   flex-direction: row;
   /*Para que estén una a lado de la otra*/
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   /*Para que las tarjetas se encuentren en el centro del viewport*/
-  gap: clamp(10px, 50px, 80px);
-  /*El espacio entre las dos tarjetas variará en un rango de 10 a 180px dependiendo del viewport*/
+
 }
 
-.categoria {
+.category-card { /*cambio de nombre*/
   /*Este contenedor tendrá un texto representativo de la categoría, una imagen, el nombre de la categoría y un texto más detallado de dicha categoría*/
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  display: grid;
+  grid-template-rows: 62% auto; /* 62500% for the first row, remaining for the second row */
+  gap: 0px; /* Adjust the gap between rows if needed */
+
   background-color: var(--color2);
   /*Es el color de fondo de la tarjeta de la categoría*/
   border-radius: 15px;
-  width: clamp(210px, 45%, 650px);
-  /*  Representa el contenedor al 30% */
+  width: 44vw;
+  height: 32.12vw;
+  
 }
-
-.container--imagen--texto {
-  /*Contiene al texto representativo y a la imagen*/
-  display: flex;
-  flex-direction: row;
-  /*Se pone en dirección row para que estén una a lado de otra*/
-  width: clamp(210px, 100%, 650px);
-  /*  Representa el 100% del contenedor categoría, o sea el 30% del viewport */
-  height: clamp(100px, 60%, 300px);
-  align-self: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  margin: 10px 10px 10px 10px;
+.category-card__text-image-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  
+  
 }
-
-.container--texto--resaltado {
-  /*Este container solo incluye el texto en resaltado*/
-  width: clamp(100px, 60%, 180px);
-  /*  Representa el 60% del contenedor imagen--texto */
-  height: clamp(100px, 50%, 220px);
+.category-card__text-big{
+  margin: 2vw;
+  line-height: 1.3;
   font-family: var(--font-yeseva);
-  font-size: 1.2vw;
-  margin-bottom: 10px;
-  margin-top: 0px;
-  align-self: flex-start;
+  font-size: clamp(20px, 2.2vw, 60px);
 }
 
-.container--imagen--categoria {
-  /*Este container solo incluye la imagen de la categoria*/
-  width: clamp(140px, 40%, 320px);
-  margin-right: 10px;
-  margin-left: 30px;
-  margin-top: 10px;
+.category-card__title{
+  font-family: var(--font-yeseva);
+  font-size: var(--title-font-size);
 }
 
-.imagen--profesiones {
-  width: 100%;
+.category-card__image {
+  margin: auto;
+  width: 90%;
+  border-radius: 2.3vw;
 }
 
-.container--titulo--texto {
+.category-card__text-container {
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
   font-family: var(--font-onest);
-  width: clamp(210px, 100%, 650px);
-  margin-top: 20px;
+  
 }
 
-.titulo--h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 
 .texto--p {
-  margin-top: 0;
-  margin-bottom: 10px;
-  margin-left: 10px;
+  margin: 0 1.1vw;
+  font-size: var(--text-font-size);
   text-align: justify;
-  margin-right: 10px;
+  
 }
 
+}
 
 /*Responsividad de tercera sección*/
-@media (max-width: 480px) {
-  .tercera--seccion {
-    margin-top: 25px;
-    /*Margen arriba para que no esté pegado a la segunda sección*/
-    /*  Representa el contenedor al 100% */
-    margin-bottom: 25px;
-  }
 
-  .texto--titulo--tercera {
-    /*Esta clase engloba a el título y descripción de categorías*/
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #titulo--categorias {
-    /*Texto de nuestras categorías*/
-    font-family: var(--font-borel);
-    font-size: 30px;
-    margin-bottom: 0px;
-  }
-
+@media (max-width: 768px) {
+  
   #texto--introduccion {
     /*Texto descriptivo de la sección*/
     font-family: var(--font-onest);
-    font-size: clamp(5px, 15px, 25px);
+    font-size: var(--text-font-size);
     margin-top: 0;
+    text-indent: 4vw;
+  } /*MODIFICADO*/
+  
+  .category-card { 
+    display: grid;
+    grid-template-rows: 62% auto; 
+    gap: 0px; 
+  
+    background-color: var(--color2);
+    border-radius: 1.25vw;
+    width: 44vw;
+    height: 36.12vw;
+    
+  }
+
+  .category-card__text-big{
+    margin: 1.5vw;
+    line-height: 1.3;
+    font-family: var(--font-yeseva);
+    font-size: clamp(12px, 2.7vw, 60px); /*utilice un clamp porque las variables de root no encajan con el tamaña necesario para este texto*/
+  }
+  
+  .category-card__title{
+    font-family: var(--font-yeseva);
+    font-size: var(--text-font-size);
+  }
+    
+  .texto--p {
+    margin: 0 1.1vw;
+    font-size: var(--text-font-size-small);
+    text-align: justify;
+    
+  }
+}/*cierre de media query*/
+@media (max-width: 480px) {
+
+  #titulo--categorias {
+ font-size: var(--title-font-size-mobile);
+  }
+
+  #texto--introduccion {
+    font-size: var(--title-font-size);
   }
 
   .container--tarjetas--cuarta {
     /*Este contenedor es de las dos tarjetas de categorías: profesiones y mascotas*/
     display: flex;
     flex-direction: column;
+    gap: 7.5vw;
     /*Para que estén una a lado de la otra*/
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     /*Para que las tarjetas se encuentren en el centro del viewport*/
-    gap: clamp(10px, 20px, 30px);
+   
     /*El espacio entre las dos tarjetas variará en un rango de 10 a 180px dependiendo del viewport*/
   }
 
-  .categoria {
-    /*Este contenedor tendrá un texto representativo de la categoría, una imagen, el nombre de la categoría y un texto más detallado de dicha categoría*/
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color2);
-    /*Es el color de fondo de la tarjeta de la categoría*/
-    border-radius: 15px;
-    width: clamp(210px, 75%, 650px);
-    /*  Representa el contenedor al 30% */
-  }
+ 
+.category-card { 
+  display: grid;
+  grid-template-rows: 62% auto; 
+  gap: 0px; 
+  background-color: var(--color2);
+  border-radius: 15px;
+  width: 80.41vw;
+  height: 55.41vw;
+  
+}
 
-  .container--imagen--texto {
-    /*Contiene al texto representativo y a la imagen*/
-    display: flex;
-    flex-direction: row;
-    /*Se pone en dirección row para que estén una a lado de otra*/
-    width: clamp(210px, 100%, 650px);
-    /*  Representa el 100% del contenedor categoría, o sea el 30% del viewport */
-    height: clamp(100px, 60%, 300px);
-    align-self: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    margin: 10px 10px 10px 10px;
-  }
+.category-card__text-big{
+  font-size: 4.1vw;
+  margin-left: 5.3vw;
+  margin-top:8.09vw;
+  margin-right: 0;
+  margin-bottom: 0;
+  align-self: start;
+  justify-self: left;
+  
+}
+.category-card__text-image-container{
+  display: grid;
+  grid-template-columns: 43.78% auto;
+  align-items: center;
+  
+  
+}
+.category-card__image{
+  width: 37.91vw;
+  height: 29.16vw;
+}
+.category-card__title{
+  font-size: 3.75vw;
+}
+.texto--p{
+  font-size: 2.5vw;
+  margin: 0 3.6vw;
+}
 
-  .container--texto--resaltado {
-    /*Este container solo incluye el texto en resaltado*/
-    width: clamp(100px, 60%, 180px);
-    /*  Representa el 60% del contenedor imagen--texto */
-    height: clamp(100px, 50%, 220px);
-    font-family: var(--font-yeseva);
-    font-size: 2.5vw;
-    margin-top: 0px;
-    margin-left: 15px;
-    align-self: flex-start;
-  }
 
-  .container--imagen--categoria {
-    /*Este container solo incluye la imagen de la categoria*/
-    width: clamp(140px, 40%, 320px);
-    margin-right: 10px;
-    margin-left: 30px;
-    margin-top: 10px;
-    align-self: center;
-  }
 
-  .imagen--profesiones {
-    width: 100%;
-  }
 
-  .container--titulo--texto {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: var(--font-onest);
-    width: clamp(210px, 100%, 650px);
-  }
 
-  .titulo--h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
 
-  .texto--p {
-    margin-top: 0;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    text-align: justify;
-    margin-right: 10px;
-  }
+
+
 
 
 }
-
-/*cierre de media query celular 480 px*/
-
-@media (481px<=width <=950px) {
-  .tercera--seccion {
-    margin-top: 25px;
-    /*Margen arriba para que no esté pegado a la segunda sección*/
-    /*  Representa el contenedor al 100% */
-    margin-bottom: 25px;
-  }
-
-  .texto--titulo--tercera {
-    /*Esta clase engloba a el título y descripción de categorías*/
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #titulo--categorias {
-    /*Texto de nuestras categorías*/
-    font-family: var(--font-borel);
-    font-size: 30px;
-    margin-bottom: 0px;
-  }
-
-  #texto--introduccion {
-    /*Texto descriptivo de la sección*/
-    font-family: var(--font-onest);
-    font-size: clamp(5px, 15px, 25px);
-    margin-top: 0;
-  }
-
-  .container--tarjetas--cuarta {
-    /*Este contenedor es de las dos tarjetas de categorías: profesiones y mascotas*/
-    display: flex;
-    flex-direction: row;
-    /*Para que estén una a lado de la otra*/
-    justify-content: center;
-    /*Para que las tarjetas se encuentren en el centro del viewport*/
-    gap: clamp(10px, 50px, 80px);
-    /*El espacio entre las dos tarjetas variará en un rango de 10 a 180px dependiendo del viewport*/
-  }
-
-  .categoria {
-    /*Este contenedor tendrá un texto representativo de la categoría, una imagen, el nombre de la categoría y un texto más detallado de dicha categoría*/
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    background-color: var(--color2);
-    /*Es el color de fondo de la tarjeta de la categoría*/
-    border-radius: 15px;
-    width: clamp(210px, 45%, 650px);
-    /*  Representa el contenedor al 30% */
-  }
-
-  .container--imagen--texto {
-    /*Contiene al texto representativo y a la imagen*/
-    display: flex;
-    flex-direction: row;
-    /*Se pone en dirección row para que estén una a lado de otra*/
-    width: clamp(210px, 100%, 650px);
-    /*  Representa el 100% del contenedor categoría, o sea el 30% del viewport */
-    height: clamp(100px, 60%, 300px);
-    align-self: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    margin: 10px 10px 10px 10px;
-  }
-
-  .container--texto--resaltado {
-    /*Este container solo incluye el texto en resaltado*/
-    width: clamp(100px, 60%, 180px);
-    /*  Representa el 60% del contenedor imagen--texto */
-    height: clamp(100px, 100%, 220px);
-    font-family: var(--font-yeseva);
-    font-size: 1.4vw;
-    margin-bottom: 10px;
-    margin-top: 0px;
-    align-self: flex-start;
-    margin-left: 15px;
-  }
-
-  .container--imagen--categoria {
-    /*Este container solo incluye la imagen de la categoria*/
-    width: clamp(140px, 40%, 320px);
-    margin-right: 10px;
-    margin-left: 30px;
-    margin-top: 10px;
-  }
-
-  .imagen--profesiones {
-    width: 100%;
-  }
-
-  .container--titulo--texto {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: var(--font-onest);
-    width: clamp(210px, 100%, 650px);
-    margin-top: 20px;
-  }
-
-  .titulo--h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .texto--p {
-    margin-top: 0;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    text-align: justify;
-    margin-right: 10px;
-  }
-
-}
-
-/*cierre de media query*/
-
 
 /***************************************************************/
 /*CUARTA SECCIÓN*/
@@ -1432,7 +1302,7 @@ p {
   font-size: clamp(30px, 35px, 45px);
 }
 
-#btn--dos {
+.btn--mentas-descubrelo-small {
   background-color: #a8dae3;
   cursor: pointer;
   border-radius: 10px;
