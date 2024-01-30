@@ -10,7 +10,7 @@
   --big-title-size: clamp(20px, 2.5vw, 60px);
   /*Con la función clamp se establece un tamaño de fuente que crezca con el tamaño del viewport, pero no se reduzca debajo de un mínimo y no se incremente por encima de un máximo.*/
   --title-font-size: clamp(14px, 1.8vw, 40px);
-  --text-font-size: clamp(12px, 1.2vw, 30px);
+  --text-font-size: clamp(12px, 1.42vw, 30px);
   --text-font-size-small: clamp(8px, 1.2vw, 20px);
   --title-font-size-mobile: clamp(20px, 8vw, 35px);
 
@@ -46,10 +46,10 @@ body {
   font-family: var(--font-borel);
 }
 
-p {
+.text{
   font-family: var(--font-onest);
   font-size: var(--text-font-size);
-  margin: 0px;
+  margin: 0px 3.63vw;
 }
 .btn--mentas {
   background-color: var(--color3);
@@ -687,14 +687,14 @@ dialog::backdrop {
 .category-card { /*cambio de nombre*/
   /*Este contenedor tendrá un texto representativo de la categoría, una imagen, el nombre de la categoría y un texto más detallado de dicha categoría*/
   display: grid;
-  grid-template-rows: 62% auto; /* 62500% for the first row, remaining for the second row */
+  grid-template-rows: 62% auto; /* 62% for the first row, remaining for the second row */
   gap: 0px; /* Adjust the gap between rows if needed */
 
   background-color: var(--color2);
   /*Es el color de fondo de la tarjeta de la categoría*/
-  border-radius: 15px;
+  border-radius: 1.25vw;
   width: 44vw;
-  height: 32.12vw;
+  height: 36.12vw;
   
 }
 .category-card__text-image-container{
@@ -707,8 +707,9 @@ dialog::backdrop {
 .category-card__text-big{
   margin: 2vw;
   line-height: 1.3;
-  font-family: var(--font-yeseva);
+  font-family: var(--font-onest);
   font-size: clamp(20px, 2.2vw, 60px);
+  font-weight: 800;
 }
 
 .category-card__title{
@@ -734,6 +735,7 @@ dialog::backdrop {
 
 .texto--p {
   margin: 0 1.1vw;
+  font-family: var(--font-onest);
   font-size: var(--text-font-size);
   text-align: justify;
   
@@ -767,19 +769,20 @@ dialog::backdrop {
 
   .category-card__text-big{
     margin: 1.5vw;
+    
     line-height: 1.3;
-    font-family: var(--font-yeseva);
+    font-family: var(--font-onest);
     font-size: clamp(12px, 2.7vw, 60px); /*utilice un clamp porque las variables de root no encajan con el tamaña necesario para este texto*/
   }
   
   .category-card__title{
     font-family: var(--font-yeseva);
-    font-size: var(--text-font-size);
+    font-size: clamps(10px, 1.89vw, 15px);
   }
     
   .texto--p {
     margin: 0 1.1vw;
-    font-size: var(--text-font-size-small);
+    font-size: clamp(8px,1.59vw,13px);
     text-align: justify;
     
   }
@@ -821,6 +824,7 @@ dialog::backdrop {
 
 .category-card__text-big{
   font-size: 4.1vw;
+  font-weight: 800;
   margin-left: 5.3vw;
   margin-top:8.09vw;
   margin-right: 0;
@@ -861,43 +865,136 @@ dialog::backdrop {
 
 /***************************************************************/
 /*CUARTA SECCIÓN*/
-p {
-  font-family: var(--font-onest);
-  font-size: clamp(10px, 1.3vw, 20px);
-  text-align: left;
-}
 
 
-.info-banner-container {
+.info-banner__container {
+  margin-top: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: var(--color1);
+  height: 35.71vw;
+  gap: 2.14vw;
+}
+.care-info, .packing-info{
+  display: grid;
+  grid-template-columns: 25% auto;
+  align-items: center;
+  width: 36.3vw;
+  height: 6.4vw;
+  border-radius: 0.83vw;
+  background-color: var(--color2);
+  font-size: var(--title-font-size);
+
+}
+.icon-info {
+  width: 3.75vw;
+  height: auto;
+  justify-self: center;
+  
 }
 
-.icon-info {
-  width: 40px;
-  height: auto;
+@media only screen and (max-width: 768px){
+  .info-banner__container {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color1);
+    height: 35.71vw;
+    gap: 2.14vw;
+  }
+
+  .info-banner__title{
+    margin-top: 2vw;
+  }
+
+  .info-banner__text{
+    font-size: max(8px, 1.56vw);
+  }
+  
+  .care-info, .packing-info{
+    display: grid;
+    grid-template-columns: 25% auto;
+    align-items: center;
+    width: 36.3vw;
+    height: 6.4vw;
+    border-radius: 0.83vw;
+    background-color: var(--color2);
+    font-size: clamp(8px, 1.4vw, 20px)
+  
+  }
+  .info-banner__span{
+    /* justify-self: center; */
+    font-size: 1.79vw;
+  }
+  .icon-info {
+    width: 3.75vw;
+    height: auto;
+    justify-self: center;
+    
+  }
+}
+@media only screen and (max-width: 480px){
+  .info-banner__container {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    background-color: var(--color1);
+    height: 66.16vw;
+  }
+
+  .info-banner__title{
+    margin-top: 2vw;
+    font-size: var(--title-font-size-mobile);
+  }
+  .info-banner__text{
+    margin: 0 10vw;
+    line-height: 1;
+    font-size: 2.7vw;
+    text-align: justify;
+  }
+  
+  .care-info, .packing-info{
+    display: grid;
+    grid-template-columns: 20% auto;
+    align-items: center;
+    width: 67.7vw;
+    height: 11.45vw;
+    border-radius: 2.9vw;
+    background-color: var(--color2);
+  
+  
+  }
+  .info-banner__span{
+    justify-self: center;
+    font-size: 3.5vw;
+  }
+  .icon-info {
+    width: 6.8vw;
+    height: auto;
+    justify-self: center;
+    
+  }
 }
 
 /***************************************************************/
 /*QUINTA SECCIÓN*/
 /*Esta sección corresponde a los reviews e incluye cuatro cards*/
-
+@media only screen and (max-width: 5000px){
 .seccion--quinta {
-  /*Esta clase engloba a toda la sección de reviews*/
-  display: flex;
-  /*se hace flexible para que todos los elementos se puedan organizar*/
-  flex-direction: row;
-  /*la dirección es row para que queden en fila todas las cards*/
-  align-content: space-around;
+margin-top: 2vw;
 }
 
 .center {
-  /*Esta clase hará que los reviews tengan un */
   display: flex;
   flex-direction: row;
-  margin: 40px 40px 40px 40px;
+  margin: 3.125vw;
 }
 
 .imagen--container--reviews {
@@ -921,36 +1018,37 @@ p {
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 400ms ease;
-  margin: 10px 10px 30px 10px;
+  margin: 0.78vw 0.78vw 2.34vw 0.78vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: clamp(400px, 7vw, 800px);
+  width: 21.4vw;
+  height: 31.25vw;
 }
 
 .reviews--quinta:hover {
-  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 3.125vw rgba(0, 0, 0, 0.4);
   transform: translateY(-3%)
 }
 
 #nombre--review--quinta {
   /*Es el contenedor del texto donde aparecerá el nombre de la persona que dejó el review*/
-  margin: 10px 20px 10px 10px;
+  margin: 0.78vw 1.56vw  0.78vw  0.78vw;
+  font-size: var(--title-font-size);
   align-self: flex-start;
 }
 
 
 .stars--quinta {
   /*contenedor de todas las estrellas*/
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15%;
   align-content: center;
   justify-content: center;
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: clamp(10px, 100%, 280px);
+  gap: 0.5vw;
+  margin: 0px 0.8vw;
+  width: 100%;
   /*tomará el ancho del contenedor, siendo el mínimo 10px y el máximo 280px*/
 }
 
@@ -963,181 +1061,89 @@ p {
   margin-right: 10px;
   width: clamp(10px, 2vw, 100px);
 }
-
+}
 /*RESPONSIVIDAD QUINTA SECCIÓN*/
-@media (width <=980px) {
 
-  .seccion--quinta {
-    /*Esta clase engloba a toda la sección de reviews*/
-    display: flex;
-    /*se hace flexible para que todos los elementos se puedan organizar*/
-    flex-direction: row;
-    /*la dirección es row para que queden en fila todas las cards*/
-    align-content: space-around;
-  }
+@media (max-width: 480px) {
 
+  
   .center {
-    /*Esta clase hará que los reviews tengan un */
     display: flex;
     flex-direction: row;
-    margin: 40px 40px 40px 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3.125vw;
+    height: 44vw;
+    overflow: hidden;
   }
-
+  
   .imagen--container--reviews {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 70%;
   }
-
+  
   #imagen--reviews {
     width: 100%;
   }
-
-
+  
+  .review--quinta--hidden {
+    display: none;
+  }
+  
   .reviews--quinta {
     /*Es la card de solo una reseña*/
     border-radius: 6px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 400ms ease;
-    margin: 10px 10px 30px 10px;
+    margin: 0px 5vw 8vw 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: clamp(400px, 7vw, 800px);
+    width: 26.79vw;
+    height: 39.06vw;
   }
-
-  .review--hidden {
-    /*con esta clase se ocultan dos reviews*/
-    display: none;
-  }
-
-
+  
   .reviews--quinta:hover {
-    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 3px 3.125vw rgba(0, 0, 0, 0.4);
     transform: translateY(-3%)
   }
-
+  
   #nombre--review--quinta {
     /*Es el contenedor del texto donde aparecerá el nombre de la persona que dejó el review*/
-    margin: 10px 20px 10px 10px;
+    margin: 0.78vw 1.56vw  0.78vw  0.78vw;
+    font-size: var(--title-font-size);
     align-self: flex-start;
   }
-
-
+  
+  
   .stars--quinta {
     /*contenedor de todas las estrellas*/
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15%;
     align-content: center;
     justify-content: center;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: clamp(10px, 100%, 280px);
-    /*tomará el ancho del contenedor, siendo el mínimo 10px y el máximo 280px*/
-  }
-
-  .container--stars {
-    /*contenedor de cada estrella*/
-    display: flex;
-    flex-direction: row;
-    height: clamp(10px, 5vw, 100px);
-    margin-left: 10px;
-    margin-right: 10px;
-    width: clamp(10px, 5vw, 100px);
-  }
-}
-
-@media (max-width: 480px) {
-  .seccion--quinta {
-    /*Esta clase engloba a toda la sección de reviews*/
-    display: flex;
-    /*se hace flexible para que todos los elementos se puedan organizar*/
-    flex-direction: row;
-    /*la dirección es row para que queden en fila todas las cards*/
-    align-content: space-around;
-  }
-
-  .center {
-    /*Esta clase hará que los reviews tengan un */
-    display: flex;
-    flex-direction: row;
-    margin: 20px 20px 20px 20px;
-  }
-
-  .imagen--container--reviews {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 70%;
-  }
-
-  #imagen--reviews {
+    gap: 0.5vw;
+    margin: 0px 0.8vw;
     width: 100%;
-  }
-
-
-  .reviews {
-    /*Es la card de solo una reseña*/
-    border-radius: 6px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: all 400ms ease;
-    margin: 10px 10px 30px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: clamp(400px, 2vw, 800px);
-    width: clamp(80px, 100%, 180px);
-  }
-
-  .review--hidden {
-    /*con esta clase se ocultan dos reviews*/
-    display: none;
-  }
-
-
-  .reviews--quinta:hover {
-    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.4);
-    transform: translateY(-3%)
-  }
-
-  #nombre--review--quinta {
-    /*Es el contenedor del texto donde aparecerá el nombre de la persona que dejó el review*/
-    margin: 10px 20px 10px 10px;
-    align-self: flex-start;
-  }
-
-
-  .stars--quinta {
-    /*contenedor de todas las estrellas*/
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: clamp(10px, 100%, 180px);
     /*tomará el ancho del contenedor, siendo el mínimo 10px y el máximo 280px*/
   }
-
+  
   .container--stars {
     /*contenedor de cada estrella*/
     display: flex;
     flex-direction: row;
-    height: clamp(10px, 5vw, 100px);
-    margin-left: 5px;
-    margin-right: 5px;
-    width: clamp(10px, 5vw, 100px);
+    height: clamp(10px, 2vw, 100px);
+    margin-left: 10px;
+    margin-right: 10px;
+    width: clamp(10px, 2vw, 100px);
+  }
   }
 
 
-}
 
 /*PREVIEWS DE RESEÑAS*/
 .products-preview {
