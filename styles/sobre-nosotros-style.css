@@ -1,6 +1,15 @@
-
+:root {
+    --font-onest: 'Onest', sans-serif;
+    --font-yeseva: 'Yeseva One', serif;
+    --font-borel: 'Borel', cursive;
+    --color1: #f5e7e9;
+    --color2: #f4afcf;
+    --color3: #a8dae3;
+    --color4: #cab8f2;
+    --color5: #54248f;
+}
 body{
-    background-color: beige;
+    background-color: #f5e7e9;
 }
 
 .contenedor{
@@ -28,11 +37,10 @@ grid-gap: 20px;
     
 }
 .encabezados{
-    font-family: 'Libre Baskerville', serif;
-    color: rgb(0, 0, 0);
+    font-family: 'Borel', cursive;
 }
 .encabezados1{
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Borel', cursive;
 }
 #logo{
     width: 150px;;
@@ -40,8 +48,8 @@ grid-gap: 20px;
     padding:5%;
 }
 .contenido{
-    background-color: rgb(234, 126, 17);
-    color: rgb(0, 0, 0);
+    background-color:rgb(235, 227, 202);
+    color:rgb(0, 0, 0);
     grid-column-start: 1;
     grid-column-end: 4;
     border-radius: 14px;
@@ -49,37 +57,34 @@ grid-gap: 20px;
     padding-left: 20px;
 }
 .widget-1{
-     background-color: rgb(142, 88, 224);
+     background-color: #cab8f2;
      
-    grid-column-start: 1;
-    grid-column-end: 2;
+     grid-row: auto;
     text-align: center;
     padding:5%;
     border-radius: 14px;
-    padding-top: 15px;
+    padding-top: 25px;
     
 
 }
 .widget-2{
-   background-color: rgb(151, 202, 138);
-    grid-column-start: 2;
-    grid-column-end: 3;
+   background-color: #a8dae3;
+    grid-row: auto;
     text-align: center;
     align-content: center;
     padding:5%;
     border-radius: 14px;
-    padding-top: 15px;
+    padding-top: 25px;
 }
 .widget-3{
     
-    background-color: rgb(252, 23, 23);
-    grid-column-start: 3;
-    grid-column-end: 4;
+    background-color: #f4afcf;
+    grid-row: auto;
     text-align: center;
-    
+    align-content: center;
     padding:5%;
     border-radius: 14px;
-    padding-top: 15px;
+    padding-top: 25px;
 }
 .lista{
     padding-left: 35%;
@@ -96,64 +101,67 @@ grid-gap: 20px;
 .card-body{
     
     background-color:rgb(255, 255, 255);
-    color: navy;
+    color: #54248f;
     margin: 0 auto;
     padding: 5%;
     text-align: left;
     }
 
 .btn-primary{
-    background-color: rgb(0, 51, 255);
+    background-color: #54248f;
     border: none;
 }
-.btn-primary1{
-    background-color: antiquewhite;
-    text-align: center;
-}
- 
+
 
 
 .integrante1 {
     
-    grid-column: 1 / 2;
+    grid-column: 1 / 1;
     text-align: center;
     
 }
 .integrante2{
     
-    grid-column: 2 / 3;
+    grid-column: 2 / 2;
     text-align: center;
 }
 .integrante3{
 
-    grid-column: 3 / 4;
+    grid-column: 3 / 3;
     text-align: center;
 }
 .integrante4{
 
-    grid-column: 1 / 2;
+    grid-column: 1 / 1;
     text-align: center;
 }
 .integrante5{
 
-    grid-column: 2 / 3;
+    grid-column: 2 / 2;
     text-align: center;
 }
 .integrante6{
 
-    grid-column: 3 / 4;
+    grid-column: 3 / 3;
     text-align: center;
 }
 
 .formulario{
-    background-color: rgb(0, 51, 255);
-    color: antiquewhite;
+    color:#000000 ;
+    background-color:#cab8f2;
     grid-column: 1 / 4;
     text-align: center;
     margin-top: 10%;
     padding: 50px;
             border-radius: 20px;
 
+}
+
+input{
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #54248f ;
+    box-shadow: 10px 10px 10px rgba(165, 165, 165, 0.345);
 }
 
 .form-control{
