@@ -1,0 +1,50 @@
+:root {
+    --font-onest: 'Onest', sans-serif;
+    --font-yeseva: 'Yeseva One', serif;
+    --font-borel: 'Borel', cursive;
+    --color1: #f5e7e9;
+    --color2: #f4afcf;
+    --color3: #a8dae3;
+    --color4: #cab8f2;
+    --color5: #54248f;
+}
+.btn-light{
+    background-color: #f4afcf;
+    text-align: center;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #54248f ;
+}
+
+.encabezados{
+    font-family: 'Borel', cursive ;
+    color: rgb(0, 0, 0);
+    margin-top: 20%;
+    text-align: center;
+}
+
+.formulario{
+    
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #54248f ;
+    color:#54248f ;
+    grid-column: 1 / 4;
+    text-align: center;
+    margin-top: 10%;
+    padding: 50px;
+            border-radius: 20px;
+
+}
+.form-control{
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #54248f ;
+    box-shadow: 10px 10px 10px rgba(165, 165, 165, 0.345);
+}
+.cardProducto{
+    background-color: #f4afcf;
+}
+.prueba{
+    background-color: #a8dae3;
+}

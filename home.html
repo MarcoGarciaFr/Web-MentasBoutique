@@ -34,7 +34,7 @@
   <!--NAVBAR SECCION-->
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav  class="navbar navbar-expand-lg fixed-top" style="display: none;">
       <div class="container">
         <!-- Icono de Menta's Boutique -->
         <span class="navbar-brand">
@@ -102,51 +102,51 @@
 
 
   <!--PRIMERA SECCIÓN-->
-  <div class="seccion--uno">
+  <div class="seccion-uno">
     <!--Para facilitar el trabajo de esta sección se dividió en dos partes-->
     <!--1era parte-->
-    <div id="primera--parte">
-        <div class="eslogan">
-            <h1>Joyería de lo que más amas hecha realidad.</h1>
-            <button id="btn--descubrelo">Descúbrelo</button>
-        </div>
-        <br><br>
-        <div id="iconos">
+    <div class="seccion-uno__container">
+        
+            <h1 class="title title--size-big-mobile">Joyería de lo que más amas hecha realidad.</h1>
+            <button class="btn--mentas btn--mentas-descubrelo">Descúbrelo</button>
+
+        
+        <div class="seccion-uno__subcontainer">
             <div id="envio">
-                <img src="./assets/home-assets/icon-truck.svg" alt="Envíos en México" class="icon--uno">
+                <img src="./assets/home-assets/icon-truck.svg" alt="Envíos en México" class="icon">
 
                 <div class="texto">
-                    <p class="first"><b>Envíos en México</b></p>
-                    <p class="second">Envíos a toda la república.</p>
+                    <p class="text-bold"><b>Envíos en México</b></p>
+                    <p class="text-small">Envíos a toda la república.</p>
                 </div>
             </div>
                         
             <div id="pago">
-                <img src="./assets/home-assets/icon-lock.svg" alt="Pago seguro" class="icon--uno">
+                <img src="./assets/home-assets/icon-lock.svg" alt="Pago seguro" class="icon">
 
                 <div class="texto">
-                    <p class="first"><b>Pago seguro</b></p>
-                    <p class="second">Pagos mediante plataformas reconocidas y seguras.</p>
+                    <p class="text-bold"><b>Pago seguro</b></p>
+                    <p class="text-small">Pagos mediante plataformas reconocidas y seguras.</p>
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
     <!--2da parte-->
     <div class="imagen--container">
-        <img src="./assets/home-assets/inicio-1.jpg" alt="Joyería de plata" id="imagen--banner">
+        <img src="./assets/home-assets/inicio-1.jpg" alt="Joyería de plata" class="imagen--banner">
     </div>
 
 </div>
 
 
-  <!--SEGUNDA SECCIÓN-->
+  <!--SEGUNDA SECCIÓN CARUSEL-->
   <section class="carousel">
     <div class="title-container">
-      <h1>Novedades</h1>
+      <h1 class="title carousel__title">Novedades</h1>
     </div>
 
     <div class="carousel-container">
-      <button type="button" class="btn-prev">
+      <button type="button" class="carousel__btn-prev">
         <img src="./assets/home-assets/triangle.png" class="arrow-prev" alt="prev">
       </button>
       <div class="card-container active">
@@ -155,9 +155,9 @@
             <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
           </a>
           <p class="price">$300.00</p>
-          <h4 class="product">Collar de perrito</h4>
+          <p class="product">Collar de perrito</p>
           <p class="description">plata 420</p>
-          <button type="button" class="btn-buy"> Comprar </button>
+          
         </div>
 
         <div class="card" id="product2">
@@ -165,9 +165,9 @@
             <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
           </a>
           <p class="price">$300.00</p>
-          <h4 class="product">Collar de perrito</h4>
+          <p class="product">Collar de perrito</p>
           <p class="description">plata 420</p>
-          <button type="button" class="btn-buy"> Comprar </button>
+          
         </div>
 
         <div class="card" id="product3">
@@ -175,9 +175,44 @@
             <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
           </a>
           <p class="price">$300.00</p>
-          <h4 class="product">Collar de perrito</h4>
+          <p class="product">Collar de perrito</p>
           <p class="description">plata 420</p>
-          <button type="button" class="btn-buy"> Comprar </button>
+          
+        </div>
+          
+      
+
+      </div>
+
+      <div class="card-container">
+        <div class="card" id="product1">
+          <a href="#" class="card-link">
+            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
+          </a>
+          <p class="price">$300.00</p>
+          <p class="product">Collar de perrito</p>
+          <p class="description">plata 420</p>
+          
+        </div>
+
+        <div class="card" id="product2">
+          <a href="#" class="card-link">
+            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
+          </a>
+          <p class="price">$300.00</p>
+          <p class="product">Collar de perrito</p>
+          <p class="description">plata 420</p>
+          
+        </div>
+
+        <div class="card" id="product3">
+          <a href="#" class="card-link">
+            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
+          </a>
+          <p class="price">$300.00</p>
+          <p class="product">Collar de perrito</p>
+          <p class="description">plata 420</p>
+          
         </div>
 
       </div>
@@ -188,9 +223,9 @@
             <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
           </a>
           <p class="price">$300.00</p>
-          <h4 class="product">Collar de perrito</h4>
+          <p class="product">Collar de perrito</p>
           <p class="description">plata 420</p>
-          <button type="button" class="btn-buy"> Comprar </button>
+          
         </div>
 
         <div class="card" id="product2">
@@ -198,9 +233,9 @@
             <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
           </a>
           <p class="price">$300.00</p>
-          <h4 class="product">Collar de perrito</h4>
+          <p class="product">Collar de perrito</p>
           <p class="description">plata 420</p>
-          <button type="button" class="btn-buy"> Comprar </button>
+          
         </div>
 
         <div class="card" id="product3">
@@ -208,87 +243,47 @@
             <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
           </a>
           <p class="price">$300.00</p>
-          <h4 class="product">Collar de perrito</h4>
+          <p class="product">Collar de perrito</p>
           <p class="description">plata 420</p>
-          <button type="button" class="btn-buy"> Comprar </button>
+          
         </div>
 
       </div>
 
-      <div class="card-container">
-        <div class="card" id="product1">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <h4 class="product">Collar de perrito</h4>
-          <p class="description">plata 420</p>
-          <button type="button" class="btn-buy"> Comprar </button>
-        </div>
-
-        <div class="card" id="product2">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <h4 class="product">Collar de perrito</h4>
-          <p class="description">plata 420</p>
-          <button type="button" class="btn-buy"> Comprar </button>
-        </div>
-
-        <div class="card" id="product3">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <h4 class="product">Collar de perrito</h4>
-          <p class="description">plata 420</p>
-          <button type="button" class="btn-buy"> Comprar </button>
-        </div>
-
-      </div>
-
-      <button type="button" class="btn-next">
+      <button type="button" class="carousel__btn-next">
         <img src="./assets/home-assets/triangle.png" class="arrow-next" alt="next">
       </button>
     </div>
   </section>
 
 <!--TERCERA SECCIÓN-->
-<div class="tercera--seccion">
+<section class="tercera--seccion">
   <div class="texto--titulo--tercera">
-    <h1 id="titulo--categorias">Nuestras categorías</h1>
+    <h1 class="title" id="titulo--categorias">Nuestras categorías</h1>
     <p id="texto--introduccion">Lleva contigo un símbolo de aquello que amas.</p>
   </div>
 
   <div class="container--tarjetas--cuarta">
-    <div class="categoria">
-      <div class="container--imagen--texto">
-        <div class="container--texto--resaltado">
-          <h1 class="texto--resaltado">UN SÍMBOLO DE TU ESFUERZO Y PASIÓN</h1>
-        </div>
-        <div class="container--imagen--categoria">
-          <img src="./assets/home-assets/charm.webp" alt="Imagen representativa de la categoría profesiones" class="imagen--profesiones"> <!--Cambiar imagen-->
-        </div>
+
+
+    <div class="category-card">
+      <div class="category-card__text-image-container">
+        <h1 class="category-card__text-big">Un símbolo de tu esfuerzo y pasión</h1>
+          <img src="./assets/home-assets/charm.webp" alt="Imagen representativa de la categoría profesiones" class="category-card__image"> <!--Cambiar imagen-->
       </div>
-      <div class="container--titulo--texto">
-        <h3 class="titulo--h3">Profesiones</h3>
+      <div class="category-card__text-container">
+        <h1 class="title category-card__title">Profesiones</h1>
         <p class="texto--p">Charms perfectos para celebrar tus logros, recordarte tu pasión o como un regalo especial para alguien dedicado a su profesión.</p>
       </div>
     </div>
 
-    <div class="categoria">
-      <div class="container--imagen--texto">
-        <div class="container--texto--resaltado">
-          <h1 class="texto--resaltado">LLEVA CONTIGO EL CARIÑO DE TU MASCOTA A TODAS PARTES</h1>
-        </div>
-        <div class="container--imagen--categoria">
-          <img src="./assets/home-assets/charm.webp" alt="Imagen representativa de la categoría profesiones" class="imagen--profesiones"> <!--Cambiar imagen-->
-        </div>
-
+    <div class="category-card">
+      <div class="category-card__text-image-container">
+        <h1 class="category-card__text-big" >Lleva el cariño de tu mascota a todas partes</h1>
+          <img class="category-card__image" src="./assets/home-assets/charm.webp" alt="Imagen representativa de la categoría profesiones"> <!--Cambiar imagen-->
       </div>
-      <div class="container--titulo--texto">
-        <h3 class="titulo--h3">Mascotas</h3>
+      <div class="category-card__text-container">
+        <h1 class="title category-card__title">Mascotas</h1>
         <p class="texto--p">Charms de mascotas diseñados para capturar la esencia especial de tu fiel compañero, un perfecto detalle que celebra el lazo especial que se tiene con ellos.</p>
       </div>
     </div>
@@ -298,14 +293,14 @@
 
 
 
-</div>
+</section> <!--cambio de etiqueta div a section-->
 
 
 
 
 
 <!--CUARTA SECCIÓN-->
-
+<!-- Banner de informacion con 2 Popups -->
   <section class="info-banner">
     <div class="info-banner-container">
       <div class="banner-title">
@@ -316,6 +311,28 @@
       <div class="packing-info"><img class="icon-info" src="./assets/home-assets/nuevo-producto (2).png" alt=""><span>Empaque de Menta's Boutique</span></div>
     </div>
   </section>
+  <!-- elemento dialog utilizado como Popup -->
+  <dialog class="care-info-card">
+    <form method="dialog">
+      <h3>Laura</h3>
+      <img src="./assets/charm.webp" alt="" class="img-rev">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit id reprehenderit quaerat, ullam
+        aspernatur nobis doloribus aperiam maiores ipsam consectetur nihil aut inventore iste harum sit eveniet nesciunt
+        laboriosam.</p>
+      <button type="submit">Close</button>
+    </form>
+  </dialog>
+  
+  <dialog class="packing-info-card">
+    <div class="div-prueba">
+      <h3>Laura</h3>
+      <img src="./assets/charm.webp" alt="" class="img-rev">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit id reprehenderit quaerat, ullam
+        aspernatur nobis doloribus aperiam maiores ipsam consectetur nihil aut inventore iste harum sit eveniet nesciunt
+        laboriosam.</p>
+      <button type="button" onclick="close()">Close</button>
+    </div>
+  </dialog>
 
 
 
@@ -348,7 +365,7 @@
       </div>
     </div>
 
-    <div class="reviews--quinta" id="review2" > <!--Es solo una review-->
+    <div class="reviews--quinta" id="review2" data-name="rev-2"> <!--Es solo una review-->
       <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
       </div>
@@ -372,7 +389,7 @@
       </div>
     </div>
 
-    <div class="reviews--quinta review--hidden" id="review3"> <!--Es solo una review-->
+    <div class="reviews--quinta review--hidden" id="review3" data-name="rev-3"> <!--Es solo una review-->
       <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
       </div>
@@ -396,7 +413,7 @@
       </div>
     </div>
 
-    <div class="reviews--quinta review--hidden" id="review4"> <!--Es solo una review-->
+    <div class="reviews--quinta review--hidden" id="review4" data-name="rev-4"> <!--Es solo una review-->
       <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
       </div>
@@ -423,17 +440,17 @@
   </div>
 </div>  <!--Fin sección quinta-->
 
+<!--Aquí vivirán las preview de los reviews-->
 
-<!--
-
-!--Aquí vivirán las preview de los reviews-->
-<!--
-<div class="products-preview">-->
-<!--Contenedor de todas las reviews-->
-<!--
-  <div class="preview active" data-target="rev-1">
+<div class="products-preview">
+  <!--Contenedor de todas las reviews-->
+  <!--Primera reseña -->
+  <div class="preview active" data-target="rev-1"> <!--Primera reseña -->
     <i class="fa-solid fa-xmark"></i>
-    <img id="imagen--reviews" src="#" alt="Reseña Charm Medicina">
+    <div id="imagen--preview">
+      <img id="img-preview" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
+    </div>
+    <div class="prueba">
     <h3>Nombre A.</h3>
     <div class="stars">
       <i class="fa-sharp fa-solid fa-star"></i>
@@ -442,72 +459,101 @@
       <i class="fa-sharp fa-solid fa-star"></i>
       <i class="fa-sharp fa-solid fa-star"></i>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo provident!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
+      ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
+      provident!</p>
     <div class="price">$250.00</div>
     <div class="buttons">
       <a href="#" class="buy">Comprar</a>
       <a href="#" class="cart">Agregar al carrito</a>
     </div>
   </div>
-
-</div>
--->
-
-
-
-<!--REVIEW PRUEBA-->
-<!--
-  <div class="card">
-    <a class="review-link">
-      <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-    </a>
-    <p class="price">$300.00</p>
-    <h4 class="product">Collar de perrito</h4>
-    <p class="description">plata 420</p>
-    <button type="button" class="btn-buy"> Comprar </button>
   </div>
 
-
-  <dialog class="card-dialog">
-    <form method="dialog">
-      <h3>Laura</h3>
-      <img src="./assets/charm.webp" alt="" class="img-rev">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit id reprehenderit quaerat, ullam
-        aspernatur nobis doloribus aperiam maiores ipsam consectetur nihil aut inventore iste harum sit eveniet nesciunt
-        laboriosam.</p>
-      <button type="submit">Close</button>
-    </form>
-  </dialog>
-
-
-  <div class="card">
-    <a class="review-link1">
-      <img src="./assets/charm.webp" alt="collar" class="img-card">
-    </a>
-    <p class="price">$300.00</p>
-    <h4 class="product">Collar de perrito</h4>
-    <p class="description">plata 420</p>
-    <button type="button" class="btn-buy"> Comprar </button>
+  <!--Segunda reseña -->
+  <div class="preview active" data-target="rev-2"> <!--Segunda reseña -->
+    <i class="fa-solid fa-xmark"></i>
+    <div id="imagen--preview">
+      <img id="img-preview" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
+    </div>
+    <div class="prueba">
+    <h3>Nombre A.</h3>
+    <div class="stars">
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
+      ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
+      provident!</p>
+    <div class="price">$250.00</div>
+    <div class="buttons">
+      <a href="#" class="buy">Comprar</a>
+      <a href="#" class="cart">Agregar al carrito</a>
+    </div>
+  </div>
   </div>
 
-  <dialog class="review1">
-    <form method="dialog">
-      <h3>Laura</h3>
-      <img src="./assets/charm.webp" alt="" class="img-rev">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit id reprehenderit quaerat, ullam
-        aspernatur nobis doloribus aperiam maiores ipsam consectetur nihil aut inventore iste harum sit eveniet nesciunt
-        laboriosam.</p>
-      <button type="submit">Close</button>
-    </form>
-  </dialog>
+  <!--Tercera reseña -->
+  <div class="preview active" data-target="rev-3"> <!--Tercera reseña -->
+    <i class="fa-solid fa-xmark"></i>
+    <div id="imagen--preview">
+      <img id="img-preview" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
+    </div>
+    <div class="prueba">
+    <h3>Nombre A.</h3>
+    <div class="stars">
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
+      ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
+      provident!</p>
+    <div class="price">$250.00</div>
+    <div class="buttons">
+      <a href="#" class="buy">Comprar</a>
+      <a href="#" class="cart">Agregar al carrito</a>
+    </div>
+  </div>
+  </div>
 
--->
+  <!--Cuarta reseña -->
+  <div class="preview active" data-target="rev-4"> <!--Cuartareseña -->
+    <i class="fa-solid fa-xmark"></i>
+    <div id="imagen--preview">
+      <img id="img-preview" src="./assets/home-assets/resena1.jpg" alt="Reseña Charm Medicina">
+    </div>
+    <div class="prueba">
+    <h3>Nombre A.</h3>
+    <div class="stars">
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+      <i class="fa-sharp fa-solid fa-star"></i>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
+      ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
+      provident!</p>
+    <div class="price">$250.00</div>
+    <div class="buttons">
+      <a href="#" class="buy">Comprar</a>
+      <a href="#" class="cart">Agregar al carrito</a>
+    </div>
+  </div>
+  </div>
+</div> <!--Fin de las preview-->
 
   <!--SECCIÓN SEXTA-->
   <div class="seccion--seis">
     <div id="centro">
         <h1 class="texto--seis">¡Conócenos!</h1>
-        <button id="btn--dos">Descubrir</button>
+        <button class="btn--mentas btn--mentas-descubrelo-small">Descubrir</button>
     </div>
 </div>
 
