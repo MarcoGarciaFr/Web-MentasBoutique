@@ -15,7 +15,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link href="../../styles/navbarf-styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles/listaProductos-styles.css">
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="../../styles/lista-productos.css">
 
     <!--Fuentes de Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +24,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100..900&family=Yeseva+One&display=swap"
         rel="stylesheet">
-
-
 
     <!--SCRIPTS LINKS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
@@ -35,18 +34,11 @@
     <script src="../scripts/navbarf-script.js" defer></script>
 
     <!--Script que traerá los productos de object-list.js-->
-    <script src="../scripts/productsList.js" defer></script>
-
-    <!--Script pop up productos-->
-    <script src="../scripts/productsPopUp.js" defer></script>
-
+    <script src="../scripts/productList.js" defer></script>
 </head>
 
 <body>
     <!--NAVBAR SECCION-->
-
-    <!-- Navbar -->
-
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <!-- Icono de Menta's Boutique -->
@@ -125,647 +117,163 @@
 
         <div class="cards"> <!--Sección cards rosas-->
 
-            <div class="container--tarjetas">
-                <div class="categoria"> <!--Primera tarjeta de profesiones-->
-                    <div class="container--imagen--texto">
-                        <div class="container--texto--resaltado">
-                            <h1 class="texto--resaltado 
-                        txtprofesiones">UN SÍMBOLO DE TU ESFUERZO Y PASIÓN</h1>
-                        </div>
-                        <div class="container--imagen--categoria">
-                            <img src="../../assets/lista-productos-assets/Profesiones/dentista 2.jpg"
-                                alt="Imagen representativa de la categoría profesiones"
-                                class="imagen--profesiones txtprofesiones">
-                        </div>
-                    </div>
-                    <div class="container--titulo--texto">
-                        <h3 class="titulo--h3">Profesiones</h3>
-                        <p class="texto--p">Charms perfectos para celebrar tus logros, recordarte tu pasión o como un
-                            regalo
-                            especial para alguien dedicado a su profesión.</p>
-                    </div>
+            <a href="#profesiones" class="category-card"> <!--Primera tarjeta de profesiones-->
+                <div class="category-card__text-image-container">
+                    <h1 class="category-card__text-big">UN SÍMBOLO DE TU ESFUERZO Y PASIÓN</h1>
+                    <img src="../../assets/lista-productos-assets/Profesiones/dentista 2.jpg" alt="Imagen representativa de la categoría profesiones"
+                        class="category-card__image" id="img-profesiones">
                 </div>
+                <div class="category-card__text-container">
+                    <h1 class="title category-card__title">Profesiones</h1>
+                    <p class="texto--p">Charms perfectos para celebrar tus logros, recordarte tu pasión o como un regalo
+                        especial para alguien dedicado a su profesión.</p>
+                </div>
+            </a>
 
-                <div class="categoria"> <!--Segunda tarjeta de mascotas-->
-                    <div class="container--imagen--texto">
-                        <div class="container--texto--resaltado">
-                            <h1 class="texto--resaltado">LLEVA CONTIGO EL CARIÑO DE TU MASCOTA A TODAS PARTES</h1>
-                        </div>
-                        <div class="container--imagen--categoria">
-                            <img src="../../assets/lista-productos-assets/Perros/Perros/perro 1.jpg"
-                                alt="Imagen representativa de la categoría profesiones" class="imagen--profesiones">
-                            <!--Cambiar imagen-->
-                        </div>
-
-                    </div>
-                    <div class="container--titulo--texto">
-                        <h3 class="titulo--h3">Mascotas</h3>
-                        <p class="texto--p">Charms de mascotas diseñados para capturar la esencia especial de tu fiel
+            <a href="#mascotas" class="category-card"> <!--Segunda tarjeta de mascotas-->
+                <div class="category-card__text-image-container">
+                    <h1 class="category-card__text-big">LLEVA CONTIGO EL CARIÑO DE TU MASCOTA A TODAS PARTES</h1>
+                    <img src="../../assets/lista-productos-assets/Perros/Perros/perro 1.jpg" alt="Imagen representativa de la categoría profesiones" 
+                        class="category-card__image" id="img-mascotas">
+                </div>
+                <div class="category-card__text-container">
+                    <h1 class="title category-card__title">Mascotas</h1>
+                    <p class="texto--p">Charms de mascotas diseñados para capturar la esencia especial de tu fiel
                             compañero, un perfecto detalle que celebra el lazo especial que se tiene con ellos.</p>
-                    </div>
                 </div>
-            </div>
-        </div>
+            </a>
+            
+        </div> <!--Fin primera sección de cards rosas-->
 
         <div class="cards"> <!--Segunda sección cards rosas-->
-            <div class="container--tarjetas">
-                <div class="categoria"> <!--Tercera tarjeta de handmade-->
-                    <div class="container--imagen--texto">
-                        <div class="container--texto--resaltado">
-                            <h1 class="texto--resaltado txthandmade">CREADO CON AMOR DE NOSOTROS PARA TI</h1>
-                        </div>
-                        <div class="container--imagen--categoria">
-                            <img src="../../assets/lista-productos-assets/Perros/Perros/perro 1.jpg"
-                                alt="Imagen representativa de la categoría profesiones"
-                                class="imagen--profesiones txthandmade">
-                            <!--Cambiar imagen-->
-                        </div>
-                    </div>
-                    <div class="container--titulo--texto">
-                        <h3 class="titulo--h3">Handmade</h3>
-                        <p class="texto--p">Estos charms hechos a mano cuentan una historia. Son símbolos de creatividad
-                            y dedicación que llevan consigo el amor y la pasión de Menta's Boutique.</p>
-                    </div>
-                </div>
 
-                <div class="categoria"> <!--Cuarta tarjeta de profesiones-->
-                    <div class="container--imagen--texto">
-                        <div class="container--texto--resaltado">
-                            <h1 class="texto--resaltado">EXPLORA MÁS OPCIONES Y ENCUENTRA TU FAVORITO</h1>
-                        </div>
-                        <div class="container--imagen--categoria">
-                            <img src="../../assets/lista-productos-assets/Otros Charms/Charm-Buda-Plata-925.png"
-                                alt="Imagen representativa de la categoría otros" class="imagen--profesiones">
-                            <!--Cambiar imagen-->
-                        </div>
-
-                    </div>
-                    <div class="container--titulo--texto">
-                        <h3 class="titulo--h3">Otros</h3>
-                        <p class="texto--p">Sabemos que tus charms son más que simples accesorios, por eso, ponemos a tu
-                            disposición una amplia selección para añadir tu toque personal.</p>
-                    </div>
+            <a href="#handmade" class="category-card"> <!--Tercera tarjeta de handmade-->
+                <div class="category-card__text-image-container">
+                    <h1 class="category-card__text-big">CREADO CON AMOR DE NOSOTROS PARA TI</h1>
+                    <img src="../../assets/lista-productos-assets/Perros/Perros/perro 1.jpg" alt="Imagen representativa de la categoría profesiones"
+                        class="category-card__image" id="img-handmade">
                 </div>
-            </div>
+                <div class="category-card__text-container">
+                    <h1 class="title category-card__title">Handmade</h1>
+                    <p class="texto--p">Estos charms hechos a mano cuentan una historia. Son símbolos de creatividad
+                        y dedicación que llevan consigo el amor y la pasión de Menta's Boutique.</p>
+                </div>
+            </a>
+
+            <a href="#otros" class="category-card"> <!--Cuarta tarjeta de otros-->
+                <div class="category-card__text-image-container">
+                    <h1 class="category-card__text-big">EXPLORA MÁS OPCIONES Y ENCUENTRA TU FAVORITO</h1>
+                    <img src="../../assets/lista-productos-assets/Otros Charms/Charm-Buda-Plata-925.png" alt="Imagen representativa de la categoría otros" 
+                        class="category-card__image" id="img-otros">
+                </div>
+                <div class="category-card__text-container">
+                    <h1 class="title category-card__title">Otros</h1>
+                    <p class="texto--p">Sabemos que tus charms son más que simples accesorios, por eso, ponemos a tu
+                        disposición una amplia selección para añadir tu toque personal.</p>
+                </div>
+            </a>
+
         </div>
 
     </div>
 
-<!--En esta sección empezará el despliegue de los productos-->
-<div class="titulos--categorias">Mascotas</div> <!--Banner que da inicio a la sección donde se encuentran los charms de mascotas-->
+    <div class="products"> <!--En esta sección empezará el despliegue de los productos-->
+        <div class="titulos--categorias" id="mascotas">Mascotas</div>
+        <!--Banner que da inicio a la sección donde se encuentran los charms de mascotas-->
 
-    <div class="titulos--subcategorias"><h3>Perros</h3></div> <!--Banner que divide a los charms de perritos-->
-
-        <div class="fila--productos"> <!--Productos de perros, primera fila-->
-            <div class="padding">
-                <div class="product" id="product1" data-name="prod-1"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Perros/perro 1.jpg" alt="Charm Perro Corazón">
-                    </div>
-                    <h3 id="nombre--producto">Charm Perro Corazón</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-
-                <div class="product" id="product2" data-name="prod-2"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Perros/salchicha 2.jpg" alt="Charm Perro Salchicha">
-                    </div>
-                    <h3 id="nombre--producto">Charm Perro salchicha</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-
-                <div class="product" id="product3" data-name="prod-3"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Perros/pug.jpg" alt="Charm Pug">
-                    </div>
-                    <h3 id="nombre--producto">Charm Pug</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-            </div>
-        </div> <!--Fin de la primera fila de productos-->
-
-        <div class="fila--productos"> <!--Productos de perros, segunda fila-->
-            <div class="padding">
-                <div class="product" id="product4" data-name="prod-4"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Perros/perro 2.jpg" alt="Charm Amor Perruno">
-                    </div>
-                    <h3 id="nombre--producto">Charm Amor Perruno</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-
-                <div class="product" id="product2" data-name="prod-5"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Perros/salchicha.jpg" alt="Charm Perro Salchicha Destellos">
-                    </div>
-                    <h3 id="nombre--producto">Charm Perro Salchicha Destellos</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-
-                <div class="product" id="product3" data-name="prod-6"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Perros/schnauzer.jpg" alt="Charm schnauzer">
-                    </div>
-                    <h3 id="nombre--producto">Charm Schnauzer</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-            </div>
-        </div><!--Fin de la 2da fila de productos-->
-
-    <div class="titulos--subcategorias"><h3>Gatos</h3></div> <!--Banner que divide a los charms de gatitos-->
-        <!--CONTENEDOR DE FILAS-->
-        <div class="fila--productos"> <!--Productos de gatos, primera fila-->
-            <div class="padding">
-                <div class="product" id="product1" data-name="prod-7"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Gatos/Charm-Gato-Sirena-Plata-925.png" alt="Charm Gato Sirena">
-                    </div>
-                    <h3 id="nombre--producto">Charm Gato Sirena</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-
-                <div class="product" id="product2" data-name="prod-8"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Gatos/otros 1.jpg" alt="Charm Gato Perro">
-                    </div>
-                    <h3 id="nombre--producto">Charm Gato + Perro</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-            </div> 
-        </div><!--Fin de la primera fila de productos-->
-
-
-    <div class="titulos--subcategorias"><h3>Otros</h3></div> <!--Banner que divide a los charms de otras mascotas-->
-        <div class="fila--productos"> <!--Productos de otros, primera fila-->
-            <div class="padding">
-                <div class="product" id="product1" data-name="prod-9"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Otros/cisne.jpg" alt="Charm Cisne">
-                    </div>
-                    <h3 id="nombre--producto">Charm Cisne</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-
-                <div class="product" id="product2" data-name="prod-10"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Otros/colibrie 2.jpg" alt="Charm Colibrie">
-                    </div>
-                    <h3 id="nombre--producto">Charm Colibrie</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-
-                <div class="product" id="product2" data-name="prod-11"> <!--Es solo un producto-->
-                    <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                        <img id="imagen--producto" src="../../assets/lista-productos-assets/Perros/Otros/koala.jpg" alt="Charm Koala">
-                    </div>
-                    <h3 id="nombre--producto">Charm Koala</h3>
-                    <h3 id="precio--producto">$350.00</h3>
-                    <button class="btn--comprar">Comprar</button>
-                </div>
-            </div> <!--Fin de la primera fila de productos-->   
-        </div>
-    
-
-
-<div class="titulos--categorias">Profesiones</div> <!--Banner que da inicio a la sección donde se encuentran los charms de profesiones-->
-
-<div class="titulos--subcategorias"><h3>Ciencias Biológicas y de la Salud</h3></div> <!--Banner que divide a los charms de Ciencias Biológicas y de la Salud-->
-
-    <div class="fila--productos"> <!--Productos de CBS, primera fila-->
+        <div class="titulos--subcategorias">
+            <h3>Perros</h3>
+        </div> <!--Banner que divide a los charms de perritos-->
         <div class="padding">
-            <div class="product" id="product1" data-name="prod-12"> <!--Es solo un producto-->
-                <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                    <img id="imagen--producto" src="../../assets/lista-productos-assets/Profesiones/dentista 2.jpg" alt="Charm Dentista">
-                </div>
-                <h3 id="nombre--producto">Charm Dentista</h3>
-                <h3 id="precio--producto">$350.00</h3>
-                <button class="btn--comprar">Comprar</button>
-            </div>
+            <div class="subcategoria">
+                <div class="perros">
 
-            <div class="product" id="product2" data-name="prod-13"> <!--Es solo un producto-->
-                <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                    <img id="imagen--producto" src="../../assets/lista-productos-assets/Profesiones/psicologia.jpg" alt="Charm Psicología">
                 </div>
-                <h3 id="nombre--producto">Charm Psicología</h3>
-                <h3 id="precio--producto">$350.00</h3>
-                <button class="btn--comprar">Comprar</button>
             </div>
+        </div>
+        <div class="titulos--subcategorias">
+            <h3>Gatos</h3>
+        </div> <!--Banner que divide a los charms de gatitos-->
+        <div class="padding">
+            <div class="subcategoria">
+                <div class="gatos">
 
-            <div class="product" id="product2" data-name="prod-14"> <!--Es solo un producto-->
-                <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                    <img id="imagen--producto" src="../../assets/lista-productos-assets/Profesiones/medicina simbolo.jpg" alt="Charm Medicina">
                 </div>
-                <h3 id="nombre--producto">Charm Medicina</h3>
-                <h3 id="precio--producto">$350.00</h3>
-                <button class="btn--comprar">Comprar</button>
             </div>
-        </div> <!--Fin de la primera fila de productos-->   
+        </div>
+
+        <div class="titulos--subcategorias">
+            <h3>Otros</h3>
+        </div> <!--Banner que divide a los charms de otras mascotas-->
+        <div class="padding">
+            <div class="subcategoria">
+                <div class="diversos">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="titulos--categorias" id="profesiones">Profesiones</div>
+        <!--Banner que da inicio a la sección donde se encuentran los charms de profesiones-->
+
+        <div class="titulos--subcategorias">
+            <h3>Ciencias Biológicas y de la Salud</h3>
+        </div> <!--Banner que divide a los charms de Ciencias Biológicas y de la Salud-->
+        <div class="padding">
+            <div class="subcategoria">
+                <div class="salud">
+
+                </div>
+            </div>
+        </div>
+        <div class="titulos--subcategorias">
+            <h3>Otros</h3>
+        </div> <!--Banner que divide a los charms de otras mascotas-->
+
+        <div class="padding">
+            <div class="subcategoria">
+                <div class="diversosProfesiones">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="titulos--subcategorias" id="handmade">
+            <h3>Handmade</h3>
+        </div> <!--Banner que divide a los charms de otras profesiones-->
+        <div class="padding">
+            <div class="subcategoria">
+                <div class="arte">
+
+                </div>
+            </div>
+        </div>
     </div>
 
 
+        <div class="titulos--subcategorias" id="otros">
+            <h3>Otros</h3>
+        </div> <!--Banner que divide a los charms de otras profesiones-->
+        <div class="padding">
+            <div class="subcategoria">
+                <div class="arte">
 
-<div class="titulos--subcategorias"><h3>Otros</h3></div> <!--Banner que divide a los charms de otras profesiones-->
-
-<div class="fila--productos"> <!--Productos de otros, primera fila-->
-    <div class="padding">
-        <div class="product" id="product1" data-name="prod-15"> <!--Es solo un producto-->
-            <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                <img id="imagen--producto" src="../../assets/lista-productos-assets/Profesiones/educacion 2.jpg" alt="Charm Educación">
-            </div>
-            <h3 id="nombre--producto">Charm Educación</h3>
-            <h3 id="precio--producto">$350.00</h3>
-            <button class="btn--comprar">Comprar</button>
-        </div>
-
-        <div class="product" id="product2" data-name="prod-16"> <!--Es solo un producto-->
-            <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                <img id="imagen--producto" src="../../assets/lista-productos-assets/Profesiones/estilista.jpg" alt="Charm Estilista">
-            </div>
-            <h3 id="nombre--producto">Charm Estilista</h3>
-            <h3 id="precio--producto">$350.00</h3>
-            <button class="btn--comprar">Comprar</button>
-        </div>
-
-        <div class="product" id="product2" data-name="prod-17"> <!--Es solo un producto-->
-            <div class="imagen--container--producto"><!--Es solo el container de la imagen-->
-                <img id="imagen--producto" src="../../assets/lista-productos-assets/Profesiones/modas.jpg" alt="Charm Modas">
-            </div>
-            <h3 id="nombre--producto">Charm Modas</h3>
-            <h3 id="precio--producto">$350.00</h3>
-            <button class="btn--comprar">Comprar</button>
-        </div>
-    </div> <!--Fin de la primera fila de productos-->   
-</div>
-
-
-
-
-
-<div class="titulos--categorias">Handmade</div> <!--Banner que da inicio a la sección donde se encuentran los charms de profesiones-->
-
-<div class="titulos--subcategorias"><h3>Piedras semipreciosas</h3></div> <!--Banner que divide a los charms de Ciencias Biológicas y de la Salud-->
-        <!--CONTENEDOR DE FILAS-->
-<div class="titulos--subcategorias"><h3>Otros</h3></div> <!--Banner que divide a los charms de perritos-->
-        <!--CONTENEDOR DE FILAS-->
-
-<div class="titulos--categorias">Otros</div> <!--Banner que da inicio a la sección donde se encuentran los charms de profesiones-->
-    <!--ESTE TENDRÁ DIRECTO EL CONTENEDOR DE FILAS, sin subcategoría-->
-
-
-
-<!--Aquí vivirán las preview de los productos-->
-
-<div class="products-preview">    <!--Contenedor de todos los popups de productos-->
-
-    <div class="preview active" data-target="prod-1"> <!--Primer producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Perros/perro 1.jpg" alt="Charm Perro Corazón">
-        </div>
-        <div class="more--info">
-            <h3>Charm Perro Corazón</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
+                </div>
             </div>
         </div>
-    </div> <!--FIN Primer producto de la fila -->
-
-    <div class="preview active" data-target="prod-2"> <!--Segundo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Perros/salchicha 2.jpg" alt="Charm Perro Salchicha">
-        </div>
-        <div class="more--info">
-            <h3>Charm Perro Salchicha</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN Segundo producto de la fila -->
-
-    <div class="preview active" data-target="prod-3"> <!--Tercer producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Perros/pug.jpg" alt="Charm Pug">
-        </div>
-        <div class="more--info">
-            <h3>Charm Pug</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 3er producto de la fila -->
-
-    <div class="preview active" data-target="prod-4"> <!--4to producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Perros/perro 2.jpg" alt="Charm Amor Perruno">
-        </div>
-        <div class="more--info">
-            <h3>Charm Amor Perruno</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 4to producto de la fila -->
-
-    <div class="preview active" data-target="prod-5"> <!--5to producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Perros/salchicha.jpg" alt="Charm Perro Salchicha Destellos">
-        </div>
-        <div class="more--info">
-            <h3>Charm Perro Salchicha Destellos</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 5to producto de la fila -->
-
-    <div class="preview active" data-target="prod-6"> <!--Sexto producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Perros/schnauzer.jpg" alt="Charm schnauzer">
-        </div>
-        <div class="more--info">
-            <h3>Charm schnauzer</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 6to producto de la fila -->
-
-    <div class="preview active" data-target="prod-7"> <!--7mo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Gatos/Charm-Gato-Sirena-Plata-925.png" alt="Charm Gato Sirena">
-        </div>
-        <div class="more--info">
-            <h3>Charm Gato Sirena</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 7mo producto de la fila -->
-
-    <div class="preview active" data-target="prod-8"> <!--8vo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Gatos/otros 1.jpg" alt="Charm Gato Perro">
-        </div>
-        <div class="more--info">
-            <h3>Charm Gato + Perro</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 8vo producto de la fila -->
-
-    <div class="preview active" data-target="prod-9"> <!--noveno producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Otros/cisne.jpg" alt="Charm cisne">
-        </div>
-        <div class="more--info">
-            <h3>Charm cisne</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 9no producto de la fila -->
-
-    <div class="preview active" data-target="prod-10"> <!--10mo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Otros/colibrie 2.jpg" alt="Charm Colibrie">
-        </div>
-        <div class="more--info">
-            <h3>Charm Colibrie</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 10mo producto de la fila -->
-
-    <div class="preview active" data-target="prod-11"> <!--11vo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Perros/Otros/koala.jpg" alt="Charm Koala">
-        </div>
-        <div class="more--info">
-            <h3>Charm Koala</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 11vo producto de la fila -->
-
-    <div class="preview active" data-target="prod-12"> <!--12vo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Profesiones/dentista 2.jpg" alt="Charm dentista">
-        </div>
-        <div class="more--info">
-            <h3>Charm dentista</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 12vo producto de la fila -->
-
-    <div class="preview active" data-target="prod-13"> <!--13vo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Profesiones/psicologia.jpg" alt="Charm Psicología">
-        </div>
-        <div class="more--info">
-            <h3>Charm Psicología</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 13vo producto de la fila -->
-
-    <div class="preview active" data-target="prod-14"> <!--14vo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Profesiones/medicina simbolo.jpg" alt="Charm Medicina">
-        </div>
-        <div class="more--info">
-            <h3>Charm Medicina</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 14vo producto de la fila -->
-
-    <div class="preview active" data-target="prod-15"> <!--15vo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Profesiones/educacion 2.jpg" alt="Charm Educación">
-        </div>
-        <div class="more--info">
-            <h3>Charm Educación</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 15vo producto de la fila -->
-
-    <div class="preview active" data-target="prod-16"> <!--16vo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Profesiones/estilista.jpg" alt="Charm Estilista">
-        </div>
-        <div class="more--info">
-            <h3>Charm Estilista</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 16vo producto de la fila -->
-
-    <div class="preview active" data-target="prod-17"> <!--17vo producto de la fila -->
-        <i class="fa-solid fa-xmark"></i>
-        <div id="imagen--preview">
-            <img id="img-preview" src="../../assets/lista-productos-assets/Profesiones/modas.jpg" alt="Charm Modas">
-        </div>
-        <div class="more--info">
-            <h3>Charm Modas</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sunt iusto similique eius quidem animi temporibus
-                ex tenetur eligendi! Doloremque ratione consequuntur maiores nihil quidem minus voluptatem quas explicabo
-                provident!</p>
-            <div class="price">$350.00</div>
-            <div class="buttons">
-                <a href="#" class="buy">Comprar</a>
-                <a href="#" class="cart">Agregar al carrito</a>
-            </div>
-        </div>
-    </div> <!--FIN 17vo producto de la fila -->
+    </div>
 
 
+    <!-- Overlay -->
+    <div class="products-preview">
 
+    </div>
 
+    <!-- Modal -->
+    <div class="preview">
 
-
-
-
-
-
-
-
-
-
-
-
-</div> <!--Fin de las previews-->
-
-
-<h1>Listado de Productos</h1>
-<div id="productosContainer">
-    
-</div>
-
-
-
-
-
-
-
-
-
-
-
+    </div>
 
 
 
@@ -808,8 +316,6 @@
             </div>
         </div>
     </footer> <!--Fin del footer-->
-
-
 
 
 </body>
