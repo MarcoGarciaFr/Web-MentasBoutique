@@ -1,0 +1,558 @@
+/**Reiniciando espacios de mi página*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+/**Fuentes para usar en la página*/
+:root {
+    --font-onest: 'Onest', sans-serif;
+    --font-yeseva: 'Yeseva One', serif;
+    --font-borel: 'Borel', cursive;
+    --color1: #f5e7e9;
+    --color2: #f4afcf;
+    --color3: #a8dae3;
+    --color4: #cab8f2;
+    --color5: #54248f;
+    --big-title-size: clamp(20px, 2.5vw, 60px);
+    /*Con la función clamp se establece un tamaño de fuente que crezca con el tamaño del viewport, pero no se reduzca debajo de un mínimo y no se incremente por encima de un máximo.*/
+    --title-font-size: clamp(14px, 1.8vw, 40px);
+    --text-font-size: clamp(12px, 1.2vw, 30px);
+    --text-font-size-small: clamp(8px, 1.2vw, 20px);
+    --title-font-size-mobile: clamp(20px, 8vw, 35px);
+    --text-popup: clamp(8px, 1.8vw, 20px);
+    --title-popup: clamp(8px, 4vw, 20px);
+}
+
+.navbar{
+    display:none;
+}
+
+.contenedor {
+    /*Margen de la barra de navegación*/
+    margin-top: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/***************************************************************/
+
+
+@media only screen and (max-width:5000px){
+
+.cards {
+    /*Este contenedor es de las dos tarjetas de categorías: profesiones y mascotas*/
+    color: black; /*ESTO SE AÑADIÓ*/
+    display: flex;
+    flex-direction: row;
+    /*Para que estén una a lado de la otra*/
+    justify-content: space-around;
+    align-items: center;
+    /*Para que las tarjetas se encuentren en el centro del viewport*/    
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.category-card { /*Engloba a una tarjeta, ya sea de profesiones, mascotas, handmade u otros*/
+    /*Este contenedor tendrá un texto representativo de la categoría, una imagen, el nombre de la categoría y un texto más detallado de dicha categoría*/
+    display: grid;
+    grid-template-rows: 62% auto; /* 62500% for the first row, remaining for the second row */
+    gap: 0px; /* Adjust the gap between rows if needed */
+    background-color: var(--color2); /*Es el color de fondo de la tarjeta de la categoría*/
+    border-radius: 15px;
+    width: 44vw;
+    height: 32.12vw;
+    font-family: var(--font-onest); /*SE MODIFICÓ*/
+}
+
+.category-card__text-image-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+#img-profesiones, #img-handmade, #img-otros{
+    margin-top: 15px;
+}
+
+#img-mascotas, #img-handmade{
+    margin-bottom: 20px;
+}
+
+.category-card__text-big{
+    margin: 2vw;
+    line-height: 1.3;
+    font-size: clamp(20px, 2.5vw, 100px); /*SE MODIFICÓ*/
+    font-weight: 800;  /*SE MODIFICÓ*/
+}
+    
+.category-card__title{
+    font-size: var(--title-font-size);
+}
+    
+.category-card__image {
+    margin: auto;
+    width: 90%;
+    border-radius: 2.3vw;
+}
+    
+.category-card__text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-family: var(--font-onest);
+}
+    
+    
+.texto--p {
+    margin: 0 1.1vw;
+    font-size: var(--text-font-size);
+    text-align: justify;
+}
+    
+}
+    
+    /*Responsividad de cards*/
+    
+@media (max-width: 768px) {
+
+.category-card { 
+    display: grid;
+    grid-template-rows: 62% auto; 
+    gap: 0px; 
+    background-color: var(--color2);
+    border-radius: 1.25vw;
+    width: 44vw;
+    height: 36.12vw;
+}
+
+.category-card__text-big{
+    margin: 1.5vw;
+    line-height: 1.3;
+    font-family: var(--font-onest);
+    font-size: clamp(12px, 2.7vw, 60px); /*utilice un clamp porque las variables de root no encajan con el tamaña necesario para este texto*/
+}
+
+.category-card__title{
+    font-family: var(--font-onest);
+    font-size: var(--text-font-size);
+}
+        
+.texto--p {
+    margin: 0 1.1vw;
+    font-size: var(--text-font-size-small);
+    text-align: justify;
+}
+}/*cierre de media query*/
+
+
+@media (max-width: 480px) {
+    
+#titulo--categorias {
+    font-size: var(--title-font-size-mobile);
+}
+    
+#texto--introduccion {
+    font-size: var(--title-font-size);
+}
+    
+.cards {
+/*Este contenedor es de las dos tarjetas de categorías: profesiones y mascotas*/
+    display: flex;
+    flex-direction: column;
+    gap: 7.5vw;
+    /*Para que estén una a lado de la otra*/
+    align-items: center;
+    justify-content: space-around; /*Para que las tarjetas se encuentren en el centro del viewport*/
+    /*El espacio entre las dos tarjetas variará en un rango de 10 a 180px dependiendo del viewport*/
+}
+
+.category-card { 
+    display: grid;
+    grid-template-rows: 62% auto; 
+    gap: 0px; 
+    background-color: var(--color2);
+    border-radius: 15px;
+    width: 80.41vw;
+    height: 55.41vw;
+}
+
+.category-card__text-big{
+    font-size: 4.1vw;
+    margin-left: 5.3vw;
+    margin-top:8.09vw;
+    margin-right: 0;
+    margin-bottom: 0;
+    align-self: start;
+    justify-self: left;
+}
+
+.category-card__text-image-container{
+    display: grid;
+    grid-template-columns: 43.78% auto;
+    align-items: center;
+}
+
+.category-card__image{
+    width: 37.91vw;
+    height: 29.16vw;
+}
+
+.category-card__title{
+    font-size: 3.75vw;
+}
+
+.texto--p{
+    font-size: 2.5vw;
+    margin: 0 3.6vw;
+}
+
+}
+
+/****************************Secciones donde aparecerán los productos************************************/
+
+.titulos--categorias {
+    /*Banner azul que da inicio a la sección de charms, este se repite para todas*/
+    background-color: var(--color3);
+    border-radius: 10px;
+    text-align: center;
+    font-family: var(--font-borel);
+    color: black;
+    font-size: 30px;
+    padding-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.titulos--subcategorias {
+    /*Banner rosa de subcategorías, este se repite para todas*/
+    background-color: var(--color2);
+    margin-top: 20px;
+    border-radius: 10px;
+    font-family: var(--font-borel);
+    color: black;
+    font-size: 30px;
+    padding-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.titulos--subcategorias h3{
+    text-align:left;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+/****************************************ESTILOS PARA LOS PRODUCTOS*******************************/
+
+.padding {
+    /*Esta clase es para colocar espacio a los lados del contenedor de la fila*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: clamp(50px, 20%, 100px);
+    padding-right: clamp(50px, 20%, 100px);
+    padding-top: clamp(50px, 1%, 100px);
+}
+
+.product {
+    /*Es toda la card de producto: imagen, nombre del producto, precio y botón*/
+    border-radius: 6px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin: 10px 30px 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: clamp(400px, 7vw, 800px);
+    color: black;
+
+}
+
+
+
+.imagen--container--producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(100px, 70%, 300px);
+    /*EDITAR LAS IMGS SERÁN CUADRADOS PARA QUE FUNCIONE*/
+}
+
+#imagen--producto {
+    width: 100%;
+}
+
+#nombre--producto {
+    /*Es el contenedor del texto donde aparecerá el nombre del producto que dejó el review*/
+    margin: 10px 20px 10px 10px;
+    align-self: center;
+    font-size: large;
+    text-align: center;
+
+}
+
+.btn--comprar {
+    background-color: var(--color3);
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: var(--font-onest);
+    /*debido a que en la clase eslogan se le ponía Borel, aquí se le coloca nuevamente el tipo de letra Onest al btn*/
+    height: 40px;
+    width: 150px;
+    font-size: large;
+    border: 0;
+    /*de esta manera el botón no tendrá borde*/
+}
+
+.btn--comprar:hover {
+    /*este estilo le da un hover al botón*/
+    background-color: var(--color4);
+}
+
+
+/*********************************ESTILOS PARA EL POPUP***********************************************/
+
+@media only screen and (max-width:5000px){
+.products-preview {
+    /*Este contenedor hará que la preview tenga un fondo oscuro*/
+    position: fixed;
+    /*Toda la sección de preview estará en posición fija en la pantalla del navegador*/
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: none;
+    /*Por defecto estará desactivada esta sección, la activación se hace por manipulación del DOM*/
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: black;
+    /*Es el fondo de la review, es con el fin de centrar la atención del usuario en el contenido de la review*/
+}
+
+
+.preview {
+    display: none;
+    width: 700px;
+    gap: 0;
+    text-align: center;
+    background: white;
+    top: 20%;
+    left:20%;
+    position: fixed;
+    margin: 20px;
+    height: 400px;
+    border-radius: 15px;
+}
+
+.product--name{
+    text-align: center;
+}
+
+.price{
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+}
+
+
+/*Estos botones agregan al carrito y a la compra directa del producto*/
+.preview--buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: clamp(13px, 20%, 100px);
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-onest);
+}
+
+
+.cart {
+    background-color: #a8dae3;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    border: none;
+}
+
+
+.buy {
+    background-color: #a8dae3;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    border: none;
+}
+
+
+.cart:hover {
+    background-color: #cab8f2;
+    border-radius: 10px;
+}
+
+.buy:hover {
+    background-color: #cab8f2;
+    border-radius: 10px;
+}
+
+#imagen--preview {
+    margin-left: 10px;
+    margin-right: 0px;
+    width: clamp(200px, 100%, 800px);
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    max-width: 250px;
+}
+
+#img-preview {
+    width: clamp(100px, 100%, 800px);
+}
+
+.more--info{
+    position: absolute;
+    top: 15%;
+    max-width: 50%;
+    left: 45%;
+    height: clamp(100px, 70%, 800px);
+    text-align: justify;
+}
+}
+
+@media (max-width: 768px) {
+    .products-preview {
+        /*Este contenedor hará que la preview tenga un fondo oscuro*/
+        position: fixed;
+        /*Toda la sección de preview estará en posición fija en la pantalla del navegador*/
+        top: 0;
+        left: 0;
+        min-height: 150vh;
+        width: 100%;
+        display: none;
+        /*Por defecto estará desactivada esta sección, la activación se hace por manipulación del DOM*/
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: black;
+        /*Es el fondo de la review, es con el fin de centrar la atención del usuario en el contenido de la review*/
+    }
+    
+    
+    .preview {
+        display: none;
+        width: clamp(250px, 80%, 600px);
+        gap: 0;
+        text-align: center;
+        background: white;
+        top: clamp(5%, 10%, 25%);
+        left:5%;
+        position: fixed;
+        margin: 10px;
+        height: 250px;
+        border-radius: 15px;
+    }
+    
+    .product--name{
+        text-align: center;
+        font-size: var(--title-popup);
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    
+    .product--description, .product--material, .product--type{
+        font-size: var(--text-popup);
+        margin: 0;
+    }
+
+    .price{
+        text-align: center;
+        font-size: var(--title-popup);
+        font-weight: 300;
+        margin: 0;
+    }
+    
+    
+    /*Estos botones agregan al carrito y a la compra directa del producto*/
+    .preview--buttons {
+        display: flex;
+        gap: 20px;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        font-size: clamp(6px, 20%, 50px);
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-onest);
+    }
+    
+    
+    .cart {
+        background-color: #a8dae3;
+        border-radius: 10px;
+        width: 50px;
+        height: 25px;
+        border: none;
+    }
+    
+    
+    .buy {
+        background-color: #a8dae3;
+        border-radius: 10px;
+        width: 50px;
+        height: 25px;
+        border: none;
+    }
+    
+    
+    .cart:hover {
+        background-color: #cab8f2;
+        border-radius: 10px;
+    }
+    
+    .buy:hover {
+        background-color: #cab8f2;
+        border-radius: 10px;
+    }
+    
+    #imagen--preview {
+        margin-left: 10px;
+        margin-right: 0px;
+        width: clamp(100px, 60%, 400px);
+        position: absolute;
+        top: clamp(5%, 25%, 40%);
+        left: clamp(2%, 10%, 25%);
+        max-width: 100px;
+    }
+    
+    #img-preview {
+        width: clamp(100px, 100%, 400px);
+    }
+    
+    .more--info{
+        position: absolute;
+        top: 15%;
+        max-width: 50%;
+        left: 45%;
+        height: clamp(100px, 70%, 800px);
+        text-align: justify;
+    }
+
+}
+
+
