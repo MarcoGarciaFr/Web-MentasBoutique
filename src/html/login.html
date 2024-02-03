@@ -28,16 +28,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100..900&family=Yeseva+One&display=swap"
         rel="stylesheet">
-
-    
-
 </head>
 <body>
-
-         <!--NAVBAR SECCION-->
-
+  <!--NAVBAR SECCION-->
     <!-- Navbar -->
-
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
           <!-- Icono de Menta's Boutique -->
@@ -45,13 +39,11 @@
             <a href="../../home.html">
             <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Icono Menta's Boutique" style="width: 100px; height: 40px;">
           </a>
-          </span>
-          
+          </span>   
           <!-- Botón del menú responsivo para dispositivos pequeños -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-    
           <!-- Elementos del menú -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
@@ -75,7 +67,6 @@
               </li>
             </ul>
           </div>
-    
           <!-- Iconos a la derecha -->
           <div class="navbar-nav">
     
@@ -103,38 +94,47 @@
           </div>
         </div>
       </nav>
-
-
-
     <!--Contenedor general de la página de contactos-->
     <div class="contenedor">
 
         <!--SubContenedor de la sección de header(y contendrá la navBar)-->
         <div class="header">
             <nav>
-
-            </nav>
-    <div class="form-wrapper">
+  </nav>
+    <!-- Fromulario de login -->
+  <div class="form-wrapper">
         <div class="form-side">
             <form class="my-form">
                 <div class="form-welcome-row">
+                  <!-- Titulo -->
                     <h2>Inicia sesión</h2>
+                    <!-- Casillas para ingresar email & password -->
                     <div class="text-field">
                         <input id="email" type="email" name="email" placeholder="Email*">
                     </div>
+                    <div class="invalid-feedback" style="color: #54248f;">
+                      Este campo es requerido
+                  </div>
                     <div class="text-field">
                         <input id="password" type="password" name="password" placeholder="Contraseña*">
                     </div>
+                    <div class="invalid-feedback" style="color: #54248f;">
+                      Este campo es requerido
+                  </div>
                     <div class="text-field-forgot-password">
+                      <!-- Link para para recuperar contraseña -->
                         <a href="#">¿Olvidaste tu contraseña?</a>
                     </div>
-                    <button type="submit" class="my-form__button">Iniciar Sesión</button>
+                    <!-- Boton de inicio sesión -->
+                    <button type="submit" class="my-form__button">Iniciar sesión </button>
                     <div class="my-form__actions">
+                      <!-- Link para crear nueva cuenta -->
                         <p id="not-member">¿Aún no eres miembro? <a href="./register.html">Regístrate</a></p>
                     </div>
                 </div>                    
             </form>
-        </div>
+          </div>
+        <!-- Imagen de la derecha -->
         <div class="info-side">
             <img src="../../assets/home-assets/charm.webp" alt="mentas-btq" class="mockup">
         </div>
