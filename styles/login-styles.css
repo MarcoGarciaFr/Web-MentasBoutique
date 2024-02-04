@@ -33,7 +33,7 @@ h1{
 }
 body {
     font-size: 16px;
-    background-color: var(--background-primary);
+    background-color: var(--background-secondary);
     font-family: var(--font-primary);
 }
 
@@ -204,7 +204,12 @@ h2 {
 
 .my-form__actions p#not-member{
     font-family: var(--font-primary);
-    font-size: 18px;   
+    font-size: 17px;   
+}
+
+.my-form__actions p#already-account{
+    font-family: var(--font-primary);
+    font-size: 17px;   
 }
 
 .my-form__actions > a {
@@ -256,10 +261,12 @@ h2 {
         height: 170px;
     }
    .text-field-forgot-password {
-        font-size: 1.5em;
+        font-size: 1em;
         color: var(--primary-dark);
         border: none;
         background-color: var(--shadow-color);
+        padding: 5px;
+        justify-content: center;
     }
     
     .socials-row > a {
@@ -280,28 +287,11 @@ h2 {
         color: var(--primary-light);
     }
     
-    .divider-line {
-        height: 2px;
-        background-color: var(--primary-light);
-    }
-
     .text-field {
         margin-top: 10px;
+        
     }
     
-    .text-field input {
-        color: var(--background-secondary);
-        font-size: 1.7em;
-        height: 75px;
-        border: none;
-        background-color: var(--shadow-color);
-        outline: none;
-        border-radius: 12px;
-        margin-top: 3px;
-        padding-left: 20px;
-    }
-
-
     .text-field label {
         color: var(--primary-light);
         font-size: 1.9em;
@@ -309,12 +299,14 @@ h2 {
     }
 
     .my-form__button {
-        height: 75px;
+        height:30%;
+        width: 90%;
         box-shadow: none;
-        font-size: 2em;
-        padding: 10px;
+        font-size: 1em;
+        padding: 5px;
         background-color: var(--button-responsive);
         border-radius: 12px;
+        margin-left: 15px;
     }
 
     .my-form__actions {
@@ -332,6 +324,11 @@ h2 {
 
     .my-form__actions p#not-member{
         font-family: var(--font-primary);
-        font-size: 21px;   
+        font-size: 15px;   
+    }
+
+    .my-form__actions p#already-account{
+        font-family: var(--font-primary);
+        font-size: 15px;   
     }
 }
