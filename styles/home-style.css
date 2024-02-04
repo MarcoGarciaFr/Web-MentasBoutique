@@ -54,7 +54,7 @@ body {
 .btn--mentas {
   background-color: var(--color3);
   
-  border-radius: 10px;
+  border-radius: 1vw;
   font-family: var(--font-onest);
   /*debido a que en la clase eslogan se le ponía Borel, aquí se le coloca nuevamente el tipo de letra Onest al btn*/
 
@@ -328,7 +328,7 @@ body {
   flex-wrap: nowrap;
   align-items: center;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .carousel__title{
@@ -406,9 +406,9 @@ body {
 
 .carousel__btn-next,
 .carousel__btn-next:hover {
-  width: 20px;
-  height: 30px;
-  margin-right: 20px;
+  width: 2vw;
+  height: 5vw;
+  margin-right: 1.8vw;
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -417,15 +417,15 @@ body {
 
 .arrow-next {
   transform: rotate(90deg);
-  width: 20px;
-  height: 20px;
+  width: max(20px,1.5vw);
+  height: max(20px,1.5vw);
 }
 
 .carousel__btn-prev,
 .carousel__btn-prev:hover {
-  width: 20px;
-  height: 30px;
-  margin-left: 20px;
+  width: 2vw;
+  height: 5vw;
+  margin-left: 1.8vw;
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -434,8 +434,8 @@ body {
 
 .arrow-prev {
   transform: rotate(-90deg);
-  width: 20px;
-  height: 20px;
+  width: max(20px,1.5vw);
+  height: max(20px,1.5vw);
 }
 
 .active {
@@ -493,6 +493,29 @@ dialog::backdrop {
 
   }
 }
+@keyframes slideToRigth {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInR {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+
+  }}
 
 .animated-in {
   animation: slideIn 2s ease-in;
@@ -504,39 +527,51 @@ dialog::backdrop {
 
 }
 
+.animated-in-p {
+  animation: slideInR 2s ease-in;
+}
+
+.animated-out-p {
+  animation: slideToRigth 2s ease-out;
+}
+
+
+
 
 @media only screen and (max-width: 768px) {
 
   .carousel__btn-next,
   .carousel__btn-next:hover {
-    width: 10px;
-    height: 10px;
-    margin-right: 5px;
+    width: 2vw;
+    height: 5vw;
+    margin-right: 2vw;
     border: 0;
+    background-color: transparent;
     cursor: pointer;
     padding: 0px;
   }
-
+  
   .arrow-next {
     transform: rotate(90deg);
-    width: 10px;
-    height: 10px;
+    width: max(20px,1.5vw);
+    height: max(20px,1.5vw);
   }
-
+  
   .carousel__btn-prev,
   .carousel__btn-prev:hover {
-    width: 10px;
-    height: 10px;
-    margin-left: 5px;
+    width: 2vw;
+    height: 5vw;
+    margin-left: 1vw;
     border: 0;
+    background-color: transparent;
     cursor: pointer;
     padding: 0px;
   }
-
+  
   .arrow-prev {
     transform: rotate(-90deg);
-    width: 10px;
-    height: 10px;
+    width: max(20px,1.5vw);
+    height: max(20px,1.5vw);
   }
 
   .img-card {
@@ -616,7 +651,7 @@ dialog::backdrop {
     margin: 0.2vw 0px;
     max-width: clamp(75px,25vw,83px) ;
     text-align: center;
-    font-size: var(--title-font-size);
+    font-size: max(10px, 2.91vw);
     line-height: 1.2;
   }/*MODIFICADO*/
 
@@ -628,7 +663,7 @@ dialog::backdrop {
     font-family: var(--font-onest);
     border: 0px;
     margin: 0.2vw 0px;
-    font-size: var(--title-font-size);
+    font-size: max(10px, 2.91vw);
   }/*MODIFICADO*/
 
   .btn-buy {
@@ -669,8 +704,8 @@ dialog::backdrop {
   /*Texto descriptivo de la sección*/
   font-family: var(--font-onest);
   font-size: var(--title-font-size);
-  margin-top: 0;
-  text-indent: 4vw;
+  margin: 0;
+  
 }
 
 .container--tarjetas--cuarta {
@@ -894,6 +929,19 @@ dialog::backdrop {
   justify-self: center;
   
 }
+dialog:-internal-dialog-in-top-layer{
+  background-color: var(--color1);
+}
+
+.care-info-card, .packing-info-card{
+  font-family: var(--font-onest);
+}
+.care-info-card__btn-close, .care-info-card__btn-close:focus-visible{
+  outline: 0;
+  border: 0;
+  height: 4.5vw;
+  width: 13.92vw;
+}
 
 @media only screen and (max-width: 768px){
   .info-banner__container {
@@ -981,6 +1029,11 @@ dialog::backdrop {
     justify-self: center;
     
   }
+  .care-info-card__btn-close{
+    border: 0;
+    height: max(25px, 4.5vw);
+    width: max(50px, 13.92vw);
+  }
 }
 
 /***************************************************************/
@@ -1034,9 +1087,9 @@ margin-top: 2vw;
 
 #nombre--review--quinta {
   /*Es el contenedor del texto donde aparecerá el nombre de la persona que dejó el review*/
-  margin: 0.78vw 1.56vw  0.78vw  0.78vw;
+  margin: 0.78vw;
   font-size: var(--title-font-size);
-  align-self: flex-start;
+  align-self: center;
 }
 
 
@@ -1046,10 +1099,11 @@ margin-top: 2vw;
   grid-template-columns: 15% 15% 15% 15% 15%;
   align-content: center;
   justify-content: center;
-  gap: 0.5vw;
-  margin: 0px 0.8vw;
+  justify-items: center;
+  /* gap: 0.5vw; */
+  
   width: 100%;
-  /*tomará el ancho del contenedor, siendo el mínimo 10px y el máximo 280px*/
+  
 }
 
 .container--stars {
@@ -1071,10 +1125,12 @@ margin-top: 2vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 5vw;
     flex-wrap: wrap;
-    margin: 3.125vw;
-    height: 44vw;
+    width: 100%;
+    height: 62vw;
     overflow: hidden;
+    margin: 0%;
   }
   
   .imagen--container--reviews {
@@ -1098,13 +1154,13 @@ margin-top: 2vw;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 400ms ease;
-    margin: 0px 5vw 8vw 5vw;
+    /* margin: 0px 5vw 8vw 5vw; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 26.79vw;
-    height: 39.06vw;
+    width: 40.185vw;
+    height: 58.59vw;
   }
   
   .reviews--quinta:hover {
@@ -1114,16 +1170,16 @@ margin-top: 2vw;
   
   #nombre--review--quinta {
     /*Es el contenedor del texto donde aparecerá el nombre de la persona que dejó el review*/
-    margin: 0.78vw 1.56vw  0.78vw  0.78vw;
-    font-size: var(--title-font-size);
-    align-self: flex-start;
+    margin: 0.78vw;
+    font-size: max(10px, 3vw);
+    align-self: center;
   }
   
   
   .stars--quinta {
     /*contenedor de todas las estrellas*/
     display: grid;
-    grid-template-columns: 15% 15% 15% 15% 15%;
+    grid-template-columns: 7% 7% 7% 7% 7%;
     align-content: center;
     justify-content: center;
     gap: 0.5vw;
@@ -1146,6 +1202,7 @@ margin-top: 2vw;
 
 
 /*PREVIEWS DE RESEÑAS*/
+@media only screen and (max-width:5000px){
 .products-preview {
   /*Este contenedor hará que la preview tenga un fondo oscuro*/
   position: fixed;
@@ -1162,75 +1219,91 @@ margin-top: 2vw;
   /*Es el fondo de la review, es con el fin de centrar la atención del usuario en el contenido de la review*/
 }
 
-.products-preview .preview {
+.reseñas__title{
+  text-indent: 4vw;
+  margin-top: 2vw;
+}
+.preview {
   /*Este contenedor es de las cuatro tarjetas de la review*/
   display: none;
-  /*Por defecto no se mostrará visible */
-  padding: 20px;
   text-align: center;
   background: var(--color1);
   position: relative;
-  margin: 20px;
-  width: 900px;
-  border-radius: 15px;
+  margin: 1.56vw;
+  width: 63.5vw;
+  height: 45.6vw;
+  border-radius: 1.2vw;
+  overflow: hidden;
 }
 
-.products-preview .preview.active {
+.preview.active {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 55% auto;
   /*La primera columna ocupará el ancho necesario para la imagen, y la segunda ocupará el resto del espacio disponible */
-  width: 900px;
   gap: 0;
 }
 
 
 
-.products-preview .preview .fa-xmark {
+.fa-xmark {
   position: absolute;
-  top: 1rem;
-  right: 1.5rem;
+  top: 1vw;
+  right: 1.5vw;
   cursor: pointer;
   color: var(--color5);
-  font-size: 30px;
+  font-size: 2.3vw;
   /*Asigna el tamaño al ícono*/
 }
 
+.stars{
+  display: flex;
+  justify-content: left;
 
+}
 .products-preview .preview .stars i {
-  color: #FFE33D;
-  font-size: 20px;
+  color: var(--color5);
+  font-size: 1.6vw;
 }
 
 
 .products-preview .preview p {
-  font-size: 10px;
-  text-align: justify;
+  font-size: max(8px, 1.2vw);
+  text-align: left;
+  margin: 0;
 }
 
-.products-preview .preview .buttons {
+.buttons {
+  border-top: 1px var(--color5) solid;
   display: flex;
-  gap: 1.5rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
-  justify-content: center;
+  justify-content: left;
+  align-items: center;
+  
+}
+.review-card__product_name{
+  text-align: left;
+  
+  
 }
 
 /*Estos botones son anclas que llevan al carrito y a la compra del producto*/
 .products-preview .preview .buttons a {
   display: flex;
-  padding: 10px;
+  padding: 0.8vw;
   text-decoration: none;
   color: black;
-  font-size: 15px;
-  width: 100px;
+  font-size: 1.2vw;
+  width: 100%;
+  height: 30%;
   align-items: center;
   justify-content: center;
 }
 
 .products-preview .preview .buttons a.cart {
   background-color: #a8dae3;
-  border-radius: 10px;
+  border-radius: 0.8vw;
   width: 10vw;
+  height: 3vw;
 }
 
 .products-preview .preview .buttons a.buy {
@@ -1252,81 +1325,235 @@ margin-top: 2vw;
 
 #imagen--preview {
   display: flex;
-  margin-left: 10px;
-  margin-right: 0px;
-  width: clamp(100px, 60%, 800px);
   align-items: center;
   justify-content: center;
-  grid-column: span 2;
+  overflow: hidden;
 }
 
 #img-preview {
-  width: clamp(100px, 100%, 800px);
+  width: 100%;
+  height: 100%;
 }
 
 .prueba {
-  grid-column: span 1;
+  /* grid-column: 2; */
   /* Coloca estos elementos en la segunda columna */
-  margin-left: 0;
+  margin: 1vw;
   /* Elimina márgenes predeterminados en estos elementos */
-  width: clamp(100px, 100%, 800px);
-  display: flex;
+  
+  display: grid;
+  grid-template-rows: 7% 6% 65% auto;
   flex-direction: column;
-  align-items: center;
+  align-items: top;
   justify-content: center;
+
 }
 
+.review-card__client-name{
+  font-size: max(10px, 2.2vw);
+  line-height: 1.2;
+  margin:0;
+  padding: 0;
+  justify-self: left;
+  height: 2.3vw;
+}
+}
 
+@media only screen and (max-width:480px){
+  .products-preview {
+    /*Este contenedor hará que la preview tenga un fondo oscuro*/
+    position: fixed;
+    /*Toda la sección de preview estará en posición fija en la pantalla del navegador*/
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: none;
+    /*Por defecto estará desactivada esta sección, la activación se hace por manipulación del DOM*/
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    /*Es el fondo de la review, es con el fin de centrar la atención del usuario en el contenido de la review*/
+  }
+  
+  .preview {
+    /*Este contenedor es de las cuatro tarjetas de la review*/
+    display: none;
+    
+    background: var(--color1);
+    position: relative;
+   
+    width: 95%;
+    height: 90vh;
+    border-radius: 1.2vw;
+    overflow:hidden;
+  }
+  
+  .preview.active {
+    display: grid;
+    grid-template-rows: 65% auto;
+    grid-template-columns: none;
+    /*La primera columna ocupará el ancho necesario para la imagen, y la segunda ocupará el resto del espacio disponible */
+    gap: 0;
+  }
+  
+  .reseñas__title{
+    font-size: var(--title-font-size-mobile);
+  }
+  
+  
+  .fa-xmark {
+    position: absolute;
+    top: 1vw;
+    right: 1.5vw;
+    cursor: pointer;
+    color: var(--color5);
+    font-size: 5vw;
+    /*Asigna el tamaño al ícono*/
+  }
+  
+  .stars{
+    display: flex;
+    justify-content: left;
+  
+  }
+  .products-preview .preview .stars i {
+    color: var(--color5);
+    font-size: 2.5vw;
+  }
+  
+  
+  .products-preview .preview p {
+    font-size: max(10px, 3.2vw);
+    text-align: left;
+    margin: 0;
+  }
+  
+  .buttons {
+    border-top: 1px var(--color5) solid;
+    display: block;
+  }
+ 
+  
+  /*Estos botones son anclas que llevan al carrito y a la compra del producto*/
+  .products-preview .preview .buttons a {
+    display: flex;
+    padding: 0.8vw;
+    text-decoration: none;
+    color: black;
+    font-size: 2.4vw;
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .products-preview .preview .buttons a.cart {
+    background-color: #a8dae3;
+    border-radius: 0.8vw;
+    width: 20vw;
+    height: 6vw;
+  }
+  
+  .products-preview .preview .buttons a.buy {
+    background-color: #a8dae3;
+    border-radius: 10px;
+    width: 10vw;
+  }
+  
+  
+  .products-preview .preview .buttons a.cart:hover {
+    background-color: #cab8f2;
+    border-radius: 15px;
+  }
+  
+  .products-preview .preview .buttons a.buy:hover {
+    background-color: #cab8f2;
+    border-radius: 15px;
+  }
+  
+  #imagen--preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  #img-preview {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .prueba {
+    box-sizing: border-box;
+    /* grid-column: 2; */
+    /* Coloca estos elementos en la segunda columna */
+    margin: 1vw;
+    /* Elimina márgenes predeterminados en estos elementos */
+    padding: 2vw 2vw 0 2vw;
+    display: grid;
+    grid-template-rows: 7% 6% 55% auto;
+    flex-direction: column;
+    align-items: top;
+    justify-content: center;
+  
+  }
+  
+  .review-card__client-name{
+    font-size: max(10px, 3.2vw);
+    line-height: 1.2;
+    margin:0;
+    padding: 0;
+    justify-self: left;
+    height: 2.3vw;
+  }
+}
 
 /***************************************************************/
 /*SEXTA SECCIÓN*/
 
 .seccion--seis {
-  background: linear-gradient(90deg, var(--color2), var(--color4), var(--color4));
+  background: linear-gradient(90deg, var(--color2), var(--color1), var(--color1));
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 2vw;
+  height: 16.6vw;
+  width: 100%;
 }
 
 #centro {
   background-color: #f4afcf;
   width: 60%;
-  max-height: 70%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap:1vw;
   border-radius: 5px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .texto--seis {
-  margin-bottom: 10px;
-  font-size: clamp(30px, 35px, 45px);
+  font-size: 2.73vw;
+  margin: 0;
 }
 
 .btn--mentas-descubrelo-small {
   background-color: #a8dae3;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 1vw;
   font-family: 'Onest', sans-serif;
   /*debido a que en la clase eslogan se le ponía Borel, aquí se le coloca nuevamente el tipo de letra Onest al btn*/
-  height: 60px;
-  width: 200px;
-  font-size: clamp(15px, 20px, 25px);
-  margin-top: 10px;
-  margin-bottom: 30px;
+  height: 4.68vw;
+  width: 15.62vw;
+  font-size: 1.56vw;
+  margin: 0;
   border: 0;
 
 }
 
-#btn--dos:hover {
-  /*este estilo le da un hover al botón*/
-  background-color: #cab8f2;
-}
 
 
 /*Responsividad de  SEXTA SECCIÓN*/
@@ -1340,44 +1567,39 @@ margin-top: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 44.58vw;
   }
 
   #centro {
     background-color: #f4afcf;
-    width: 60%;
-    max-height: 70%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    gap: 6.8vw;
+
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
   }
 
   .texto--seis {
-    margin-bottom: 10px;
-    font-size: clamp(10px, 15px, 25px);
+    font-size: 9.37vw;
+    color: var(--color5);
   }
 
-  #btn--dos {
+  .btn--mentas-descubrelo-small {
     background-color: #a8dae3;
     cursor: pointer;
-    border-radius: 10px;
-    font-family: var(--font-onest);
+    border-radius: 2.5vw;
+    font-family: 'Onest', sans-serif;
     /*debido a que en la clase eslogan se le ponía Borel, aquí se le coloca nuevamente el tipo de letra Onest al btn*/
-    height: 20px;
-    width: 70px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    width: 40vw;
+    height:  10.83vw;
+    font-size: 3.56vw;
+    margin: 0;
     border: 0;
-    font-size: clamp(10px, 10px, 25px);
-  }
-
-  #btn--dos:hover {
-    /*este estilo le da un hover al botón*/
-    background-color: #cab8f2;
+  
   }
 }
 
