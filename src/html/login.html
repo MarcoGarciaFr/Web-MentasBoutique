@@ -1,184 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login up</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login up</title>
 
-    <!-- Icon de la página -->
-    <link rel="icon" href="../../assets/navbarf-assets/Mentas.png" type="image/png">
+  <!-- Icon de la página -->
+  <link rel="icon" href="../../assets/navbarf-assets/Mentas.png" type="image/png">
 
-    <!--Bootstrap-->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../../styles/login-styles.css">
-    <link href="../../styles/navbarf-styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles/login-styles.css">
+  <link href="../../styles/navbarf-styles.css" rel="stylesheet">
 
 
-    <!--Fuentes de Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100..900&family=Yeseva+One&display=swap"
-        rel="stylesheet">
+  <!--Fuentes de Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100..900&family=Yeseva+One&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <!--NAVBAR SECCION-->
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-          <!-- Icono de Menta's Boutique -->
-          <span class="navbar-brand">
-            <a href="../../home.html">
-            <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Icono Menta's Boutique" style="width: 100px; height: 40px;">
-          </a>
-          </span>   
-          <!-- Botón del menú responsivo para dispositivos pequeños -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Elementos del menú -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="charmsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Charms</a>
-                <div class="dropdown-menu" aria-labelledby="charmsDropdown">
-                  <a class="dropdown-item" href="about:blank" target="_blank">Handmade</a>
-                  <a class="dropdown-item" href="about:blank" target="_blank">Mascotas</a>
-                  <a class="dropdown-item" href="about:blank" target="_blank">Profesiones</a>
-                  <a class="dropdown-item" href="about:blank" target="_blank">Otros</a>
-                </div>
-              </li>
-              <li>
-                <a class="nav-link" href="about:blank" id="pulserasDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Pulseras</a>
-              </li>
-              <li>
-                <a class="nav-link" href="about:blank" id="aretesDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Aretes</a>
-              </li>
-              <li>
-                <a class="nav-link" href="about:blank" id="collaresDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Collares</a>
-              </li>
-            </ul>
-          </div>
-          <!-- Iconos a la derecha -->
-          <div class="navbar-nav">
-    
-            <!-- Barra de búsqueda -->
-            <form class="d-flex mx-auto">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Buscar</button>
-            </form>
-    
-            <a class="nav-item nav-link search-icon" href="#">
-              <img src="../../assets/navbarf-assets/Search.png" alt="Busqueda" style="width: 20px; height: 20px;">
-            </a>
-            <a class="nav-item nav-link" href="./src/html/login.html" target="_blank">
-              <img src="../../assets/navbarf-assets/User.png" alt="Usuario" style="width: 20px; height: 20px;">
-            </a>
-            <a class="nav-item nav-link" href="about:blank" target="_blank">
-              <img src="../../assets/navbarf-assets/Pay.png" alt="Pagos" style="width: 20px; height: 20px;">
-            </a>
-            <a class="nav-item nav-link" href="https://www.instagram.com/mentasboutique" target="_blank">
-              <img src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo" style="width: 20px; height: 20px;">
-            </a>
-            <a class="nav-item nav-link" href="https://www.tiktok.com/@mentas_boutique" target="_blank">
-              <img src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo" style="width: 20px; height: 20px;">
-            </a>
-          </div>
-        </div>
-      </nav>
-    <!--Contenedor general de la página de contactos-->
-    <div class="contenedor">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <!-- Icono de Menta's Boutique -->
+      <span class="navbar-brand">
+        <a href="../../home.html">
+          <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Icono Menta's Boutique"
+            style="width: 100px; height: 40px;">
+        </a>
+      </span>
+      <!-- Botón del menú responsivo para dispositivos pequeños -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Elementos del menú -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="charmsDropdown" role="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Charms</a>
+            <div class="dropdown-menu" aria-labelledby="charmsDropdown">
+              <a class="dropdown-item" href="about:blank" target="_blank">Handmade</a>
+              <a class="dropdown-item" href="about:blank" target="_blank">Mascotas</a>
+              <a class="dropdown-item" href="about:blank" target="_blank">Profesiones</a>
+              <a class="dropdown-item" href="about:blank" target="_blank">Otros</a>
+            </div>
+          </li>
+          <li>
+            <a class="nav-link" href="about:blank" id="pulserasDropdown" role="button" aria-haspopup="true"
+              aria-expanded="false" target="_blank">Pulseras</a>
+          </li>
+          <li>
+            <a class="nav-link" href="about:blank" id="aretesDropdown" role="button" aria-haspopup="true"
+              aria-expanded="false" target="_blank">Aretes</a>
+          </li>
+          <li>
+            <a class="nav-link" href="about:blank" id="collaresDropdown" role="button" aria-haspopup="true"
+              aria-expanded="false" target="_blank">Collares</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Iconos a la derecha -->
+      <div class="navbar-nav">
 
-        <!--SubContenedor de la sección de header(y contendrá la navBar)-->
-        <div class="header">
-            <nav>
-  </nav>
-    <!-- Fromulario de login -->
-  <div class="form-wrapper">
-        <div class="form-side">
-            <form class="my-form">
-                <div class="form-welcome-row">
-                  <!-- Titulo -->
-                    <h2>Inicia sesión</h2>
-                    <!-- Casillas para ingresar email & password -->
-                    <div class="text-field">
-                        <input id="email" type="email" name="email" placeholder="Email*">
-                    </div>
-                    <div class="invalid-feedback" style="color: #54248f;">
-                      Este campo es requerido
-                  </div>
-                    <div class="text-field">
-                        <input id="password" type="password" name="password" placeholder="Contraseña*">
-                    </div>
-                    <div class="invalid-feedback" style="color: #54248f;">
-                      Este campo es requerido
-                  </div>
-                    <div class="text-field-forgot-password">
-                      <!-- Link para para recuperar contraseña -->
-                        <a href="#">¿Olvidaste tu contraseña?</a>
-                    </div>
-                    <!-- Boton de inicio sesión -->
-                    <button type="submit" class="my-form__button">Iniciar sesión </button>
-                    <div class="my-form__actions">
-                      <!-- Link para crear nueva cuenta -->
-                        <p id="not-member">¿Aún no eres miembro? <a href="./register.html">Regístrate</a></p>
-                    </div>
-                </div>                    
-            </form>
-          </div>
-        <!-- Imagen de la derecha -->
-        <div class="info-side">
-            <img src="../../assets/home-assets/charm.webp" alt="mentas-btq" class="mockup">
-        </div>
+        <!-- Barra de búsqueda -->
+        <form class="d-flex mx-auto">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
+
+        <a class="nav-item nav-link search-icon" href="#">
+          <img src="../../assets/navbarf-assets/Search.png" alt="Busqueda" style="width: 20px; height: 20px;">
+        </a>
+        <a class="nav-item nav-link" href="./src/html/login.html" target="_blank">
+          <img src="../../assets/navbarf-assets/User.png" alt="Usuario" style="width: 20px; height: 20px;">
+        </a>
+        <a class="nav-item nav-link" href="about:blank" target="_blank">
+          <img src="../../assets/navbarf-assets/Pay.png" alt="Pagos" style="width: 20px; height: 20px;">
+        </a>
+        <a class="nav-item nav-link" href="https://www.instagram.com/mentasboutique" target="_blank">
+          <img src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo" style="width: 20px; height: 20px;">
+        </a>
+        <a class="nav-item nav-link" href="https://www.tiktok.com/@mentas_boutique" target="_blank">
+          <img src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo" style="width: 20px; height: 20px;">
+        </a>
+      </div>
     </div>
-    
+  </nav>
+  <!--Contenedor general de la página de contactos-->
+  <div class="contenedor">
+
+    <!--SubContenedor de la sección de header(y contendrá la navBar)-->
+    <div class="header">
+      <nav>
+      </nav>
+    <!-- Formulario de login -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form class="my-form needs-validation" novalidate>
+        <h2 class="mb-3">Inicia sesión</h2>
+
+        <!-- Mensaje de error para credenciales inválidas -->
+        <div id="error-message" class="alert alert-danger d-none" role="alert">
+          Por favor, ingrese correo y contraseña correcta.
+        </div>
+
+        <!-- Casillas para ingresar email & password -->
+        <div class="mb-3">
+         
+          <input id="email" type="email" name="email" class="form-control" placeholder="Email*" required>
+          <div class="invalid-feedback">
+            Por favor, ingresa tu dirección de correo electrónico.
+          </div>
+        </div>
+
+        <div class="mb-3">
+         
+          <input id="password" type="password" name="password" class="form-control" placeholder="Contraseña*"
+            required>
+          <div class="invalid-feedback">
+            Por favor, ingresa tu contraseña.
+          </div>
+        </div>
+
+        <div class="mb-3 text-field-forgot-password">
+          <!-- Link para recuperar contraseña -->
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <!-- Boton de inicio sesión -->
+        <button type="submit" class="btn btn-primary my-form__button">Iniciar sesión</button>
+
+        <div class="my-form__actions mt-3">
+          <!-- Link para crear nueva cuenta -->
+          <p id="not-member">¿Aún no eres miembro? <a href="./register.html">Regístrate</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Imagen a la derecha -->
+<div class="info-side">
+  <img src="../../assets/home-assets/charm.webp" alt="mentas-btq" class="mockup">
+</div>
+
+
+      <!-- Imagen de la derecha 
+      <div class="info-side">
+        <img src="../../assets/home-assets/charm.webp" alt="mentas-btq" class="mockup">
+      </div>
+    </div> -->
+
     <!-- FOOTER SECCION -->
 
     <footer class="footer pt-4 pb-2">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 text-left">
-              <!-- Logo de Menta's Boutique -->
-              <a href="../../home.html"> <!-- Agrega este enlace -->
-                <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Logo Menta's Boutique" style="width: 100px; height: 40px;">
-                <span class="ml-2"></span>
-              </a>
-            </div>
-            <div class="col-md-6 text-right">
-              <a href="../../src/html/conocenos.html" class="ml-2" target="_blank">Conócenos</a>
-              <a href="../../html/contacto.html" class="ml-2" target="_blank">Contacto</a>
-              <a href="about:blank" class="ml-2" target="_blank">Productos</a>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-left">
+            <!-- Logo de Menta's Boutique -->
+            <a href="../../home.html"> <!-- Agrega este enlace -->
+              <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Logo Menta's Boutique"
+                style="width: 100px; height: 40px;">
+              <span class="ml-2"></span>
+            </a>
           </div>
-          <hr>
-          <div class="row">
-            <div class="col-md-6 text-left">
-              <p class="small">Hecho con amor. &copy;<a href="../../src/html/sobreNosotros.html" target="_blank">Little Devs</a>2023.</p>
-            </div>
-            <div class="col-md-6 text-right">
-              <p class="small">Síguenos:
-                <a href="https://www.instagram.com/mentasboutique" target="_blank"><img src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo" style="width: 20px; height: 20px;"></a>
-                <a href="https://www.tiktok.com/@mentas_boutique" target="_blank"><img src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo" style="width: 20px; height: 20px;"></a>
-              </p>
-            </div>
+          <div class="col-md-6 text-right">
+            <a href="../../src/html/conocenos.html" class="ml-2" target="_blank">Conócenos</a>
+            <a href="../../html/contacto.html" class="ml-2" target="_blank">Contacto</a>
+            <a href="about:blank" class="ml-2" target="_blank">Productos</a>
           </div>
         </div>
-      </footer>
-      
-      <!--SCRIPTS LINKS -->
-      
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-      <script src="../scripts/navbarf-script.js"></script>
+        <hr>
+        <div class="row">
+          <div class="col-md-6 text-left">
+            <p class="small">Hecho con amor. &copy;<a href="../../src/html/sobreNosotros.html" target="_blank">Little
+                Devs</a>2023.</p>
+          </div>
+          <div class="col-md-6 text-right">
+            <p class="small">Síguenos:
+              <a href="https://www.instagram.com/mentasboutique" target="_blank"><img
+                  src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo" style="width: 20px; height: 20px;"></a>
+              <a href="https://www.tiktok.com/@mentas_boutique" target="_blank"><img
+                  src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo" style="width: 20px; height: 20px;"></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--SCRIPTS LINKS -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <script src="../scripts/navbarf-script.js"></script>
+
+    <script src="../scripts/login.js"></script>
 
 </body>
+
 </html>

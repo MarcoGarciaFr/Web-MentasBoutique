@@ -12,6 +12,7 @@
 
 }
 
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -33,7 +34,7 @@ h1{
 }
 body {
     font-size: 16px;
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
     font-family: var(--font-primary);
 }
 
@@ -49,7 +50,7 @@ h2 {
     text-align: center;
 }
 
-
+/*
 .form-wrapper {
     position: relative;
     display: grid;
@@ -58,39 +59,35 @@ h2 {
 }
 
 .form-side {
-    /* padding: 186px 32px 48px 32px; */
+    /* padding: 186px 32px 48px 32px; *
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--primary-light);
-}
+}*/
 
 .info-side {
+    position: absolute;
+    top: 0;
+    right: 0;
     height: 100vh;
-    /* padding: 248px 12px 8px 12px; */
-    color: #401B3D;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(92deg, var(--background-secondary) 30%,var(--background-primary) 95.43%);
-}
-
-.info-side img {
-    width: 100%;
+  }
+  
+  .info-side img {
     height: 100%;
+    width: auto;
     border-radius: 0.1rem;
-}
+  }
+  
 
 
-.text-field {
+.mb-3 {
     position: flex;
     flex-direction: column;
     margin-top: 10px;
 }
 
-.text-field input {
+.mb-3 input {
     font-family: var(--font-primary);
     color: var(--secondary-color);
     font-size: 14px;
@@ -104,12 +101,12 @@ h2 {
     padding-left: 10px;
 }
 
-.text-field input:focus {
+.mb-3 input:focus {
     border: 1px solid var(--primary-color);
     stroke: var(--primary-color);
 }
 
-.text-field label {
+.mb-3 label {
     color: var(--primary-dark);
     font-size: 16px;
     letter-spacing: .03rem;
@@ -217,8 +214,10 @@ h2 {
     text-decoration: none;
     font-weight: 200;
 }
-
-
+/*Centrar formualrio*/
+.col-md-6{
+    margin-right: 35%;
+}
 
 /* Responsive 720px */
 @media (width <= 720px) { /*Nueva sintaxis para media queries*/
