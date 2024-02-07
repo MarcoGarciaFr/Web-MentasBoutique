@@ -1,0 +1,73 @@
+/**Reiniciando espacios de mi página*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+/**Fuentes para usar en la página*/
+:root {
+    --font-onest: 'Onest', sans-serif;
+    --font-yeseva: 'Yeseva One', serif;
+    --font-borel: 'Borel', cursive;
+    --color1: #f5e7e9;
+    --color2: #f4afcf;
+    --color3: #a8dae3;
+    --color4: #cab8f2;
+    --color5: #54248f;
+    --big-title-size: clamp(20px, 2.5vw, 60px);
+    /*Con la función clamp se establece un tamaño de fuente que crezca con el tamaño del viewport, pero no se reduzca debajo de un mínimo y no se incremente por encima de un máximo.*/
+    --title-font-size: clamp(14px, 1.8vw, 40px);
+    --text-font-size: clamp(12px, 1.2vw, 30px);
+    --text-font-size-small: clamp(8px, 1.2vw, 20px);
+    --title-font-size-mobile: clamp(20px, 8vw, 35px);
+    --text-popup: clamp(8px, 1.8vw, 20px);
+    --title-popup: clamp(8px, 4vw, 20px);
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+}
+
+aside{
+    background-color: var(--color2);
+    padding: 20px 20px 20px 20px;
+    color: black;
+    height: 720px;
+    width: clamp(50px, 20%, 250px);
+    font-family: var(--font-onest);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opciones{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    width: clamp(80px, 30%, 120px);
+    margin-bottom: 20px;
+}
+
+h3{
+    font-family: var(--font-borel);
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-onest);
+}
+
+a{
+    text-decoration: none;
+    color: #54248f;
+    margin: 10px 10px 10px 10px;
+}
+
