@@ -360,9 +360,11 @@ body {
   align-items: center;
   justify-content: center;
   width: 25%;
+  
 }
 
 .img-card {
+  border-radius: 10px;
   width: min(max(72px, 100%), 300px);
   height: auto;
 }

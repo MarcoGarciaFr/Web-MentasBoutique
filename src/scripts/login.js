@@ -65,9 +65,9 @@
                 // Cambiar los estilos a éxito
                 emailInput.classList.add(successClass);
                 passwordInput.classList.add(successClass);
-
-                alert('Inicio de sesión exitoso para usuario: ' + user.username);
-                displayUser(user);
+            
+                // Redirigir al usuario hacia la página principal
+                window.location.href = "../../home.html";
 
                 // Guardar los usuarios actualizados en el localStorage
                 saveToLocalStorage(users);
