@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de pago</title>
+
+    <!--Google Fonts Borel-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100..900&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+
+    <!--Google Fonts Onest-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100..900&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+
+    <!--Google Fonts Yeseva One-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100..900&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+
+    <!--Link de Bootstrap-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Hoja de estilos de proceso de pago-->
+    <link rel="stylesheet" href="../../styles/Pago.css">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header class="navegacion">
+            AQUÍ VA LA NAVBAR
+        </header>
+
+        <section class="contenedor-form">
+            <div class="subcontenedor-form">
+                <div class="separador">
+                    Identificación
+                </div>
+                <div class="alerta">
+                    <p>*Solicitamos únicamente la información esencial para la finalización de la compra.</p>
+                </div>
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="row-md-4">
+                        <label for="validationCustom01" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="validationCustom01" required
+                            placeholder="sucorreo@dominio.com">
+                        <div class="valid-feedback">
+                            ¡Correcto!
+                        </div>
+                    </div>
+                    <div class="row-md-4">
+                        <label for="validationCustom02" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="validationCustom02"
+                            placeholder="Nombre Apellido Apellido" required>
+                        <div class="valid-feedback">
+                            ¡Correcto!
+                        </div>
+                    </div>
+
+                    <div class="row-md-4">
+                        <label for="validationCustom02" class="form-label">Teléfono móvil</label>
+                        <input type="tel" class="form-control" id="validationCustom02" placeholder="55 55555555"
+                            required>
+                        <div class="valid-feedback">
+                            ¡Correcto!
+                        </div>
+                    </div>
+
+                    <div class="separador">
+                        Envio
+                    </div>
+
+                    <div class="row-md-4">
+                        <label for="validationCustom02" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="validationCustom02" required>
+                        <div class="valid-feedback">
+                            ¡Correcto!
+                        </div>
+                    </div>
+
+                    <div class="row-md-4">
+                        <label for="validationCustom02" class="form-label">Dirección</label>
+                        <input type="tel" class="form-control" id="validationCustom02"
+                            placeholder="Calle XXX entre Calle XXX #555 Col. XXX C.P. 11111" required>
+                        <div class="valid-feedback">
+                            ¡Correcto!
+                        </div>
+                    </div>
+
+                    <div class="separador">
+                        Pago
+                    </div>
+
+
+
+                    <hr class="my-4">
+
+                    <h4 class="mb-3">Método de pago</h4>
+
+
+                    <div class="my-3">
+
+                        <div class="form-check">
+                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="debit">Pago contra entrega</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="paypal">PayPal</label>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Aceptar términos y condiciones
+                            </label>
+                            <div class="invalid-feedback">
+                                Debes aceptar antes de enviar.
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Finalizar compra</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+        <aside class="resumen">
+            AQUÍ VA EL RESUMEN DE PROCESO DE APGO
+        </aside>
+
+        <footer class="footer">
+            AQUÍ VA EL FOOTER
+        </footer>
+
+    </div>
+    <!--Link Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="../scripts/Pago.js"></script>
+</body>
+
+</html>

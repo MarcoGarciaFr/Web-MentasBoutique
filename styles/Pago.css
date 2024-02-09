@@ -1,0 +1,123 @@
+/**Reiniciando mi navegador*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/**Declarando variables de fuentes y color*/
+:root {
+    --font-primary: 'Borel', sans-serif;
+    /*Logo y otros elementos*/
+    --font-secundary: 'Onest', sans-serif;
+    /*Textos*/
+    --font-tertiary: 'Yeseva One', sans-serif;
+    /*Encabezados*/
+    --color-primary: #f5e7e9;
+    --color-secundary: #f4afcf;
+    --color-tertiary: #a8dae3;
+    --color-quaternary: #54248f;
+    --color-quinary: #cab8f2;
+
+}
+
+/**Color de fondo del contenedor*/
+.contenedor {
+    background-color: white;
+    
+}
+
+/**Grid layout de proceso de pago */
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-areas:
+        "navegacion navegacion navegacion"
+        "contenedor-form contenedor-form resumen"
+        "contenedor-form contenedor-form resumen"
+        "contenedor-form contenedor-form resumen"
+        "footer footer footer";
+}
+
+.navegacion {
+    grid-area: navegacion;
+}
+
+.contenedor-form {
+    grid-area: contenedor-form;
+    font-family: var(--font-secundary);
+    font-size: 16px;
+}
+.contenedor input:focus {
+    border-color: var(--color-quaternary); 
+    
+}
+.contenedor input::placeholder {
+    color: var(--color-quaternary); 
+}
+.contenedor input:focus {
+    background-color: var(--color-primary); 
+}
+.contenedor input {
+    color: var(--color-quaternary);
+}
+.contenedor label {
+    color: var(--color-quaternary); /* Cambia el color del texto de los labels a morado */
+}
+.alerta p{
+    margin-top: 10px;
+}
+
+
+
+.contenedor-form {
+    /* Establece estilos para el contenedor de section */
+    width: auto;
+    height: auto;
+    /* flexbox para centrar horizontalmente el contenido */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.subcontenedor-form {
+    
+    padding: 20px;
+    border: 1px solid var(--color-secundary);
+    border-radius: 10px;
+    background-color: white; /* Color de fondo del subcontenedor */
+    margin: 20px 20px 20px 20px;
+}
+
+/** Estilo para boton */
+.btn-primary {
+    background-color: var(--color-secundary); 
+    border-color: var(--color-secundary);
+    color: black; 
+    font-family: var(--font-secundary);
+    font-size: 16px;
+}
+
+/* Estilo cuando el cursor está sobre el botón */
+.btn-primary:hover {
+    background-color: var(--color-tertiary); /* Color de fondo al pasar el ratón sobre el botón */
+    border-color: var(--color-tertiary);
+    color: #ffffff; /* Color del texto al pasar el ratón sobre el botón */
+}
+
+
+
+
+.separador {
+    background-color: var(--color-quinary);
+}
+
+.resumen {
+    grid-area: resumen;
+}
+
+.footer {
+    grid-area: footer;
+}
