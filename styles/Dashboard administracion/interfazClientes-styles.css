@@ -43,6 +43,13 @@ aside{
     align-items: center;
 }
 
+.acordeon{
+    background-color: var(--color4);
+}
+
+.acordeon:hover{
+    background-color: var(--color3);
+}
 .opciones{
     margin-top: 50px;
     display: flex;
@@ -60,13 +67,14 @@ h3{
 
 
 section{
-    margin-left: 3vw;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% auto;
-    align-items: center;
-    width: 75%;
+    display: flex;
+    flex-direction: column;
     font-family: var(--font-onest);
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #a8dae3;
+    width: 100%;
 }
 
 a{
@@ -133,3 +141,55 @@ a{
     font-size: max(12px, 1.2vw);
   }
   
+
+
+
+
+  @media (max-width: 768px){
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    aside{
+        background-color: var(--color2);
+        padding: 20px 20px 20px 20px;
+        color: black;
+        height: clamp(160px, 20%, 250px);
+        width: clamp(450px, 100%, 768px);
+        font-family: var(--font-onest);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .encabezado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo{
+        width: clamp(30px, 20%, 120px);
+        margin-bottom: 20px;
+    }
+    
+    h3{
+        font-family: var(--font-borel);
+    }
+    
+    .acordeon{
+        background-color: var(--color4);
+    }
+
+    .acordeon:hover{
+        background-color: var(--color3);
+    }
+
+    section{
+        max-width:780px; 
+        overflow: scroll;
+    }
+  }

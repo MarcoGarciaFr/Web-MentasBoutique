@@ -35,20 +35,22 @@
 <body>
     <div class="contenedor">
         <aside> <!--Aquí irán todos los botones que desplieguen las opciones para administrar-->
-            <img src="../../../assets/administracion-assets/logo mentas solo.png" alt="Menta's Boutique"
-                class="img-fluid logo">
-            <h3 class="text-center">Administración Menta's Boutique</h3>
+            <div class="encabezado">
+                <img src="../../../assets/administracion-assets/logo mentas solo.png" alt="Menta's Boutique"
+                    class="img-fluid logo">
+                <h3 class="text-center">Administración Menta's Boutique</h3>
+            </div>
             <br>
 
             <div class="accordion container-fluid">
                 <div class="accordion-item opcion">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button acordeon" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Productos
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                         <a href="./interfazCrearProductos.html"
                             class="accordion-body list-group-item list-group-item-action active" aria-current="true"
                             id="crear">
@@ -61,14 +63,14 @@
                     </div>
                 </div>
 
-                <div class="accordion-item open">
+                <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed acordeon" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Pedidos
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <a href="./interfazPedidos.html"
                             class="accordion-body list-group-item list-group-item-action active">
                             Revisar pedidos
@@ -78,7 +80,7 @@
 
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button class="accordion-button collapsed acordeon" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Clientes
                         </button>
@@ -102,22 +104,23 @@
             <h1 class="section__title">Pedidos</h1>
             <table class="table table-hover table-bordered ordersTable">
                 <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">id_usuario</th>
-                    <th scope="col">Fecha de orden</th>
-                    <th scope="col">Total orden</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Detalles</th>
-                  </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">id_usuario</th>
+                        <th scope="col">Fecha de orden</th>
+                        <th scope="col">Total orden</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Detalles</th>
+                    </tr>
                 </thead>
                 <tbody>
                 </tbody>
-              </table>
+            </table>
         </section>
     </div>
 
 
 </body>
 <script src="../../scripts/Dashboard administracion/Pedidos.js"></script>
+
 </html>
