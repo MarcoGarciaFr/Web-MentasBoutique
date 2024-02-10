@@ -26,9 +26,6 @@
     --title-popup: clamp(8px, 4vw, 20px);
 }
 
-.navbar{
-    display:none;
-}
 
 .contenedor {
     /*Margen de la barra de navegación*/
@@ -230,7 +227,7 @@ a{
     margin-right: 30px;
 }
 
-.titulos--subcategorias {
+.titulos--tipo {
     /*Banner rosa de subcategorías, este se repite para todas*/
     background-color: var(--color2);
     margin-top: 20px;
@@ -243,10 +240,10 @@ a{
     margin-right: 30px;
 }
 
-.titulos--subcategorias h3{
+.titulos--tipo h1{
     text-align:left;
     padding-left: 25px;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 /****************************************ESTILOS PARA LOS PRODUCTOS*******************************/
