@@ -294,9 +294,10 @@ table{
     gap: 0;
     text-align: center;
     background: white;
-    top: 40%;
-    left:25%;
+    top: 50%;
+    left:50%;
     position: fixed;
+    transform: translate(-50%, -50%);
     margin: 20px;
     height: 150px;
     border-radius: 5px;
@@ -345,9 +346,10 @@ table{
     gap: 0;
     text-align: center;
     background: white;
-    top: 5%;
-    left:5%;
+    top: 50%;
+    left:50%;
     position: fixed;
+    transform: translate(-50%, -50%);
     margin: 20px;
     padding: 20px;
     height: auto;
