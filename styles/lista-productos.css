@@ -344,9 +344,10 @@ a{
     gap: 0;
     text-align: center;
     background: white;
-    top: 20%;
-    left:20%;
+    top: 50%;
+    left:50%;
     position: fixed;
+    transform: translate(-50%, -50%);
     margin: 20px;
     height: 400px;
     border-radius: 15px;
@@ -376,24 +377,17 @@ a{
     align-items: center;
     justify-content: center;
     font-family: var(--font-onest);
+    font-weight: 600;
 }
 
 
 .cart {
     background-color: #a8dae3;
     border-radius: 10px;
-    width: 100px;
+    width: 200px;
     height: 50px;
     border: none;
-}
-
-
-.buy {
-    background-color: #a8dae3;
-    border-radius: 10px;
-    width: 100px;
-    height: 50px;
-    border: none;
+    font-weight: 500;
 }
 
 
@@ -402,10 +396,6 @@ a{
     border-radius: 10px;
 }
 
-.buy:hover {
-    background-color: #cab8f2;
-    border-radius: 10px;
-}
 
 #imagen--preview {
     margin-left: 10px;
@@ -457,8 +447,10 @@ a{
         text-align: center;
         background: white;
         top: clamp(5%, 10%, 25%);
-        left:5%;
+        top: 50%;
+        left:50%;
         position: fixed;
+        transform: translate(-50%, -50%);
         margin: 10px;
         height: 250px;
         border-radius: 15px;
@@ -502,19 +494,12 @@ a{
     .cart {
         background-color: #a8dae3;
         border-radius: 10px;
-        width: 50px;
+        width: 100px;
         height: 25px;
         border: none;
+        margin-bottom: 10px;
     }
     
-    
-    .buy {
-        background-color: #a8dae3;
-        border-radius: 10px;
-        width: 50px;
-        height: 25px;
-        border: none;
-    }
     
     
     .cart:hover {
@@ -522,10 +507,6 @@ a{
         border-radius: 10px;
     }
     
-    .buy:hover {
-        background-color: #cab8f2;
-        border-radius: 10px;
-    }
     
     #imagen--preview {
         margin-left: 10px;
