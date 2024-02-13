@@ -199,7 +199,6 @@ function showPopup(producto) {
             <p class="product--type">Tipo: ${producto.type}</p>
             <div class="price">$${producto.price}</div>
             <div class="preview--buttons">
-                <button class="buy">Comprar</button>
                 <button class="cart">Agregar al carrito</button>
             </div>
         </div>
