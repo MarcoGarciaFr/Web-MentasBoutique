@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Little Devs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Della+Respira&family=Inter+Tight&family=Libre+Baskerville&family=Noto+Sans+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/formulario-creacion.css">
+</head>
+
+<body>
+    <h2 class="encabezados">Formulario de Publicación de Producto</h2>
+
+    <div class="container">
+        <form class="formulario needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre del producto</label>
+                <input type="text" class="form-control" id="name" max="100" required autocomplete="off">
+                <div class="invalid-feedback">
+                    Este campo es requerido
+                </div>
+                <div class="valid-feedback">
+                    Correcto!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Precio del producto</label>
+                <input type="text" class="form-control" id="lastName" min="1" max="100" required autocomplete="off">
+                <div class="invalid-feedback">
+                    Este campo es requerido
+                </div>
+                <div class="valid-feedback">
+                    Correcto!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="productDescription" class="form-label">Descripción del Producto:</label>
+                <input type="text" class="form-control" id="productDescription" min="1" max="100" required autocomplete="off">
+                <div class="invalid-feedback">
+                    Este campo es requerido
+                </div>
+                <div class="valid-feedback">
+                    Correcto!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="productMaterial" class="form-label">Material:</label>
+                <input type="text" class="form-control" id="productMaterial" min="1" max="100" required autocomplete="off">
+                <div class="invalid-feedback">
+                    Este campo es requerido
+                </div>
+                <div class="valid-feedback">
+                    Correcto!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="productType" class="form-label">Tipo:</label>
+                <input type="text" class="form-control" id="productType" min="1" max="100" required autocomplete="off">
+                <div class="invalid-feedback">
+                    Este campo es requerido
+                </div>
+                <div class="valid-feedback">
+                    Correcto!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="productCategory" class="form-label">Categoria:</label>
+                <input type="text" class="form-control" id="productCategory" min="1" max="100" required autocomplete="off">
+                <div class="invalid-feedback">
+                    Este campo es requerido
+                </div>
+                <div class="valid-feedback">
+                    Correcto!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="productSubcategory" class="form-label">Subcategoria:</label>
+                <input type="text" class="form-control" id="productSubcategory" min="1" max="100" required autocomplete="off">
+                <div class="invalid-feedback">
+                    Este campo es requerido
+                </div>
+                <div class="valid-feedback">
+                    Correcto!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="image" class="form-label">Imagen</label>
+                <button class="btn btn-light" id="btn">Buscar imagen</button>
+    <input type="file" id="image" accept="image/*" style="display: none;" required>
+    <div class="invalid-feedback">
+        Este campo es requerido
+    </div>
+    <div class="valid-feedback">
+        Correcto!
+    </div></div>
+        
+        
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        ¡Estoy list@ para publicar un nuevo producto!
+                    </label>
+                    <div class="invalid-feedback">
+                        Debes aceptar antes de enviar
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-light" type="submit" onclick="publishProduct()">Publicar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="productListContainer">
+        <h2 class="encabezados">Lista de Productos</h2>
+        <div class="cardProducto" id="productList"></div>
+    </div>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+<script src="../../src/scripts/formulario-creacion.js"></script>
+</body>
+
+</html>

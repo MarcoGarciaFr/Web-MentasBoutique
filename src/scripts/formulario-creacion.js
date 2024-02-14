@@ -49,7 +49,7 @@ function publishProduct() {
     let productMaterial = document.getElementById("productMaterial").value;
     let productType = document.getElementById("productType").value;
     let productCategory = document.getElementById("productCategory").value;
-    let productSubcategory = document.getElementById("productSubcategory").value;
+    
 
     // Obtener la imagen del localStorage
     let productImage = localStorage.getItem('my-image');
@@ -66,7 +66,6 @@ function publishProduct() {
             existingProduct.material === productMaterial &&
             existingProduct.type === productType &&
             existingProduct.category === productCategory &&
-            existingProduct.subcategory === productSubcategory &&
             existingProduct.image === productImage
         );
     });
@@ -84,7 +83,6 @@ function publishProduct() {
         material: productMaterial,
         type: productType,
         category: productCategory,
-        subcategory: productSubcategory,
         image: productImage,
     };
 
@@ -114,7 +112,7 @@ function displayProducts() {
         let listItem = document.createElement("ul");
         let imgElement = document.createElement("img");
         listItem.classList.add("prueba");
-        listItem.textContent = `${product.name} - ${product.price} - ${product.description}- ${product.material}- ${product.type}- ${product.category}- ${product.subcategory}`;
+        listItem.textContent = `${product.name} - ${product.price} - ${product.description}- ${product.material}- ${product.type}- ${product.category}`;
 
         // Agregar la imagen 
         listItem.classList.add("imagenprueba");

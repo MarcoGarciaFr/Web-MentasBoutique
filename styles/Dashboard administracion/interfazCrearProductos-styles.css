@@ -1,0 +1,243 @@
+/**Reiniciando espacios de mi página*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+/**Fuentes para usar en la página*/
+:root {
+    --font-onest: 'Onest', sans-serif;
+    --font-yeseva: 'Yeseva One', serif;
+    --font-borel: 'Borel', cursive;
+    --color1: #f5e7e9;
+    --color2: #f4afcf;
+    --color3: #a8dae3;
+    --color4: #cab8f2;
+    --color5: #54248f;
+    --big-title-size: clamp(20px, 2.5vw, 60px);
+    /*Con la función clamp se establece un tamaño de fuente que crezca con el tamaño del viewport, pero no se reduzca debajo de un mínimo y no se incremente por encima de un máximo.*/
+    --title-font-size: clamp(14px, 1.8vw, 40px);
+    --text-font-size: clamp(12px, 1.2vw, 30px);
+    --text-font-size-small: clamp(8px, 1.2vw, 20px);
+    --title-font-size-mobile: clamp(20px, 8vw, 35px);
+    --text-popup: clamp(8px, 1.8vw, 20px);
+    --title-popup: clamp(8px, 4vw, 20px);
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+}
+
+aside{
+    background-color: var(--color2);
+    padding: 20px 20px 20px 20px;
+    color: black;
+    height: 1000px;
+    width: clamp(150px, 20%, 768px);
+    font-family: var(--font-onest);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.encabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.opciones{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    width: clamp(80px, 30%, 120px);
+    margin-bottom: 20px;
+}
+
+h3{
+    font-family: var(--font-borel);
+}
+
+.acordeon{
+    background-color: var(--color4);
+}
+
+.acordeon:hover{
+    background-color: var(--color3);
+}
+
+h2{
+    padding: 10px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-onest);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #54248f;
+    margin: 10px 10px 10px 10px;
+}
+
+/*ESTILOS FORMULARIO DE CREACIÓN*/
+
+.medidas{
+    width: 100%;
+
+}
+
+.btn-light{
+    background-color: #f4afcf;
+    text-align: center;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #54248f ;
+}
+
+.encabezados{
+    font-family: 'Borel', cursive ;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.formulario{  
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #54248f ;
+    color:#54248f ;
+    grid-column: 1 / 4;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+.form-control{
+    border-width: 1.5px;
+    border-style: solid;
+    border-color: #54248f ;
+    box-shadow: 10px 10px 10px rgba(165, 165, 165, 0.345);
+}
+.cardProducto{
+    background-color: #f4afcf;
+}
+
+
+
+#productListContainer{
+background-color: #a8dae3;
+text-align: center;
+padding-top: 20px;
+}
+
+@media (max-width: 768px){
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    aside{
+        background-color: var(--color2);
+        padding: 20px 20px 20px 20px;
+        color: black;
+        height: clamp(160px, 20%, 250px);
+        width: clamp(450px, 100%, 768px);
+        font-family: var(--font-onest);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .encabezado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo{
+        width: clamp(30px, 20%, 120px);
+        margin-bottom: 20px;
+    }
+    
+    h3{
+        font-family: var(--font-borel);
+    }
+    
+    .acordeon{
+        background-color: var(--color4);
+    }
+
+    .acordeon:hover{
+        background-color: var(--color3);
+    }
+
+
+    h1{
+        padding: 20px;
+    }
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        font-family: var(--font-onest);
+    }
+    
+    a{
+        text-decoration: none;
+        color: #54248f;
+        margin: 10px 10px 10px 10px;
+    }
+    
+    .btn-light{
+        background-color: #f4afcf;
+        text-align: center;
+        border-width: 1.5px;
+        border-style: solid;
+        border-color: #54248f ;
+    }
+    
+    .encabezados{
+        font-family: 'Borel', cursive ;
+        color: rgb(0, 0, 0);
+        margin-top: 20%;
+        text-align: center;
+    }
+    
+    .formulario{
+        
+        border-width: 1.5px;
+        border-style: solid;
+        border-color: #54248f ;
+        color:#54248f ;
+        grid-column: 1 / 4;
+        text-align: center;
+        padding: 50px;
+                border-radius: 20px;
+    
+    }
+    .form-control{
+        border-width: 1.5px;
+        border-style: solid;
+        border-color: #54248f ;
+        box-shadow: 10px 10px 10px rgba(165, 165, 165, 0.345);
+    }
+    .cardProducto{
+        background-color: #f4afcf;
+    }
+    .prueba{
+        background-color: #a8dae3;
+    }
+}

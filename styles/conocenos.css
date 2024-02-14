@@ -1,0 +1,381 @@
+/**Reiniciando mi navegador*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/**Declarando variables de fuentes y color*/
+:root {
+    --font-primary: 'Borel', sans-serif;
+    /*Logo y otros elementos*/
+    --font-secundary: 'Onest', sans-serif;
+    /*Textos*/
+    --font-tertiary: 'Yeseva One', sans-serif;
+    /*Encabezados*/
+    --color-primary: #f5e7e9;
+    --color-secundary: #f4afcf;
+    --color-tertiary: #a8dae3;
+    --color-quaternary: #54248f;
+
+}
+
+body {
+    background-color: white;
+}
+
+/**Grid layout*/
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-rows: -1fr 3fr 2fr 1fr 1fr;
+
+    grid-template-areas:
+        "header header header"
+        "section-1 section-1  section-1"
+        "section-2 section-2 section-2"
+        "aside aside aside"
+        "footer footer footer";
+
+
+}
+
+
+/**Secciones de mi pagina*/
+
+.header {
+    grid-area: header;
+    
+
+}
+
+.section-1 {
+    grid-area: section-1;
+
+
+}
+
+.section-2 {
+    grid-area: section-2;
+    background-color: white;
+}
+
+.aside {
+    grid-area: aside;
+    /* background-color: var(--color-secundary);*/
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.section-1,
+.section-2,
+.aside {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/**section-1 y sus contenido*/
+.section-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: -1fr 1fr 1fr 1fr;
+    grid-template-areas: "titulo titulo titulo"
+        "historia historia foto-historia"
+        "mision mision mision"
+        "vision vision vision";
+
+        .titulo{
+            padding-top: 100px;
+            margin-bottom: 30px;
+        }
+}
+
+/**Margenes entre mis secciones*/
+.historia,
+.mision,
+.vision
+
+/*.section-2*/
+    {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px 50px 20px 50px;
+}
+
+
+.titulo {
+    grid-area: titulo;
+    padding-top: 500px; /* Puedes ajustar el valor según sea necesario */
+        margin-bottom: 10px;
+    
+
+}
+
+.titulo h1,
+.titulo p {
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    font-family: var(--font-primary);
+}
+
+.titulo p {
+    font-family: var(--font-secundary);
+}
+
+.historia {
+    grid-area: historia;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-secundary);
+    font-size: 16px;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+
+}
+
+/*.historia h4 {
+    padding-right:840px ;
+}*/
+
+.foto-historia {
+    grid-area: foto-historia;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    /* Ajusta la altura según tus necesidades */
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 11px;
+    margin-bottom: 10px;
+
+
+}
+
+.foto-historia img {
+    max-width: 100%;
+    /* Hace que la imagen no sea más ancha que su contenedor */
+    height: auto;
+    /* Mantiene la proporción original de la imagen */
+    border-radius: 10px;
+    /* Aplica el mismo radio de borde que el contenedor */
+}
+
+
+
+
+.mision {
+    grid-area: mision;
+    font-family: var(--font-secundary);
+    font-size: 16px;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-secundary);
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    /* margin-top: 10px; 
+    margin-bottom: 10px;*/
+    height: 500px;
+    
+}
+
+.vision {
+    grid-area: vision;
+    font-family: var(--font-secundary);
+    font-size: 16px;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-secundary);
+    font-size: 16px;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    /* margin-top: 10px; 
+    margin-bottom: 10px; */
+    height: 500px;
+    
+}
+
+
+
+/**section-2 y su contenido*/
+
+.section-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    /* Ajusta la cantidad de espacio entre las imágenes */
+    
+}
+
+
+.foto-menta img {
+    width: 100%;
+    /* Ajusta el ancho */
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #D3D3D3;
+    padding: 10px;
+
+
+}
+
+.section-2 {
+    margin-bottom: 10px;
+}
+
+/**aside y su contenido*/
+.aside {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-secundary);
+    position: relative;
+}
+
+.aside h4 {
+    margin-bottom: 15px;
+    font-family: var(--font-secundary);
+    font-size: 16px;
+}
+
+#popCard {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primary);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Sombra más pronunciada */
+    z-index: 1000;
+    /* Controla la posición en el eje Z, asegurando que la popCard esté en la capa superior */
+    width: 300px;
+    /* Ajusta el ancho de la popCard */
+    max-width: 100%;
+    /* Ancho máximo */
+    text-align: center;
+    /* Alinea el contenido al centro */
+}
+
+.oculto {
+    display: none;
+}
+
+#cerrarPopCard {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: var(--color-quaternary);
+    /* Color del icono de cerrar */
+    font-size: 20px;
+    /* Tamaño del icono de cerrar */
+    transition: color 0.3s ease-in-out;
+    border: none;
+}
+
+#cerrarPopCard:hover {
+    color: var(--color-tertiary);
+    /* Cambia el color del icono de cerrar al pasar el ratón sobre él */
+}
+
+#popCard img {
+    width: 50px;
+    margin: 10px;
+    /* Espaciado entre las imágenes */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#popCard img:hover {
+    transform: scale(1.2);
+}
+
+#mostrarTarjeta {
+    background-color: var(--color-tertiary);
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color del texto del botón */
+    padding: 10px 20px;
+    /* Espaciado interno del botón */
+    font-size: 16px;
+    /* Tamaño del texto */
+    border: none;
+    /* Sin borde */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+    font-family: var(--font-secundary);
+}
+
+#mostrarTarjeta:hover {
+    background-color: var(--color-primary);
+    /* Cambia el color de fondo al pasar el ratón sobre el botón */
+}
+
+/**Responsividad*/
+/* Media query para pantallas menores de 480px */
+@media (max-width: 479px) {
+    /* Cambiamos el orden de visualización en pantallas menores de 480px */
+    .section-1 {
+        grid-template-areas: "titulo titulo titulo"
+                            "foto-historia foto-historia foto-historia"
+                            "historia historia historia"
+                            "mision mision mision"
+                            "vision vision vision";
+    }
+    .titulo{
+        padding-top: 100px;
+        margin-top: 200px;
+    }
+}
+
+/* Media query para pantallas de 480px a 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+    /* Cambiamos el orden de visualización en pantallas entre 480px y 767px */
+    .section-1 {
+        grid-template-areas: "titulo titulo titulo"
+                            "foto-historia foto-historia foto-historia"
+                            "historia historia historia"
+                            "mision mision mision"
+                            "vision vision vision";
+    }
+    .titulo{
+        padding-top: 100px;
+        margin-top: 200px;
+    }
+    
+}
+
+/* Media query para pantallas de 1024px o más */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .section-1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: -1fr 1fr 1fr 1fr;
+        grid-template-areas: "titulo titulo titulo"
+            "historia historia foto-historia"
+            "mision mision mision"
+            "vision vision vision";
+    
+           
+            .titulo{
+                padding-top: 100px;
+                margin-top: 200px;
+            }
+    }
+    
+}

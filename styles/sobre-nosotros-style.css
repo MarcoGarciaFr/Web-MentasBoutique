@@ -37,10 +37,11 @@ grid-gap: 20px;
     
 }
 .encabezados{
-    font-family: 'Borel', cursive;
+    font-family: 'borel', cursive;
 }
 .encabezados1{
-    font-family: 'Borel', cursive;
+    font-family: 'borel', cursive;
+    
 }
 #logo{
     width: 150px;;

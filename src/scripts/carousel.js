@@ -92,28 +92,28 @@ nota: el else statement hace exactamente lo mismo pero adaptado para la ultima c
     nota: el else statement hace exactamente lo mismo pero adaptado para la ultima carta del carusel
     */ 
         if(actualCard == 0){
-            cardContainers[actualCard].classList += " animated-out"
+            cardContainers[actualCard].classList += " animated-out-p"
             
             setTimeout(() => {
-                cardContainers[actualCard].classList.remove("animated-out");
+                cardContainers[actualCard].classList.remove("animated-out-p");
                 cardContainers[actualCard].classList.remove("active");
-                cardContainers[cardContainers.length-1].classList += " active" + " animated-in"
+                cardContainers[cardContainers.length-1].classList += " active" + " animated-in-p"
          
             }, 2000); 
             setTimeout(()=>{
-                cardContainers[cardContainers.length-1].classList.remove("animated-in")}, 4000
+                cardContainers[cardContainers.length-1].classList.remove("animated-in-p")}, 4000
             )
     
         }else {
-            cardContainers[actualCard].classList +=" animated-out"
+            cardContainers[actualCard].classList +=" animated-out-p"
             
             setTimeout(() => {
-                cardContainers[actualCard].classList.remove("animated-out");
+                cardContainers[actualCard].classList.remove("animated-out-p");
                 cardContainers[actualCard].classList.remove("active");
-                cardContainers[actualCard-1].classList += " active" + " animated-in"
+                cardContainers[actualCard-1].classList += " active" + " animated-in-p"
             }, 2000); 
             setTimeout(()=>{
-                cardContainers[actualCard-1].classList.remove("animated-in")}, 4000
+                cardContainers[actualCard-1].classList.remove("animated-in-p")}, 4000
             )
         }
         }

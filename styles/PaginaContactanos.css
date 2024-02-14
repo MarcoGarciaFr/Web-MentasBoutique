@@ -24,13 +24,13 @@
         "header            header"
         "message           message"
         "smedia            contenedor-formulario"
-        "smedia            form-container"
+        "smedia            contenedor-formulario"
         "footer            footer";
 }
 
 /**Estilos de header*/
 .contenedor .header {
-    background-color: #f4afcf;
+  
     grid-area: header;
 }
 
@@ -39,7 +39,7 @@
     background: rgb(244, 175, 207);
     background: linear-gradient(180deg, rgba(244, 175, 207, 1) 2%, rgba(202, 184, 242, 1) 73%, rgba(202, 184, 242, 0) 100%);
     height: 300px;
-    margin: 20px 20px 20px 20px;
+   /* margin: 20px 20px 20px 20px;*/
     font-family: var(--font-primary);
     font-size: 40px;
     grid-area: message;
@@ -59,7 +59,6 @@
     font-family: var(--font-secondary);
     font-size: 30px;
     grid-area: smedia;
-
     margin: 20px 20px 20px 20px;
     display: flex;
     align-items: center;
@@ -165,7 +164,7 @@ h4 {
     justify-content: center;
     align-items: center;
     height: auto;
-    /* Opcional: ajusta la altura según tus necesidades */
+    
 }
 
 
@@ -177,6 +176,7 @@ form {
     width: 250px;
     padding: 10px;
     color: #54248f;
+    border: 1px solid #54248f;
 }
 
 .contenedor-formulario h2 {
@@ -193,7 +193,10 @@ form {
 
 textarea {
     max-width: 499px;
+    
+    
 }
+
 
 .btn.btn-primary {
     padding: 17px 15px;
@@ -229,35 +232,97 @@ label{
 }
 
 
-
-
 /**Estilos para footer*/
 
 .contenedor .footer {
-    background-color: #cab8f2;
+
     /* Cambia a tu color preferido */
     grid-area: footer;
-    padding: 10px;
-
-}
-
-/* *Responsive (Falta mejorar) */
-
-/* Estilos para tamaños de pantalla de 480px o menos (móviles)*/
-
-@media (max-width: 480px) {
-    .contenedor {
-        grid-template-areas:
-            "header"
-            "message"
-            "form-container"
-            "smedia"
-            "footer";
-        grid-template-columns: 1fr;
-        /* Cambia a una sola columna en pantallas de 480px o menos */
-    }
-
     
 
-   
 }
+
+/* *Responsive */
+/* Estilos para pantallas de escritorio mayores a 768px */
+@media only screen and (min-width: 769px) {
+    .contenedor {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas:
+          "header            header"
+          "message           message"
+          "smedia            contenedor-formulario"
+          "smedia            contenedor-formulario"
+          "footer            footer";
+  
+      width: auto;
+      height: 500px;
+      margin: 10px;
+      font-size: 18px;
+      margin: 0 0 0 0;
+      
+    }
+  }
+  
+  /* Estilos para tablets con un ancho máximo de 768px */
+  @media only screen and (max-width: 768px) {
+    .contenedor {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas:
+          "header"
+          "message"
+          "contenedor-formulario"
+          "contenedor-formularior"
+          "smedia"
+          "footer";
+  
+      width: auto;
+      height: 500px;
+      margin: 10px;
+      font-size: 18px;
+        padding-top: 200px;
+        margin: 0 0 0 0;
+    }
+    /* Estilos para los campos de entrada dentro de contenedor-formulario */
+    .contenedor-formulario input {
+        width: 85%; /* O ajusta el ancho  */
+        padding: 10px; /* O ajusta el espacio de relleno  */
+        box-sizing: border-box;
+        margin-bottom: 10px; /* Agrega espacio entre los campos de entrada */
+  }
+}
+  
+  /* Estilos para smartphones con un ancho máximo de 480px */
+  @media only screen and (max-width: 480px) {
+    .contenedor {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas:
+          "header"
+          "message"
+          "contenedor-formulario"
+          "contenedor-formulario"
+          "smedia"
+          "footer";
+  
+      width: auto;
+      height: 500px;
+      margin: 10px;
+      font-size: 18px;
+      padding-top: 200px;
+      margin: 0 0 0 0;
+    }
+  
+    /* Estilos para los campos de entrada dentro de contenedor-formulario */
+    .contenedor-formulario input {
+      width: 85%; /* O ajusta el ancho  */
+      padding: 10px; /* O ajusta el espacio de relleno  */
+      box-sizing: border-box;
+      margin-bottom: 10px; /* Agrega espacio entre los campos de entrada */
+    }
+  }
+  
