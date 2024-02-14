@@ -115,7 +115,7 @@ h2 {
     letter-spacing: .03rem;
 }
 
-#name, #email, #password, #again-password {
+#lastName, #firstName, #phone, #email, #password, #again-password {
     width: 100%;
     color: var(--secondary-color);
 }
