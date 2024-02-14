@@ -102,9 +102,9 @@
             <nav>
   </nav>
     <!-- Fromulario de login -->
-  <div class="form-wrapper">
+  <div class="form-wrapper" >
         <div class="form-side">
-            <form class="my-form" id="register-form">
+            <form class="my-form needs-validation" id="register-form" novalidate>
                 <div class="form-welcome-row">
                   <!-- Titulo -->
                     <h2>Inicia sesión</h2>
@@ -114,13 +114,13 @@
                     </div>
                     <!-- Casillas para ingresar email & password -->
                     <div class="text-field">
-                        <input id="email" type="email" name="email" placeholder="Email*">
+                        <input class="form-control" id="email" type="email" name="email" placeholder="Email*" required>
                     </div>
                     <div class="invalid-feedback" style="color: #54248f;">
                       Este campo es requerido
                   </div>
                     <div class="text-field">
-                        <input id="password" type="password" name="password" placeholder="Contraseña*">
+                        <input class="form-control" id="password" type="password" name="password" placeholder="Contraseña*" required>
                     </div>
                     <div class="invalid-feedback" style="color: #54248f;">
                       Este campo es requerido

@@ -41,8 +41,53 @@ function showPopup(productData){
    }
    
 
-fillCarousel(lista);
 
+//Programa para desplegar cartas al hacer click sobre un elemento
+//la carta desplegada es un elemento HTML dialog, modificado con CSS para ocupar el viewport actual del usuario
+
+const careInfo = document.querySelector(".care-info-card")
+const careCard= document.querySelector(".care-info")
+
+const packingInfo = document.querySelector(".packing-info-card")
+const packingCard = document.querySelector(".packing-info")
+const divPrueba = document.querySelector(".div-prueba")
+
+
+careCard.addEventListener("click", () =>{
+    careInfo.showModal()
+
+})
+
+packingCard.addEventListener("click", () =>{
+    packingInfo.showModal();
+
+
+})
+
+
+
+//evento para redicreccion de los botones descubrir
+const btnDescubrelo = document.querySelector(".btn--mentas-descubrelo")
+btnDescubrelo.addEventListener("click", ()=>{
+    window.location.href = "./src/html/listaProductos.html"
+}) 
+
+const btnConocenos = document.querySelector(".btn--mentas-descubrelo-small")
+btnConocenos.addEventListener("click", ()=>{
+    window.location.href = "./src/html/conocenos.html"
+}) 
+
+//evento para redireccion de las cards de categorias
+const cardProfesiones = document.getElementById("profesiones");
+cardProfesiones.addEventListener("click", () =>{
+    const url = "./src/html/listaProductos.html#profesiones";
+    window.open(url, '_blank');
+})
+const cardMascotas = document.getElementById("mascotas");
+cardMascotas.addEventListener("click", () =>{
+    const url = "./src/html/listaProductos.html#mascotas";
+    window.open(url, '_blank');
+})
 
 //array de contenedores de cards
 let cardContainers= document.querySelectorAll(".card-container");
@@ -247,49 +292,6 @@ carousel.innerHTML += btnNext
 
 
     
-//Programa para desplegar cartas al hacer click sobre un elemento
-//la carta desplegada es un elemento HTML dialog, modificado con CSS para ocupar el viewport actual del usuario
-
-const careInfo = document.querySelector(".care-info-card")
-const careCard= document.querySelector(".care-info")
-
-const packingInfo = document.querySelector(".packing-info-card")
-const packingCard = document.querySelector(".packing-info")
-const divPrueba = document.querySelector(".div-prueba")
 
 
-careCard.addEventListener("click", () =>{
-    careInfo.showModal()
-
-})
-
-packingCard.addEventListener("click", () =>{
-    packingInfo.showModal();
-
-
-})
-
-
-
-//evento para redicreccion de los botones descubrir
-const btnDescubrelo = document.querySelector(".btn--mentas-descubrelo")
-btnDescubrelo.addEventListener("click", ()=>{
-    window.location.href = "./src/html/listaProductos.html"
-}) 
-
-const btnConocenos = document.querySelector(".btn--mentas-descubrelo-small")
-btnConocenos.addEventListener("click", ()=>{
-    window.location.href = "./src/html/conocenos.html"
-}) 
-
-//evento para redireccion de las cards de categorias
-const cardProfesiones = document.getElementById("profesiones");
-cardProfesiones.addEventListener("click", () =>{
-    const url = "./src/html/listaProductos.html#profesiones";
-    window.open(url, '_blank');
-})
-const cardMascotas = document.getElementById("mascotas");
-cardMascotas.addEventListener("click", () =>{
-    const url = "./src/html/listaProductos.html#mascotas";
-    window.open(url, '_blank');
-})
+fillCarousel(lista);

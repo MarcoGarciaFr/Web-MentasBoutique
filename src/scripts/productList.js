@@ -10,16 +10,16 @@
 /*1. LISTADO DE OBJETOS */
 
 class Producto {
-    constructor(id, name, price, description, material, type, category, subcategory, img) {
+    constructor(id, nombre, precio, descripcion, material, tipo, categoria, imagen, stock) {
         this.id = id;
-        this.name = name;
-        this.price = price;
-        this.description = description;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.descripcion = descripcion;
         this.material = material;
-        this.type = type;
-        this.category = category;
-        this.subcategory = subcategory;
-        this.img = img;
+        this.tipo = tipo;
+        this.categoria = categoria;
+        this.imagen = imagen;
+        this.stock = stock;
     }
 }
 

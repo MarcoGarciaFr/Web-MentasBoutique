@@ -16,15 +16,6 @@ VALUES ('John','Doe', 'john.doe@example.com', 994653241,'1234'),
 ('Eva', 'Rodriguez', 'eva.rodriguez@example.com', 1112223333,'1234');
 
 
-INSERT INTO mentas_db.products(product_name,price,description,material,type,url_img,stock,category)
-VALUES ('French Poodle', 390, '', 'Plata 925', 'Charm','', 10, 'Mascotas'),
-('Cerebro Anatomico', 390, '', 'Plata 925', 'Charm','', 10,'Profesiones'),
-('Pulmon Anatomico', 370, '', 'Plata 925', 'Charm','', 10,'Profesiones'),
-('Charm Maestra', 370, '', 'Plata 925', 'Charm','', 10,'Profesiones'),
-('Charm Microscopio', 370, '', 'Plata 925', 'Charm','', 10,'Profesiones'),
-('Schnauzer', 390, '', 'Plata 925', 'Charm','', 10,'Mascotas');
-
-
 INSERT INTO `mentas_db`.`orders`
 (`users_id_user`,
 `order_date`,
