@@ -1,0 +1,192 @@
+/**Reiniciando espacios de mi página*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+/**Fuentes para usar en la página*/
+:root {
+    --font-onest: 'Onest', sans-serif;
+    --font-yeseva: 'Yeseva One', serif;
+    --font-borel: 'Borel', cursive;
+    --color1: #f5e7e9;
+    --color2: #f4afcf;
+    --color3: #a8dae3;
+    --color4: #cab8f2;
+    --color5: #54248f;
+    --big-title-size: clamp(20px, 2.5vw, 60px);
+    /*Con la función clamp se establece un tamaño de fuente que crezca con el tamaño del viewport, pero no se reduzca debajo de un mínimo y no se incremente por encima de un máximo.*/
+    --title-font-size: clamp(14px, 1.8vw, 40px);
+    --text-font-size: clamp(12px, 1.2vw, 30px);
+    --text-font-size-small: clamp(8px, 1.2vw, 20px);
+    --title-font-size-mobile: clamp(20px, 8vw, 35px);
+    --text-popup: clamp(8px, 1.8vw, 20px);
+    --title-popup: clamp(8px, 4vw, 20px);
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+}
+
+aside{
+    background-color: var(--color2);
+    padding: 20px 20px 20px 20px;
+    color: black;
+    height: 720px;
+    width: clamp(50px, 20%, 250px);
+    font-family: var(--font-onest);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.acordeon{
+    background-color: var(--color4);
+}
+
+.acordeon:hover{
+    background-color: var(--color3);
+}
+
+.opciones{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    width: clamp(80px, 30%, 120px);
+    margin-bottom: 20px;
+}
+
+h3{
+    font-family: var(--font-borel);
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-onest);
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #a8dae3;
+    width: 100%;
+}
+
+/* section{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-onest);
+} */
+
+a{
+    text-decoration: none;
+    color: #54248f;
+    margin: 10px 10px 10px 10px;
+}
+
+.section__title{
+    justify-self: left;
+}
+
+.ordersTable {
+    width: 80%;
+    align-self: start; 
+    justify-self: start;
+    
+}
+  
+
+  .modal {
+    display: none;
+    position: fixed;
+    justify-content: space-around;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-text{
+    font-size: max(16px, 1.5vw);
+    margin: 0;
+  }
+  
+  .modal-content {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    padding: 1.9vw;
+    border: 1px solid #888;
+    width:min(400px,30vw);
+    height: auto;
+    text-align: center;
+  }
+  .close ,.close:hover{
+    font-size: clamp(16px, 2vw, 30px);
+    align-self: end;
+    justify-self: start;
+    cursor: pointer;
+  }
+
+
+
+  @media (max-width: 768px){
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    aside{
+        background-color: var(--color2);
+        padding: 20px 20px 20px 20px;
+        color: black;
+        height: clamp(160px, 20%, 250px);
+        width: clamp(450px, 100%, 768px);
+        font-family: var(--font-onest);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .encabezado{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo{
+        width: clamp(30px, 20%, 120px);
+        margin-bottom: 20px;
+    }
+    
+    h3{
+        font-family: var(--font-borel);
+    }
+    
+    .acordeon{
+        background-color: var(--color4);
+    }
+
+    .acordeon:hover{
+        background-color: var(--color3);
+    }
+
+    section{
+        width: 100%;
+        max-width:780px; 
+        overflow: scroll;
+    }
+
+  }

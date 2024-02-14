@@ -1,6 +1,6 @@
 //traer botones
-const botonNext = document.querySelector(".btn-next")
-const botonPrev = document.querySelector(".btn-prev")
+const botonNext = document.querySelector(".carousel__btn-next")
+const botonPrev = document.querySelector(".carousel__btn-prev")
 
 //array de contenedores de cards
 let cardContainers= document.querySelectorAll(".card-container");
@@ -92,28 +92,28 @@ nota: el else statement hace exactamente lo mismo pero adaptado para la ultima c
     nota: el else statement hace exactamente lo mismo pero adaptado para la ultima carta del carusel
     */ 
         if(actualCard == 0){
-            cardContainers[actualCard].classList += " animated-out"
+            cardContainers[actualCard].classList += " animated-out-p"
             
             setTimeout(() => {
-                cardContainers[actualCard].classList.remove("animated-out");
+                cardContainers[actualCard].classList.remove("animated-out-p");
                 cardContainers[actualCard].classList.remove("active");
-                cardContainers[cardContainers.length-1].classList += " active" + " animated-in"
+                cardContainers[cardContainers.length-1].classList += " active" + " animated-in-p"
          
             }, 2000); 
             setTimeout(()=>{
-                cardContainers[cardContainers.length-1].classList.remove("animated-in")}, 4000
+                cardContainers[cardContainers.length-1].classList.remove("animated-in-p")}, 4000
             )
     
         }else {
-            cardContainers[actualCard].classList +=" animated-out"
+            cardContainers[actualCard].classList +=" animated-out-p"
             
             setTimeout(() => {
-                cardContainers[actualCard].classList.remove("animated-out");
+                cardContainers[actualCard].classList.remove("animated-out-p");
                 cardContainers[actualCard].classList.remove("active");
-                cardContainers[actualCard-1].classList += " active" + " animated-in"
+                cardContainers[actualCard-1].classList += " active" + " animated-in-p"
             }, 2000); 
             setTimeout(()=>{
-                cardContainers[actualCard-1].classList.remove("animated-in")}, 4000
+                cardContainers[actualCard-1].classList.remove("animated-in-p")}, 4000
             )
         }
         }
@@ -121,13 +121,23 @@ nota: el else statement hace exactamente lo mismo pero adaptado para la ultima c
 //Programa para desplegar cartas al hacer click sobre un elemento
 //la carta desplegada es un elemento HTML dialog, modificado con CSS para ocupar el viewport actual del usuario
 
-const review = document.querySelector(".card-dialog")
-const reviewCard= document.querySelector(".review-link")
+const careInfo = document.querySelector(".care-info-card")
+const careCard= document.querySelector(".care-info")
 
-reviewCard.addEventListener("click", () =>{
-    review.showModal()
+const packingInfo = document.querySelector(".packing-info-card")
+const packingCard = document.querySelector(".packing-info")
+const divPrueba = document.querySelector(".div-prueba")
+
+
+careCard.addEventListener("click", () =>{
+    careInfo.showModal()
 
 })
 
+packingCard.addEventListener("click", () =>{
+    packingInfo.showModal();
+
+
+})
 
 
