@@ -1,9 +1,54 @@
-//traer botones
-const botonNext = document.querySelector(".carousel__btn-next")
-const botonPrev = document.querySelector(".carousel__btn-prev")
+const lista = localStorage.getItem("listaProductos");
+
+function showPopup(productData){
+    // Obtener el modal y el overlay
+    let modal = document.querySelector('.modal-info');
+    let overlay = document.querySelector('.overlay');
+   
+    // Actualizar el contenido del modal con la información del producto
+    modal.innerHTML = `
+        <div class="container">
+          <div id="imagen--product">
+              <img id="img-product" src="${productData.img}" alt="${productData.name}">
+          </div>
+          <div class="more--info">
+              <h3 class="product--name">${productData.name}</h3>
+              <p class="product--description">${productData.description}</p>
+              <p class="product--material">Material: ${productData.material}</p>
+              <p class="product--type">Tipo: ${productData.type}</p>
+              <div class="price">$${productData.price}</div>
+              <div class="preview--buttons">
+                  <button class="cart">Agregar al carrito</button>
+              </div>
+          </div>
+        </div>
+    `;
+   
+    // Mostrar el modal y el overlay
+    modal.style.display = 'inline-block';
+    overlay.style.display = 'inline-block';
+   
+    // Agregar un evento de clic al overlay para cerrar el modal
+    overlay.addEventListener('click', function() {
+      modal.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+   
+    // Agregar un evento de clic al modal para evitar el cierre al hacer clic dentro de él
+    modal.addEventListener('click', function(event) {
+      event.stopPropagation(); // Evita que el clic se propague al overlay
+    });
+   }
+   
+
+fillCarousel(lista);
+
 
 //array de contenedores de cards
 let cardContainers= document.querySelectorAll(".card-container");
+//traer botones
+const botonNext = document.querySelector(".carousel__btn-next")
+const botonPrev = document.querySelector(".carousel__btn-prev")
 
 //añadir event listener al botonNext que inicializa la funcion para cambiar las cards
 botonNext.addEventListener("click", () =>{nextContainer()})
@@ -98,7 +143,7 @@ nota: el else statement hace exactamente lo mismo pero adaptado para la ultima c
                 cardContainers[actualCard].classList.remove("animated-out-p");
                 cardContainers[actualCard].classList.remove("active");
                 cardContainers[cardContainers.length-1].classList += " active" + " animated-in-p"
-         
+                
             }, 2000); 
             setTimeout(()=>{
                 cardContainers[cardContainers.length-1].classList.remove("animated-in-p")}, 4000
@@ -117,6 +162,90 @@ nota: el else statement hace exactamente lo mismo pero adaptado para la ultima c
             )
         }
         }
+
+
+
+function fillCarousel(lista){
+ const data= JSON.parse(lista)
+ //creacion del div que contiene las cards
+const cardContainer = document.createElement("div")
+cardContainer.classList.add("card-container")
+
+//creacion de las cards
+const card = document.createElement("div")
+card.classList.add("card")
+//creacion de botones
+const btnPrev = `<button type="button" class="carousel__btn-prev">
+<img src="./assets/home-assets/triangle.png" class="arrow-prev" alt="prev">
+</button>`
+const btnNext = `<button type="button" class="carousel__btn-next">
+<img src="./assets/home-assets/triangle.png" class="arrow-next" alt="next">
+</button>`
+
+//llamar al carusel para insertar los elementos
+let carousel = document.querySelector(".carousel-container")
+
+carousel.innerHTML += btnPrev
+
+//se agregan 3 contenedores
+for (let i = 0; i < 3; i++) {
+    carousel.appendChild(cardContainer.cloneNode(true))
+}
+
+let containers = carousel.querySelectorAll(".card-container");
+containers[0].classList += " active";
+    // Loop through each card container
+    containers.forEach((container) => {
+        //insert 3 cards in each container
+        for (let i = 0; i < 3; i++) {
+            //append the new card
+            const newCard = card.cloneNode(true)
+            container.appendChild(newCard)
+        }
+    });
+
+//Element array off all the cards
+let allCards = carousel.querySelectorAll(".card")
+console.log(allCards);
+//loop through each card
+allCards.forEach((card, i) => {
+    
+            // Set inner HTML of the card
+            card.innerHTML = `
+                <div class="card-link" id="productId${data[i].id}">
+                    <img src="${data[i].img}" alt="${data[i].name}" class="img-card">
+                </div>
+                <p class="product">${data[i].name}</p>
+                <p class="price">$${data[i].price}.00</p>`;
+
+                
+});
+
+//fue necesario 
+setTimeout(() => {
+    const cardLinks = document.querySelectorAll(".card-link")
+    cardLinks.forEach( (link , f)=>{
+        console.log(card + f);
+        
+        link.addEventListener("click", () =>{
+            showPopup(data[f]);
+        })
+    })
+    
+}, 2000);
+
+
+carousel.innerHTML += btnNext
+
+
+
+}
+
+
+
+
+
+
     
 //Programa para desplegar cartas al hacer click sobre un elemento
 //la carta desplegada es un elemento HTML dialog, modificado con CSS para ocupar el viewport actual del usuario
@@ -141,3 +270,26 @@ packingCard.addEventListener("click", () =>{
 })
 
 
+
+//evento para redicreccion de los botones descubrir
+const btnDescubrelo = document.querySelector(".btn--mentas-descubrelo")
+btnDescubrelo.addEventListener("click", ()=>{
+    window.location.href = "./src/html/listaProductos.html"
+}) 
+
+const btnConocenos = document.querySelector(".btn--mentas-descubrelo-small")
+btnConocenos.addEventListener("click", ()=>{
+    window.location.href = "./src/html/conocenos.html"
+}) 
+
+//evento para redireccion de las cards de categorias
+const cardProfesiones = document.getElementById("profesiones");
+cardProfesiones.addEventListener("click", () =>{
+    const url = "./src/html/listaProductos.html#profesiones";
+    window.open(url, '_blank');
+})
+const cardMascotas = document.getElementById("mascotas");
+cardMascotas.addEventListener("click", () =>{
+    const url = "./src/html/listaProductos.html#mascotas";
+    window.open(url, '_blank');
+})

@@ -22,6 +22,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Borel&family=Onest&family=Yeseva+One&display=swap"
     rel="stylesheet">
+  <!-- Script objectlist-->
+  <script src="./src/scripts/object-list.js"></script>
   <!-- Carousel script -->
   <script src="./src/scripts/carousel.js" defer></script>
   <!-- Reviews script -->
@@ -153,113 +155,15 @@
     </div>
 
     <div class="carousel-container">
-      <button type="button" class="carousel__btn-prev">
-        <img src="./assets/home-assets/triangle.png" class="arrow-prev" alt="prev">
-      </button>
-      <div class="card-container active">
-        <div class="card" id="product1">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <p class="product">Collar de perrito</p>
-          <p class="description">plata 420</p>
+    </div>
+       
+    <!-- Overlay -->
+    <div class="overlay">
 
-        </div>
+    </div>
 
-        <div class="card" id="product2">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <p class="product">Collar de perrito</p>
-          <p class="description">plata 420</p>
-
-        </div>
-
-        <div class="card" id="product3">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <p class="product">Collar de perrito</p>
-          <p class="description">plata 420</p>
-
-        </div>
-
-
-
-      </div>
-
-      <div class="card-container">
-        <div class="card" id="product1">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <p class="product">Collar de perrito</p>
-          <p class="description">plata 420</p>
-
-        </div>
-
-        <div class="card" id="product2">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <p class="product">Collar de perrito</p>
-          <p class="description">plata 420</p>
-
-        </div>
-
-        <div class="card" id="product3">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <p class="product">Collar de perrito</p>
-          <p class="description">plata 420</p>
-
-        </div>
-
-      </div>
-
-      <div class="card-container">
-        <div class="card" id="product1">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <p class="product">Collar de perrito</p>
-          <p class="description">plata 420</p>
-
-        </div>
-
-        <div class="card" id="product2">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <p class="product">Collar de perrito</p>
-          <p class="description">plata 420</p>
-
-        </div>
-
-        <div class="card" id="product3">
-          <a href="#" class="card-link">
-            <img src="./assets/home-assets/charm.webp" alt="collar" class="img-card">
-          </a>
-          <p class="price">$300.00</p>
-          <p class="product">Collar de perrito</p>
-          <p class="description">plata 420</p>
-
-        </div>
-
-      </div>
-
-      <button type="button" class="carousel__btn-next">
-        <img src="./assets/home-assets/triangle.png" class="arrow-next" alt="next">
-      </button>
+    <!-- Modal -->
+    <div class="modal-info">
     </div>
   </section>
 
@@ -273,10 +177,10 @@
     <div class="container--tarjetas--cuarta">
 
 
-      <div class="category-card">
+      <div class="category-card" id="profesiones">
         <div class="category-card__text-image-container">
-          <h1 class="category-card__text-big">Un símbolo de tu esfuerzo y pasión</h1>
-          <img src="./assets/categorias/=_ perro 1.jpg" alt="Imagen representativa de la categoría profesiones"
+          <h1 class="category-card__text-big">UN SÍMBOLO DE TU ESFUERZO Y PASION</h1>
+          <img src="./assets/categorias/dentista 2.jpg" alt="Imagen representativa de la categoría profesiones"
             class="category-card__image"> <!--Cambiar imagen-->
         </div>
         <div class="category-card__text-container">
@@ -286,11 +190,11 @@
         </div>
       </div>
 
-      <div class="category-card">
+      <div class="category-card" id="mascotas">
         <div class="category-card__text-image-container">
-          <h1 class="category-card__text-big">Lleva el cariño de tu mascota a todas partes</h1>
-          <img class="category-card__image" src="./assets/categorias/dentista 2.jpg"
-            alt="Imagen representativa de la categoría profesiones"> <!--Cambiar imagen-->
+          <h1 class="category-card__text-big">LLEVA EL CARIÑO DE TU MASCOTA A TODAS PARTES</h1>
+          <img class="category-card__image" src= "./assets/categorias/=_ perro 1.jpg"
+            alt="Imagen representativa de la categoría mascotas"> <!--Cambiar imagen-->
         </div>
         <div class="category-card__text-container">
           <h1 class="title category-card__title">Mascotas</h1>
@@ -326,22 +230,44 @@
   <!-- elemento dialog utilizado como Popup -->
   <dialog class="care-info-card">
     <form method="dialog">
-      <h3>Laura</h3>
-      <img src="./assets/charm.webp" alt="" class="img-rev">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit id reprehenderit quaerat, ullam
-        aspernatur nobis doloribus aperiam maiores ipsam consectetur nihil aut inventore iste harum sit eveniet nesciunt
-        laboriosam.</p>
+      <h3>¿Cómo cuidar tus piezas?</h3>
+      <p><ul><span><b>Cuidado de Joyería de Plata 925:</b></span>
+        <li>Limpieza regular: La plata tiende a oxidarse con el tiempo, así que es recomendable limpiar tus joyas de plata 925 regularmente. Utiliza un paño de pulido para eliminar el deslustre y restaurar el brillo original.
+        </li>
+        <li>Almacenamiento adecuado: Guarda tus joyas de plata en un lugar fresco y seco. Evita la exposición directa a la luz solar y al aire, ya que esto puede acelerar el proceso de oxidación.</li>
+        <li>Evita la humedad: La humedad puede contribuir a la oxidación de la plata. Guarda tus piezas de plata en un lugar sin humedad y evita almacenarlas en el baño.</li>
+        <li>Uso regular: Aunque parezca contradictorio, usar tus joyas de plata con regularidad puede ayudar a mantenerlas brillantes. El contacto con la piel y la fricción contribuyen a pulir la superficie.</li>
+        <li>Evita productos químicos: Evita el contacto directo con productos químicos como perfumes, lociones y productos de limpieza. Retira tus joyas de plata antes de aplicar estos productos para evitar daños.</li>
+      </ul>
+        <hr>
+        <ul><span><b>Cuidado de Joyería de Acero Inoxidable con Baño de Oro:</b></span>
+        <li>Limpieza suave: Limpia las piezas de acero inoxidable con baño de oro utilizando un paño suave y no abrasivo para eliminar el polvo y la suciedad. Evita limpiadores abrasivos que puedan dañar el baño de oro.</li>
+        <li>Almacenamiento por separado: Guarda tus joyas de acero inoxidable con baño de oro por separado de otras joyas para evitar rayones. Puedes envolverlas en paños suaves o guardarlas en bolsas de joyería.</li>
+        <li>Evita el agua: Aunque el acero inoxidable es resistente al agua, el baño de oro puede deteriorarse con el tiempo si se expone al agua con frecuencia. Evita el contacto excesivo con el agua y quítate las joyas antes de nadar o bañarte.
+        </li>
+        <li>No apliques productos químicos: Evita el contacto con productos químicos agresivos como perfumes y productos de limpieza. Aplica perfumes antes de ponerte las joyas y límpialas suavemente si entran en contacto con estos productos.
+        </li>
+        <li>Inspección regular: Realiza inspecciones periódicas para asegurarte de que no haya desgaste evidente en el baño de oro. Si observas algún desgaste, es posible que desees consultar a un joyero profesional para retocar el baño de oro.
+        </li></ul>
+      
+    <b>Siguiendo estos consejos de cuidado, podrás mantener tus joyas de plata 925 y acero inoxidable con baño de oro en óptimas condiciones durante más tiempo.
+    </b></p>
       <button class="btn--mentas care-info-card__btn-close" type="submit">Cerrar</button>
     </form>
   </dialog>
 
   <dialog class="packing-info-card">
     <form method="dialog">
-      <h3>Laura</h3>
-      <img src="./assets/charm.webp" alt="" class="img-rev">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit id reprehenderit quaerat, ullam
-        aspernatur nobis doloribus aperiam maiores ipsam consectetur nihil aut inventore iste harum sit eveniet nesciunt
-        laboriosam.</p>
+      <h3>Empaque de Menta’s Boutique</h3>
+      <p>
+        <ul>
+        <li>El paquete llega a tus manos con un empaque elegante y distintivo de la marca de joyería. La mailbox exterior está adornada con el logotipo en detalles dorados, creando una anticipación emocionante antes de abrirlo. Al retirar la cinta que sujeta la mailbox sientes la calidad del material y la atención al detalle desde el primer momento.</li>
+       <li>Al abrir la mailbox te encuentras con otra capa de presentación, revelas una elegante caja de joyería. Esta caja, diseñada con materiales de alta calidad, tiene un acabado suave al tacto y se abre con suavidad, revelando el tesoro que guarda en su interior.</li>
+        <li>Dentro de la caja, las joyas descansan sobre un cojín delicadamente colocado. La presentación es impecable, cada pieza está ubicada estratégicamente para realzar su belleza. Puedes percibir el brillo de los materiales y los destellos de las gemas que capturan la luz de manera cautivadora. </li>
+        <li> medida que tomas cada pieza en tus manos, sientes su peso y la calidad de la artesanía. Los detalles meticulosos, desde los cierres hasta los grabados, revelan la atención al detalle que la marca ha puesto en cada elemento. Cada joya está acompañada de un certificado de autenticidad, reforzando la garantía de calidad. </li>
+      </ul>
+      <b>La experiencia de unboxing no solo se trata de las joyas en sí, sino del cuidado y la dedicación que la marca ha puesto en cada paso del proceso. Desde la presentación hasta la calidad del producto, todo contribuye a crear una experiencia llena de elegancia y encanto, convirtiendo la adquisición de joyas en un momento memorable.</b>
+        </p>
       <button class="btn--mentas care-info-card__btn-close" type="submit">Cerrar</button>
     </form>
   </dialog>
@@ -357,22 +283,14 @@
         <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/resenas/1.png" alt="Reseña Charm Medicina">
         </div>
-        <h3 id="nombre--review--quinta">Nombre A.</h3>
+        <h3 id="nombre--review--quinta">Daniela M.</h3>
         <div class="stars--quinta"> <!--Es el contenedor de todas las estrellitas-->
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Una estrella">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Dos estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Tres estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Cuatro estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Cinco estrellas">
+          <div class="stars">
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
           </div>
         </div>
       </div>
@@ -381,22 +299,14 @@
         <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/resenas/2.png" alt="Reseña Charm Medicina">
         </div>
-        <h3 id="nombre--review--quinta">Nombre A.</h3>
+        <h3 id="nombre--review--quinta">Dalia B.</h3>
         <div class="stars--quinta"> <!--Es el contenedor de todas las estrellitas-->
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Una estrella">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Dos estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Tres estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Cuatro estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Cinco estrellas">
+          <div class="stars">
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
           </div>
         </div>
       </div>
@@ -405,22 +315,14 @@
         <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/resenas/3.png" alt="Reseña Charm Medicina">
         </div>
-        <h3 id="nombre--review--quinta">Nombre A.</h3>
+        <h3 class="nombre--review--quinta" id="nombre--review--quinta">Karola G.</h3>
         <div class="stars--quinta"> <!--Es el contenedor de todas las estrellitas-->
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Una estrella">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Dos estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Tres estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Cuatro estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Cinco estrellas">
+          <div class="stars">
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
           </div>
         </div>
       </div>
@@ -429,22 +331,14 @@
         <div class="imagen--container--reviews"><!--Es solo el container de la imagen-->
           <img id="imagen--reviews" src="./assets/resenas/4.png" alt="Reseña Charm Medicina">
         </div>
-        <h3 id="nombre--review--quinta">Nombre A.</h3>
+        <h3 id="nombre--review--quinta">Fer A.</h3>
         <div class="stars--quinta"> <!--Es el contenedor de todas las estrellitas-->
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Una estrella">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Dos estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Tres estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Cuatro estrellas">
-          </div>
-          <div class="container--stars"> <!--Contenedor de la imagen de una estrella-->
-            <img src="./assets/home-assets/star.png" alt="Cinco estrellas">
+          <div class="stars">
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
+            <i class="fa-sharp fa-solid fa-star"></i>
           </div>
         </div>
       </div>
@@ -463,7 +357,7 @@
         <img id="img-preview" src="./assets/resenas/1.png" alt="Reseña Charm Medicina">
       </div>
       <div class="prueba">
-        <h3 class="review-card__client-name">Nombre A.</h3>
+        <h3 class="review-card__client-name">Daniela M.</h3>
         <div class="stars">
           <i class="fa-sharp fa-solid fa-star"></i>
           <i class="fa-sharp fa-solid fa-star"></i>
@@ -477,8 +371,8 @@
         
         <div class="buttons">
           <!-- <a href="#" class="buy">Comprar</a> -->
-          <p class="review-card__product-name">CHARM VARA DE HERMES MEDICINA ENFERMERIA</p>
-          <a href="#" class="cart">Ver producto</a>
+          <p class="review-card__product-name">CHARM SCHNAUZER MASOCTAS PERRO</p>
+          <a href="./src/html/listaProductos.html" class="cart">Ver productos</a>
         </div>
       </div>
     </div>
@@ -490,7 +384,7 @@
         <img id="img-preview" src="assets/resenas/2.png" alt="Reseña Charm Medicina">
       </div>
       <div class="prueba">
-        <h3 class="review-card__client-name">Nombre A.</h3>
+        <h3 class="review-card__client-name">Dalia B.</h3>
         <div class="stars">
           <i class="fa-sharp fa-solid fa-star"></i>
           <i class="fa-sharp fa-solid fa-star"></i>
@@ -504,8 +398,8 @@
         
         <div class="buttons">
           <!-- <a href="#" class="buy">Comprar</a> -->
-          <p class="review-card__product-name">CHARM VARA DE HERMES MEDICINA ENFERMERIA</p>
-          <a href="#" class="cart">Ver producto</a>
+          <p class="review-card__product-name">CHARM CORAZON HUELLA MASCOTAS</p>
+          <a href="./src/html/listaProductos.html" class="cart">Ver productos</a>
         </div>
       </div>
     </div>
@@ -517,7 +411,7 @@
         <img id="img-preview" src="assets/resenas/3.png" alt="Reseña Charm Medicina">
       </div>
       <div class="prueba">
-        <h3 class="review-card__client-name">Nombre A.</h3>
+        <h3 class="review-card__client-name">Karola G.</h3>
         <div class="stars">
           <i class="fa-sharp fa-solid fa-star"></i>
           <i class="fa-sharp fa-solid fa-star"></i>
@@ -531,8 +425,8 @@
         
         <div class="buttons">
           <!-- <a href="#" class="buy">Comprar</a> -->
-          <p class="review-card__product-name">CHARM VARA DE HERMES MEDICINA ENFERMERIA</p>
-          <a href="#" class="cart">Ver producto</a>
+          <p class="review-card__product-name">CHARM LUNA ESTRELLAS OTROS</p>
+          <a href="./src/html/listaProductos.html" class="cart">Ver productos</a>
         </div>
       </div>
     </div>
@@ -544,7 +438,7 @@
         <img id="img-preview" src="./assets/resenas/4.png" alt="Reseña Charm Medicina">
       </div>
       <div class="prueba">
-        <h3 class="review-card__client-name">Nombre A.</h3>
+        <h3 class="review-card__client-name">Fer A.</h3>
         <div class="stars">
           <i class="fa-sharp fa-solid fa-star"></i>
           <i class="fa-sharp fa-solid fa-star"></i>
@@ -556,8 +450,8 @@
         
         <div class="buttons">
           <!-- <a href="#" class="buy">Comprar</a> -->
-          <p class="review-card__product-name">CHARM VARA DE HERMES MEDICINA ENFERMERIA</p>
-          <a href="#" class="cart">Ver producto</a>
+          <p class="review-card__product-name">CHARM CAMARA FOTOGRAFIA PROFESIONES</p>
+          <a href="./src/html/listaProductos.html" class="cart">Ver productos</a>
         </div>
       </div>
     </div>
