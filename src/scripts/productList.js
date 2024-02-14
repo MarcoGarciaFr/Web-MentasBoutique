@@ -2,9 +2,7 @@
     1. Crear listado de objetos (10)
     2. Manipular el DOM para insertar los objetos dentro de HTML
     3. Generar estilos para los objetos creados dentro de HTML
-    4. Asignar un data-name a cada uno de los objetos
-    5. Crear las popups en el dom virtual
-    6. Vincular los popups con su correspondiente data-target */
+    4. Crear las popups en el dom virtual
 
 
 /*1. LISTADO DE OBJETOS */
@@ -108,7 +106,7 @@ let listaProductos = [
         "Charm microscopio, elaborado en plata 925 compatible con pulseras de charms varias marcas.",
         "Plata 925",
         "Charm",
-        "Profesiones",
+        "profesiones",
         ["salud", "Quimico", "Ciencia", "Biologia"],
         "../../assets/lista-productos-assets/Profesiones/microscopio.jpg"
     ),
@@ -130,7 +128,7 @@ let listaProductos = [
         "Collar ADN elaborado en plata 925.", //description
         "Plata 925", //material
         "Collar", //type
-        "profesiones", //category 
+        "collares", //category 
         ["Ciencia", "Quimico", "Biologia", "salud"], //subcategory
         "../../assets/lista-productos-assets/Collar/collar.jpg" //img
     )
@@ -159,14 +157,14 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     `;
     
-    // Obtener el div de subcategoría según la subcategoría del producto
-    let subcategoryDiv = document.querySelector(`.${producto.subcategory}`);
+    // Obtener el div de categoría según la categoría del producto
+    let categoryDiv = document.querySelector(`#${producto.category}`);
     
-    // Agregar el div del producto a la subcategoría div
-    if (subcategoryDiv) {
+    // Agregar el div del producto a la categoría div
+    if (categoryDiv) {
       // Aplicar un estilo para hacer que los elementos productDiv estén en línea
       productDiv.style.display = 'inline-block';
-      subcategoryDiv.appendChild(productDiv);
+      categoryDiv.appendChild(productDiv);
 
       // Agregar un evento de clic al productDiv
       productDiv.addEventListener('click', function() {
@@ -174,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showPopup(producto);
       });
     } else {
-      console.error(`Subcategory not found for product: ${producto.name}`);
+      console.error(`Category not found for product: ${producto.name}`);
     }
   });
 });
@@ -201,7 +199,6 @@ function showPopup(producto) {
             <p class="product--type">Tipo: ${producto.type}</p>
             <div class="price">$${producto.price}</div>
             <div class="preview--buttons">
-                <button class="buy">Comprar</button>
                 <button class="cart">Agregar al carrito</button>
             </div>
         </div>
