@@ -89,7 +89,14 @@
                 </div>
             </div>
 
-
+            <div>
+                <button class="close" > <!--Este se agregó-->
+                    <a href="../../../home.html">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Salir
+                    </a>
+                </button>
+            </div>
 
         </aside>
 
@@ -142,8 +149,13 @@
                     </div>
         
                     <div class="mb-3">
-                        <label for="productType" class="form-label">Tipo:</label>
-                        <input type="text" class="form-control" id="productType" min="1" max="100" required autocomplete="off">
+                        <label for="productType" class="form-label">Tipo:</label> 
+                        <select type="text" class="form-control" id="productType" min="1" max="100" required autocomplete="off">
+                            <option value="Charms">Charms</option>    
+                            <option value="Pulseras">Pulseras</option>
+                            <option value="Aretes">Aretes</option>
+                            <option value="Collares">Collares</option>    
+                        </select>
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
@@ -154,7 +166,12 @@
         
                     <div class="mb-3">
                         <label for="productCategory" class="form-label">Categoria:</label>
-                        <input type="text" class="form-control" id="productCategory" min="1" max="100" required autocomplete="off">
+                        <select type="text" class="form-control" id="productCategory" min="1" max="100" required autocomplete="off">
+                        <option value="mascotas">mascotas</option>    
+                        <option value="profesiones">profesiones</option>
+                        <option value="Handmade">Handmade</option>
+                        <option value="otros">otros</option>
+                        </select>
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
@@ -163,16 +180,7 @@
                         </div>
                     </div>
         
-                    <div class="mb-3">
-                        <label for="productSubcategory" class="form-label">Subcategoria:</label>
-                        <input type="text" class="form-control" id="productSubcategory" min="1" max="100" required autocomplete="off">
-                        <div class="invalid-feedback">
-                            Este campo es requerido
-                        </div>
-                        <div class="valid-feedback">
-                            Correcto!
-                        </div>
-                    </div>
+                   
         
                     <div class="mb-3">
                         <label for="image" class="form-label">Imagen</label>
