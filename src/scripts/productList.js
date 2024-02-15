@@ -425,8 +425,10 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="imagen--container--producto">
         <img src="${producto.imagen}" alt="${producto.nombre}" id="imagen--producto">
         </div>
+        <div class="letras">
         <h4>${producto.nombre}</h4>
         <p>Precio: $${producto.precio}</p>
+        </div>
         <button class="btn--comprar">Comprar</button>
       </div>
     `;
@@ -561,7 +563,7 @@ function showPopup(producto) {
         event.stopPropagation(); // Evita que el clic se propague al overlay
     });
 
-    
+
 }
 
 
