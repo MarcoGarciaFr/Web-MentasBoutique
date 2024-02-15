@@ -221,7 +221,22 @@ textarea.form-control {
 .footer{
     grid-area: footer;
 }
+a img {
+    width: 100px;
+    height: 40px;
+    float: left;
+    margin-right: 10px; 
+}
+.small{
+   
+    height: 40px;
+    float: left;
+    margin-right: 10px; 
+}
 
+.contenedor a {
+    text-decoration: none;
+}
 
   /**Responsividad*/
   /* Tablets */
