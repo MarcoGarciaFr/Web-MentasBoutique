@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="../../styles/conocenos.css">
      <!--Estilos de NavBar y Footer-->
-    <link href="../../styles/navbarf-styles.css" rel="stylesheet">
+    <link href="../../styles/navbar-styles.css" rel="stylesheet">
 
     <!-- Icon de la página -->
     <link rel="icon" href="../../assets/navbarf-assets/Mentas.png" type="image/png">
@@ -41,75 +41,86 @@
 
 <body>
 
-    <div class="contenedor">
-        <header class="header">
+<div class="contenedor">
+<header class="header">
            
-            <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-          <!-- Icono de Menta's Boutique -->
-          <span class="navbar-brand">
-            <a href="../../home.html">
-            <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Icono Menta's Boutique" style="width: 100px; height: 40px;">
-          </a>
-          </span>
-          
-          <!-- Botón del menú responsivo para dispositivos pequeños -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <!-- Elementos del menú -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="charmsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Charms</a>
-                <div class="dropdown-menu" aria-labelledby="charmsDropdown">
-                  <a class="dropdown-item" href="about:blank" target="_blank">Handmade</a>
-                  <a class="dropdown-item" href="about:blank" target="_blank">Mascotas</a>
-                  <a class="dropdown-item" href="about:blank" target="_blank">Profesiones</a>
-                  <a class="dropdown-item" href="about:blank" target="_blank">Otros</a>
-                </div>
-              </li>
-              <li>
-                <a class="nav-link" href="about:blank" id="pulserasDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Pulseras</a>
-              </li>
-              <li>
-                <a class="nav-link" href="about:blank" id="aretesDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Aretes</a>
-              </li>
-              <li>
-                <a class="nav-link" href="about:blank" id="collaresDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Collares</a>
-              </li>
-            </ul>
-          </div>
-    
-          <!-- Iconos a la derecha -->
-          <div class="navbar-nav">
-    
-            <!-- Barra de búsqueda -->
-            <form class="d-flex mx-auto">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Buscar</button>
-            </form>
-    
-            <a class="nav-item nav-link search-icon" href="#">
-              <img src="../../assets/navbarf-assets/Search.png" alt="Busqueda" style="width: 20px; height: 20px;">
-            </a>
-            <a class="nav-item nav-link" href="./src/html/login.html" target="_blank">
-              <img src="../../assets/navbarf-assets/User.png" alt="Usuario" style="width: 20px; height: 20px;">
-            </a>
-            <a class="nav-item nav-link" href="about:blank" target="_blank">
-              <img src="../../assets/navbarf-assets/Pay.png" alt="Pagos" style="width: 20px; height: 20px;">
-            </a>
-            <a class="nav-item nav-link" href="https://www.instagram.com/mentasboutique" target="_blank">
-              <img src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo" style="width: 20px; height: 20px;">
-            </a>
-            <a class="nav-item nav-link" href="https://www.tiktok.com/@mentas_boutique" target="_blank">
-              <img src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo" style="width: 20px; height: 20px;">
-            </a>
-          </div>
-        </div>
-      </nav>
+ <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+    <!-- Botón del menú responsivo para dispositivos pequeños -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <!-- Icono de Menta's Boutique -->
+      
+    <!-- Logo de Menta's Boutique en el centro -->
+    <a class="navbar-brand" href="../../home.html">
+      <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Icono Menta's Boutique" style="width: 100px; height: 40px;">
+    </a>
+
+      <!-- Elementos del menú -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="charmsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Charms</a>
+            <hr class="dropdown-divider"> <!-- Línea de separación -->
+            <div class="dropdown-menu dropdown-menu-center" aria-labelledby="charmsDropdown">
+              <a class="dropdown-item" href="./listaProductos.html#handmade" target="_blank">Handmade</a>
+              <hr class="dropdown-divider"> <!-- Línea de separación -->
+              <a class="dropdown-item" href="./listaProductos.html#mascotas" target="_blank">Mascotas</a>
+              <hr class="dropdown-divider"> <!-- Línea de separación -->
+              <a class="dropdown-item" href="./listaProductos.html#profesiones" target="_blank">Profesiones</a>
+              <hr class="dropdown-divider"> <!-- Línea de separación -->
+              <a class="dropdown-item" href="./listaProductos.html#otros" target="_blank">Otros</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./listaProductos.html#pulseras" id="pulserasDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Pulseras</a>
+            <hr class="dropdown-divider"> <!-- Línea de separación -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./listaProductos.html#aretes" id="aretesDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Aretes</a>
+            <hr class="dropdown-divider"> <!-- Línea de separación -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./listaProductos.html#collares" id="collaresDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Collares</a>
+            <hr class="dropdown-divider"> <!-- Línea de separación -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about:blank" id="carrito" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Carrito</a> <!--PENDIENTE REFERENCIAR A CARRITO-->
+          </li>
+        </ul>
+      </div>
+
+      <!-- Iconos a la derecha -->
+      <div class="navbar-nav">
+
+        <!-- Barra de búsqueda -->
+        <!-- <form class="d-flex mx-auto">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
+
+         <a class="nav-item nav-link search-icon" href="#">
+          <img src="./assets/Search.png" alt="Busqueda" style="width: 20px; height: 20px;"> 
+        </a> -->
+        <a class="nav-item nav-link user-icon" href="./login.html" target="_blank">
+          <img src="../../assets/navbarf-assets/User.png" alt="Usuario" style="width: 20px; height: 20px;">
+        </a>
+        <a class="nav-item nav-link payments-icon" href="./Pago.html" target="_blank">
+          <img src="../../assets/navbarf-assets/Pay.png" alt="Pagos" style="width: 20px; height: 20px;">
+        </a>
+        <a class="nav-item nav-link instagram-icon" href="https://www.instagram.com/mentasboutique" target="_blank">
+          <img src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo" style="width: 20px; height: 20px;">
+        </a>
+        <a class="nav-item nav-link tiktok-icon" href="https://www.tiktok.com/@mentas_boutique" target="_blank">
+          <img src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo" style="width: 20px; height: 20px;">
+        </a>
+      </div>
+    </div>
+  </nav>
 
         </header>
 
@@ -182,50 +193,10 @@
 
         </aside>
 
-        <footer class="footer">
-            <!--Aquí van el footer-->
-            <div class="footer">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-6 text-left">
-                      <!-- Logo de Menta's Boutique -->
-                      <a href="../../home.html"> <!-- Agrega este enlace -->
-                        <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Logo Menta's Boutique"
-                          style="width: 100px; height: 40px;">
-                        <span class="ml-2"></span>
-                      </a>
-                    </div>
-                    <div class="col-md-6 text-right">
-                      <a href="../../src/html/conocenos.html" class="ml-2" target="_blank">Conócenos</a>
-                      <a href="../../html/contacto.html" class="ml-2" target="_blank">Contacto</a>
-                      <a href="about:blank" class="ml-2" target="_blank">Productos</a>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-md-6 text-left">
-                      <p class="small">Hecho con amor. &copy;<a href="../../src/html/sobreNosotros.html" target="_blank">Little
-                          Devs</a>2023.</p>
-                    </div>
-                    <div class="col-md-6 text-right">
-                      <p class="small">Síguenos:
-                        <a href="https://www.instagram.com/mentasboutique" target="_blank"><img
-                            src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo"
-                            style="width: 20px; height: 20px;"></a>
-                        <a href="https://www.tiktok.com/@mentas_boutique" target="_blank"><img
-                            src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo"
-                            style="width: 20px; height: 20px;"></a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </footer>
-
-
-
-
     </div>
+
+  <!-- FOOTER SECCION -->
+  <iframe class="footer" src="../html/footer.html" frameborder="0"></iframe>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

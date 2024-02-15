@@ -24,6 +24,12 @@ body {
     background-color: white;
 }
 
+.footer{
+    position: absolute;
+    width: 100% !important;
+    height: 145px !important;
+}
+
 /**Grid layout*/
 .contenedor {
     display: grid;

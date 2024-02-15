@@ -26,6 +26,12 @@ nav {
 
 }
 
+.footer{
+    position: absolute;
+    width: 100% !important;
+    height: 145px !important;
+}
+
 h1{
     font-family: var(--font-title);
     color: var(--primary-light);
@@ -33,7 +39,6 @@ h1{
 }
 body {
     font-size: 16px;
-    background-color: var(--background-secondary);
     font-family: var(--font-primary);
 }
 
@@ -51,6 +56,7 @@ h2 {
 
 
 .form-wrapper {
+    padding-top: 62px;
     position: relative;
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -74,12 +80,12 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(92deg, var(--background-secondary) 30%,var(--background-primary) 95.43%);
 }
 
 .info-side img {
+    padding:0;
     width: 100%;
-    height: 100%;
+    height: 100vhs;
     border-radius: 0.1rem;
 }
 
@@ -196,19 +202,19 @@ h2 {
 }
 
 .my-form__actions  p {
-    font-family: var(--font-primary);
+    font-family: var(--font-title);
     display: inline-block;
     margin: 0;
     
 }
 
 .my-form__actions p#not-member{
-    font-family: var(--font-primary);
+    font-family: var(--font-title);
     font-size: 17px;   
 }
 
 .my-form__actions p#already-account{
-    font-family: var(--font-primary);
+    font-family: var(--font-title);
     font-size: 17px;   
 }
 
@@ -218,12 +224,17 @@ h2 {
     font-weight: 200;
 }
 
+.form-control::placeholder {
+    font-family: var(--font-title);
+}
+form ::placeholder{
+    font-family: var(--font-title);
+}
 
 
 /* Responsive 720px */
 @media (width <= 720px) { /*Nueva sintaxis para media queries*/
     body {
-        background: linear-gradient(0deg, var(--background-secondary) 30%,var(--background-primary) 95.43%);
         height: 100vh;
     }
 
@@ -242,7 +253,7 @@ h2 {
     
     .form-side {
         margin: 1.5;
-        background-color: transparent;
+
     }
 
     .my-form {
