@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proceso de pago</title>
 
+    <!-- Icon de la página -->
+    <link rel="icon" href="../../assets/navbarf-assets/Mentas.png" type="image/png">
+    <!--Icons online-->
+    <script src="https://kit.fontawesome.com/2d064f382f.js" crossorigin="anonymous" defer></script>
     <!--Google Fonts Borel-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,12 +129,12 @@
                     Identificación
                 </div>
                 <div class="alerta">
-                    <p>*Solicitamos únicamente la información esencial para la finalización de la compra.</p>
+                    <p>*Solicitamos únicamente la información esencial para la finalización de la compra. Es importante llene los campos con datos válidos, debidos a que estos se utilizaran para el envío de su pedido.</p>
                 </div>
-                <form class="row g-3 needs-validation" novalidate>
+                <form class="row g-3 needs-validation" novalidate id="formulario">
                     <div class="row-md-4">
                         <label for="validationCustom01" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="validationCustom01" required
+                        <input type="email" class="form-control" id="validationCustom01" required
                             placeholder="sucorreo@dominio.com">
                         <div class="valid-feedback">
                             ¡Correcto!
@@ -155,7 +159,7 @@
                     </div>
 
                     <div class="separador">
-                        Envio
+                        Envío
                     </div>
 
                     <div class="row-md-4">
@@ -168,7 +172,7 @@
 
                     <div class="row-md-4">
                         <label for="validationCustom02" class="form-label">Dirección</label>
-                        <input type="tel" class="form-control" id="validationCustom02"
+                        <input type="text" class="form-control" id="validationCustom02"
                             placeholder="Calle XXX entre Calle XXX #555 Col. XXX C.P. 11111" required>
                         <div class="valid-feedback">
                             ¡Correcto!
@@ -224,6 +228,16 @@
         </aside>
 
 </div>
+
+    <!-- Overlay -->
+    <div class="pago-preview">
+
+    </div>
+
+    <!-- Modal -->
+    <div class="preview">
+
+    </div>
 
       <!-- FOOTER SECCION -->
   <iframe class="footer" src="../html/footer.html" frameborder="0"></iframe>
