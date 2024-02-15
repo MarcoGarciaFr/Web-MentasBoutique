@@ -1,0 +1,106 @@
+:root {
+  --font-onest: 'Onest', sans-serif;
+  --font-yeseva: 'Yeseva One', serif;
+  --font-borel: 'Borel', cursive;
+  --color1: #f5e7e9;
+  --color2: #f4afcf;
+  --color3: #a8dae3;
+  --color4: #cab8f2;
+  --color5: #54248f;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: var(--font-onest);
+  position: relative; /* Cambiado a posición relativa */
+  
+}
+
+
+
+
+
+/* Estilos para la barra de navegación fija */
+.navbar {
+
+  background-color: var(--color2); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px var(--color1); /* Sombreado */
+  
+}
+
+/* Ajusta el espacio entre los íconos de la barra de navegación */
+.navbar-nav .nav-link {
+
+  margin-left: 5px; /* Ajusta el espacio entre los íconos */
+  font-size: 20px; /* Tamaño de los íconos */
+
+}
+
+/* Ajusta el color del texto de las opciones de la navbar */
+.navbar-nav .nav-link {
+  color: black;
+  
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+  min-width: 15px; /* Ancho del menú desplegable */
+  background-color: var(--color2); /* Color de fondo del menú desplegable */
+  
+}
+
+#carrito{
+  display: none;
+}
+
+
+
+
+
+/* Para dispositivos con ancho de pantalla de hasta 480px */
+@media screen and (max-width: 991px) {
+
+  /* Ocultar el icono de Instagram en la versión móvil */
+  .nav-item.nav-link.instagram-icon {
+    display: none;
+  }
+
+  /* Ocultar el icono de TikTok en la versión móvil */
+  .nav-item.nav-link.tiktok-icon {
+    display: none;
+  }
+
+  /* Ocultar el icono de Pagos en la versión móvil */
+  .nav-item.nav-link.payments-icon {
+    display: none;
+  }
+
+  /* Ocultar el icono de Usuarios en la versión móvil */
+  .nav-item.nav-link.user-icon {
+    display: none;
+  }
+
+  /* Alinear los elementos del menú al centro */
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-brand {
+    position: absolute; /* Posición absoluta para el logo */
+    top: 0; /* Alineación en la parte superior */
+    right: 0; /* Alineación en la parte derecha */
+    margin: 4px; /* Margen para separarlo del borde de la pantalla */
+  }
+
+  /* Estilo para las líneas de separación del menú desplegable */
+  .dropdown-divider {
+    margin: 0.2rem 0; /* Espacio vertical entre las líneas de separación */
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Estilo de la línea de separación */
+  }
+
+
+  #carrito{
+    display: inline;
+  }
+
+}

@@ -27,6 +27,15 @@
     
 }
 
+
+
+.footer{
+    padding-top: 10px;
+    position: absolute;
+    width: 100% !important;
+    height: 155px !important;
+}
+
 /**Grid layout de proceso de pago */
 
 .contenedor {

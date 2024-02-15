@@ -21,3 +21,33 @@
       }, false);
   });
 })();
+
+
+    // Recuperar el total del carrito del sessionStorage
+    let total = sessionStorage.getItem("totalCarrito");
+    let totalCarrito = JSON.parse(total);
+    const totalCobro = document.getElementById("total-cobro");
+    let totalDiv = document.createElement('div');
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Si hay un total almacenado, hacer algo con él (por ejemplo, mostrarlo en la página de cobro)
+    //if (totalCarrito) {
+        // Por ejemplo, mostrar el total en un elemento HTML con id "total-cobro"
+        totalDiv.innerHTML = `
+            <p>El total de su compra ${totalCarrito}</p>
+        `
+        totalCobro.appendChild(totalDiv);
+    //} else {
+        // Manejar el caso en que no hay total almacenado
+        
+    //}
+});
+
+const finalizarPago = document.getElementById("finalizar");
+
+finalizarPago.addEventListener("click", () =>{
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.href = "../../home.html";
+})
