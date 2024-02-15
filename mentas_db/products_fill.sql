@@ -1,24 +1,18 @@
 INSERT INTO `mentas_db`.`products`
-(
-`product_name`,
-`price`,
-`description`,
-`material`,
-`type`,
-`category`,
-`url_img`,
-`stock`)
+(product_name, price, description, material, type, category, url_img, stock)
 VALUES
 ('Charm Perro Perrito', 390, 'Charm elaborado en plata 925 compatible con pulseras de charms varias marcas.', 'Plata', 'Charms', 'mascotas', 'https://http2.mlstatic.com/D_NQ_NP_984748-MLM70666689893_072023-O.webp', 12),
 ('Charm Enfermera Enfermería', 390, 'Charm elaborado en plata 925 y esmalte, quintado. Compatible con pulseras de charm varias marcas.', 'Plata', 'Charms', 'profesiones', 'https://http2.mlstatic.com/D_NQ_NP_868872-MLM70657973526_072023-O.webp', 15),
 ('Charm Ojo Turco Protección',370, 'Charm ojo turco para protección elaborado en plata 925 y circonias. Quintado. Compatible con pulseras para charms.', 'Plata','Charms', 'otros', 'https://http2.mlstatic.com/D_NQ_NP_639832-MLM73081208707_112023-O.webp', 10),
 ('Charm Dálmata',450, 'Charm dálmata elaborado en plata 925 quintado, con detalles en esmalte. Compatible con pulseras de charms.', 'Plata', 'Charms', 'mascotas', 'https://http2.mlstatic.com/D_NQ_NP_992574-MLM72046195497_102023-O.webp',13),
 ('Charm Graduación', 390, 'Charm elaborado en plata 925 quintado, con detalles en esmalte y circonia rosa. Compatible con pulseras de charms.', 'Plata', 'Charms', 'profesiones', 'https://http2.mlstatic.com/D_NQ_NP_827937-MLM73000029742_112023-O.webp', 16),
-('Charm Buda', 390, 'Charm elaborado en plata 925 quintado, compatible con pulseras de charms.', 'Charms', 'otros', 'https://http2.mlstatic.com/D_NQ_NP_850524-MLM71169531540_082023-O.webp', 5),
+('Charm Buda', 390, 'Charm elaborado en plata 925 quintado, compatible con pulseras de charms.', 'Plata', 'Charms', 'otros', 'https://http2.mlstatic.com/D_NQ_NP_850524-MLM71169531540_082023-O.webp', 5),
 ('Charm Medicina Enfermería Reflexión', 620, 'Charm elaborado en plata 925, compatible con pulsera reflexión (la pulsera delgada). Modelo elaborado con circonias y detalle en esmalte.', 'Plata', 'Charms', 'profesiones', 'https://http2.mlstatic.com/D_NQ_NP_842825-MLM71609754155_092023-O.webp', 8),
 ('Charm Enfermería Estetoscopio', 390, 'Charm elaborado en plata 925, compatible con pulseras de charms.', 'Plata', 'Charms', 'profesiones', 'https://http2.mlstatic.com/D_NQ_NP_860371-MLM71092409842_082023-O.webp', 14),
 ('Charm La Biblia Primera Comunión Confirmación', 390, 'Charm elaborado en plata 925, quintado, compatible con pulseras de charms', 'Plata', 'Charms', 'otros', 'https://http2.mlstatic.com/D_NQ_NP_745559-MLM71436958290_092023-O.webp', 5),
 ('Charm Cerebro Medicina Neurólogo Psicólogo', 370, 'Charm elaborado en plata 925. Compatible con pulseras de charm varias marcas', 'Plata 925', 'Charms', 'profesiones', 'https://http2.mlstatic.com/D_NQ_NP_2X_650090-MLM73000021004_112023-F.webp', 10),
+
+
 ('Charm La Noche Estrellada',
 390,
 'Charm elaborado en plata 925 quintado, compatible con pulseras de charms.',
