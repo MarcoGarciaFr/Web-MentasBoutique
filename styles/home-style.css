@@ -322,6 +322,7 @@ body {
 @media (max-width:5000px){
   .carousel{
     margin-top: 2vw;
+    height: 26.04vw;
   }
 .carousel-container {
   box-sizing: border-box;
@@ -367,8 +368,8 @@ body {
 
 .img-card {
   border-radius: 10px;
-  width: min(max(72px, 100%), 300px);
-  height: auto;
+  width: clamp(72px, 100%, 300px);
+  max-height: 300px;
 }
 
 .product {

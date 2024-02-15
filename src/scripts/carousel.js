@@ -1,4 +1,6 @@
 const lista = localStorage.getItem("listaProductos");
+let previousNumbers = [];
+fillCarousel(lista);
 
 function showPopup(productData){
     // Obtener el modal y el overlay
@@ -9,14 +11,14 @@ function showPopup(productData){
     modal.innerHTML = `
         <div class="container">
           <div id="imagen--product">
-              <img id="img-product" src="${productData.img}" alt="${productData.name}">
+              <img id="img-product" src="${productData.imagen}" alt="${productData.nombre}">
           </div>
           <div class="more--info">
-              <h3 class="product--name">${productData.name}</h3>
-              <p class="product--description">${productData.description}</p>
+              <h3 class="product--name">${productData.nombre}</h3>
+              <p class="product--description">${productData.descripcion}</p>
               <p class="product--material">Material: ${productData.material}</p>
-              <p class="product--type">Tipo: ${productData.type}</p>
-              <div class="price">$${productData.price}</div>
+              <p class="product--type">Tipo: ${productData.tipo}</p>
+              <div class="price">$${productData.precio}</div>
               <div class="preview--buttons">
                   <button class="cart">Agregar al carrito</button>
               </div>
@@ -253,15 +255,15 @@ containers[0].classList += " active";
 let allCards = carousel.querySelectorAll(".card")
 console.log(allCards);
 //loop through each card
-allCards.forEach((card, i) => {
-    
+allCards.forEach((card) => {
+    let i = getRandomNumber(0, (allCards.length-1), previousNumbers)
             // Set inner HTML of the card
             card.innerHTML = `
-                <div class="card-link" id="productId${data[i].id}">
-                    <img src="${data[i].img}" alt="${data[i].name}" class="img-card">
+                <div class="card-link" id="${data[i].id}">
+                    <img src="${data[i].imagen}" alt="${data[i].nombre}" class="img-card">
                 </div>
-                <p class="product">${data[i].name}</p>
-                <p class="price">$${data[i].price}.00</p>`;
+                <p class="product">${data[i].nombre}</p>
+                <p class="price">$${data[i].precio}.00</p>`;
 
                 
 });
@@ -269,11 +271,12 @@ allCards.forEach((card, i) => {
 //fue necesario 
 setTimeout(() => {
     const cardLinks = document.querySelectorAll(".card-link")
-    cardLinks.forEach( (link , f)=>{
-        console.log(card + f);
+    cardLinks.forEach( (link)=>{
+        let index = parseInt(link.getAttribute("id"))
+
         
         link.addEventListener("click", () =>{
-            showPopup(data[f]);
+            showPopup(data[index-1]);
         })
     })
     
@@ -288,10 +291,17 @@ carousel.innerHTML += btnNext
 
 
 
-
+function getRandomNumber(min, max, previousNumbers) {
+    let randomNumber;
+    do {
+        randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    } while (previousNumbers.includes(randomNumber));
+    
+    previousNumbers.push(randomNumber);
+    return randomNumber;
+}
 
 
     
 
 
-fillCarousel(lista);
