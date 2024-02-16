@@ -328,7 +328,8 @@ body {
 @media (max-width:5000px){
   .carousel{
     margin-top: 2vw;
-    height: 26.04vw;
+    height: 40.04vw;
+    margin-bottom: 20px;
   }
 .carousel-container {
   box-sizing: border-box;
@@ -550,7 +551,10 @@ dialog::backdrop {
 
 
 @media only screen and (max-width: 768px) {
-
+  .carousel{
+    margin-top: 2vw;
+    height: 50.04vw;
+  }
   .carousel__btn-next,
   .carousel__btn-next:hover {
     width: 2vw;
@@ -628,7 +632,10 @@ dialog::backdrop {
 }
 
 @media only screen and (max-width: 480px) {
-
+  .carousel{
+    margin-top: 2vw;
+    height: 75.04vw;
+  }
   .carousel__title{
     font-size: var(--title-font-size-mobile)
   }
