@@ -230,8 +230,8 @@ function popupDelete(producto) {
         <div class="alinearDelete">
             <h5>¿Desea eliminar ${producto.name}?</h5>
             <div class="confirmation">
-                <button id="yes">Sí</button>
-                <button id="no">No</button>
+                <button id="yes" class="btn btn-success">Sí</button>
+                <button id="no" class="btn btn-secondary">No</button>
             </div>
         </div>
     `;
@@ -255,7 +255,8 @@ function popupDelete(producto) {
     const botonEliminar = document.getElementById("yes");
     botonEliminar.addEventListener('click', function() {
         eliminarProducto(producto.id);
-
+        modal.style.display = 'none';
+        overlay.style.display = 'none'
     });
     
 };

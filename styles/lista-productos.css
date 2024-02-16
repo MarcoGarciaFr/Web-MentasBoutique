@@ -26,9 +26,6 @@
     --title-popup: clamp(8px, 4vw, 20px);
 }
 
-.navbar{
-    display:none;
-}
 
 .contenedor {
     /*Margen de la barra de navegación*/
@@ -228,9 +225,10 @@ a{
     padding-top: 10px;
     margin-left: 30px;
     margin-right: 30px;
+    
 }
 
-.titulos--subcategorias {
+.titulos--tipo {
     /*Banner rosa de subcategorías, este se repite para todas*/
     background-color: var(--color2);
     margin-top: 20px;
@@ -241,25 +239,25 @@ a{
     padding-top: 10px;
     margin-left: 30px;
     margin-right: 30px;
+    
 }
 
-.titulos--subcategorias h3{
+.titulos--tipo h1{
     text-align:left;
     padding-left: 25px;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 /****************************************ESTILOS PARA LOS PRODUCTOS*******************************/
 
 .padding {
     /*Esta clase es para colocar espacio a los lados del contenedor de la fila*/
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-left: clamp(50px, 20%, 100px);
-    padding-right: clamp(50px, 20%, 100px);
-    padding-top: clamp(50px, 1%, 100px);
+    width: 90%;
+    max-width: 90%;
+    margin: 20px auto;
+    
+    
+    
 }
 
 .product {
@@ -267,14 +265,18 @@ a{
     border-radius: 6px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    margin: 10px 30px 30px 10px;
+    margin:20px 20px;
+    margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction:column;
+    flex-grow: 1;
+    padding-bottom: 8px;
+    text-align: center;
     align-items: center;
     width: 300px;
     height: clamp(400px, 7vw, 800px);
     color: black;
+    
 
 }
 
@@ -282,14 +284,23 @@ a{
 
 .imagen--container--producto {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: clamp(100px, 70%, 300px);
+    width: 80%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin-top: 10%;
+    
+    
     /*EDITAR LAS IMGS SERÁN CUADRADOS PARA QUE FUNCIONE*/
 }
 
 #imagen--producto {
-    width: 100%;
+    width: 180px;
+    height: 180px;
+    
+    object-fit: contain;
+    
+    
 }
 
 #nombre--producto {
@@ -298,25 +309,39 @@ a{
     align-self: center;
     font-size: large;
     text-align: center;
+grid-row: 2;
+    margin: 200px;
+    
 
 }
-
+.letras{
+    
+    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 20px;
+}
 .btn--comprar {
     background-color: var(--color3);
     cursor: pointer;
     border-radius: 10px;
     font-family: var(--font-onest);
     /*debido a que en la clase eslogan se le ponía Borel, aquí se le coloca nuevamente el tipo de letra Onest al btn*/
-    height: 40px;
-    width: 150px;
+    height: 10%;
+    width: 50%;
     font-size: large;
     border: 0;
+    
+    
+    
     /*de esta manera el botón no tendrá borde*/
 }
 
 .btn--comprar:hover {
     /*este estilo le da un hover al botón*/
     background-color: var(--color4);
+    
 }
 
 
@@ -347,9 +372,10 @@ a{
     gap: 0;
     text-align: center;
     background: white;
-    top: 20%;
-    left:20%;
+    top: 50%;
+    left:50%;
     position: fixed;
+    transform: translate(-50%, -50%);
     margin: 20px;
     height: 400px;
     border-radius: 15px;
@@ -379,24 +405,17 @@ a{
     align-items: center;
     justify-content: center;
     font-family: var(--font-onest);
+    font-weight: 600;
 }
 
 
 .cart {
     background-color: #a8dae3;
     border-radius: 10px;
-    width: 100px;
+    width: 200px;
     height: 50px;
     border: none;
-}
-
-
-.buy {
-    background-color: #a8dae3;
-    border-radius: 10px;
-    width: 100px;
-    height: 50px;
-    border: none;
+    font-weight: 500;
 }
 
 
@@ -405,10 +424,6 @@ a{
     border-radius: 10px;
 }
 
-.buy:hover {
-    background-color: #cab8f2;
-    border-radius: 10px;
-}
 
 #imagen--preview {
     margin-left: 10px;
@@ -460,8 +475,10 @@ a{
         text-align: center;
         background: white;
         top: clamp(5%, 10%, 25%);
-        left:5%;
+        top: 50%;
+        left:50%;
         position: fixed;
+        transform: translate(-50%, -50%);
         margin: 10px;
         height: 250px;
         border-radius: 15px;
@@ -505,19 +522,12 @@ a{
     .cart {
         background-color: #a8dae3;
         border-radius: 10px;
-        width: 50px;
+        width: 100px;
         height: 25px;
         border: none;
+        margin-bottom: 10px;
     }
     
-    
-    .buy {
-        background-color: #a8dae3;
-        border-radius: 10px;
-        width: 50px;
-        height: 25px;
-        border: none;
-    }
     
     
     .cart:hover {
@@ -525,10 +535,6 @@ a{
         border-radius: 10px;
     }
     
-    .buy:hover {
-        background-color: #cab8f2;
-        border-radius: 10px;
-    }
     
     #imagen--preview {
         margin-left: 10px;
