@@ -2,7 +2,7 @@ USE mentas_db;
 INSERT into roles(admin)
 VALUES(1),(0);
 
-INSERT INTO `mentas_db`.`user`
+INSERT INTO `mentas_db`.`clients`
 (
 `first_name`,
 `last_name`,

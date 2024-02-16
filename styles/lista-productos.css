@@ -436,7 +436,9 @@ grid-row: 2;
 }
 
 #img-preview {
-    width: clamp(100px, 100%, 800px);
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
 }
 
 .more--info{
@@ -547,7 +549,9 @@ grid-row: 2;
     }
     
     #img-preview {
-        width: clamp(100px, 100%, 400px);
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
     }
     
     .more--info{
