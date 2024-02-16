@@ -1446,7 +1446,6 @@ margin-top: 5vw;
   .stars--quinta {
     /*contenedor de todas las estrellas*/
     display: grid;
-    grid-template-columns: 7% 7% 7% 7% 7%;
     align-content: center;
     justify-content: center;
     gap: 0.5vw;
@@ -1497,10 +1496,10 @@ margin-top: 5vw;
   text-align: center;
   background: var(--color1);
   position: relative;
-  margin: 1.56vw;
-  width: 63.5vw;
-  height: 45.6vw;
-  border-radius: 1.2vw;
+  margin: 7vw; /* Reducir el margen */
+  width: 54vw; /* Ajustar el ancho de la tarjeta */
+  height: 40vw; /* Ajustar la altura de la tarjeta */
+  border-radius: 1.2vw; /* Reducir el radio de borde */
   overflow: hidden;
 }
 
@@ -1524,6 +1523,7 @@ margin-top: 5vw;
 }
 
 .stars{
+  margin-top: 6px;
   display: flex;
   justify-content: left;
 
@@ -1643,19 +1643,24 @@ margin-top: 5vw;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.8);
     /*Es el fondo de la review, es con el fin de centrar la atención del usuario en el contenido de la review*/
+    
   }
   
   .preview {
     /*Este contenedor es de las cuatro tarjetas de la review*/
     display: none;
+
+    text-align: center;
     
     background: var(--color1);
     position: relative;
+
    
-    width: 95%;
-    height: 90vh;
+    width: 80vw; /* Ajustar el ancho de la tarjeta */
+    height: 150vw; /* Ajustar la altura de la tarjeta */
     border-radius: 1.2vw;
     overflow:hidden;
+
   }
   
   .preview.active {
@@ -1667,6 +1672,7 @@ margin-top: 5vw;
   }
   
   .reseñas__title{
+    margin-top: 2vw;
     font-size: var(--title-font-size-mobile);
   }
   
@@ -1682,12 +1688,14 @@ margin-top: 5vw;
   }
   
   .stars{
-    display: flex;
-    justify-content: left;
+    padding-top: 2px;
+    display:inline-flex;
   
   }
   .products-preview .preview .stars i {
     color: var(--color5);
+    padding-top: 6px;
+    margin-bottom: 6px;
     font-size: 2.5vw;
   }
   
@@ -1699,6 +1707,7 @@ margin-top: 5vw;
   }
   
   .buttons {
+    margin-top: 8px;
     border-top: 1px var(--color5) solid;
     display: block;
   }
@@ -1718,6 +1727,7 @@ margin-top: 5vw;
   }
   
   .products-preview .preview .buttons a.cart {
+    margin-top: 6px;
     background-color: #a8dae3;
     border-radius: 0.8vw;
     width: 20vw;

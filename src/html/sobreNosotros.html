@@ -187,7 +187,9 @@
                 </div>
             </div>
 
-
+            <main class="equipo">
+                <h3 class="encabezados1">Contactanos</h3>
+            </main>
         </div>
         <div class="integrante6">
             <img src="../../assets/sobre-nosotros-assets/Carlos.png" class="foto" alt="Carlos Salina photo">
@@ -215,13 +217,15 @@
 
         </div>
 
-
+        <main class="equipo">
+            <h3 class="encabezados1">Contactanos:</h3>
+        </main>
         <!-- formulario de contacto con validacion de datos -->
 
-        <form class="formulario needs-validation" novalidate>
+        <form class="formulario needs-validation" novalidate action="https://formsubmit.co/0addbb3bf60ccbcfbfd94a6140133f0b" method="POST" >
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre(s)</label>
-                <input type="text" class="form-control" id="name" max="100" required>
+                <input name="name"type="text" class="form-control" id="name" max="100" required>
                 <div class="invalid-feedback">
                     Este campo es requerido </div>
                 <div class="valid-feedback">
@@ -230,7 +234,7 @@
             </div>
             <div class="mb-3">
                 <label for="lastName" class="form-label">Apellidos(s)</label>
-                <input type="text" class="form-control" id="lastName" min="1" max="100" required>
+                <input name="lastname" type="text" class="form-control" id="lastName" min="1" max="100" required>
                 <div class="invalid-feedback">
                     Este campo es requerido </div>
                 <div class="valid-feedback">
@@ -239,7 +243,7 @@
             </div>
             <div class="mb-3">
                 <label for="mail" class="form-label">Correo electronico</label>
-                <input type="email" class="form-control" id="mail" aria-describedby="mail" min="8" max="100" required>
+                <input name="email" type="email" class="form-control" id="mail" aria-describedby="mail" min="8" max="100" required>
                 <div class="invalid-feedback">
                     Ingresa un correo correcto
                 </div>
@@ -249,7 +253,7 @@
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Dejanos un mensaje</label>
-                <input type="text" class="form-control" id="message" required min="2" max="200">
+                <input name="text" type="text" class="form-control" id="message" required min="2" max="200">
 
                 <div class="invalid-feedback">
                     Porfavor deja un mensaje para nosotros

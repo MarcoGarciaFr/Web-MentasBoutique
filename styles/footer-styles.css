@@ -22,6 +22,7 @@ body {
   color: black;
   position: relative;
   justify-content: space-between; /* Alinea los elementos a ambos lados del contenedor */
+  overflow: hidden;
 }
 
 /* Ajusta el espacio entre los elementos del menú en el footer */

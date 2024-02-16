@@ -19,5 +19,11 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
+<<<<<<< HEAD
+  },
+  "keywords": [],
+  "author": ""
+=======
   }
+>>>>>>> dbfa42be4b36e61bb1739637bc8f60d6bea401f4
 }

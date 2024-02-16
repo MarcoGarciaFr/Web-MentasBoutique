@@ -107,8 +107,18 @@
     color: black; 
     font-family: var(--font-secundary);
     font-size: 16px;
+    
 }
-
+#paypal-button-container{
+    background-color:rgba(255, 255, 255, 0);
+}
+#result-message{
+    background-color: #f4afcf;
+}
+.paypal{
+    width: 100%;
+    height:auto
+}
 /* Estilo cuando el cursor está sobre el botón */
 .btn-primary:hover {
     background-color: var(--color-tertiary); /* Color de fondo al pasar el ratón sobre el botón */
