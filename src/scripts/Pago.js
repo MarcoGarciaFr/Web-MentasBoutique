@@ -88,6 +88,7 @@ finalizarPago.addEventListener("click", (event) => {
         event.preventDefault();
     }else{
         validacion();
+        event.preventDefault();
         popupConfirmacion();
     }
 });
@@ -101,10 +102,11 @@ function popupConfirmacion() {
     // Actualizar el contenido del modal con la información del producto
     modal.innerHTML = `
     <div class="gracias">
-        <h3>¡Muchas gracias por tu compra!</h3>
+        <h5>¡Muchas gracias por tu compra!</h5>
         <div class="icon">
             <i class="fa-solid fa-heart"></i>
         </div>
+        <p>En breve recibirás tu pedido.</p>
         <div class="home">
             <button id="aceptar">Aceptar</button>
         </div>
@@ -119,12 +121,11 @@ function popupConfirmacion() {
     aceptar.addEventListener('click', function () {
         // modal.style.display = 'none';
         // overlay.style.display = 'none';
-        const formulario = document.getElementById("formulario");
-        if (formulario.classList.contains("was-validated")) {
+        
             localStorage.clear();
             sessionStorage.clear();
             window.location.href = "../../home.html";    
-        }
+        
 
     });
 }
