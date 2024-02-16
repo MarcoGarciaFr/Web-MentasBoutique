@@ -1,6 +1,6 @@
 
 //Deshabilitar el envío de formularios si hay campos no válidos
-(() => {
+const validacion = () => {
     'use strict';
 
     // Selecciona todos los elementos del DOM que tienen la clase 'needs-validation' y los almacena en la variable forms.
@@ -20,7 +20,7 @@
             form.classList.add('was-validated');
         }, false);
     });
-})();
+};
 
 
 // Recuperar el total del carrito del sessionStorage
@@ -50,18 +50,45 @@ document.addEventListener("DOMContentLoaded", function () {
     //}
 });
 
+function habilitarBoton() {
+    var input1Value = document.getElementById('validationCustom01').value;
+    var input2Value = document.getElementById('validationCustom02').value;
+    var input3Value = document.getElementById('validationCustom03').value;
+    var fechaValue = document.getElementById('validationCustom04').value;
+    var input5Value = document.getElementById('validationCustom05').value;
+    var radioDebit = document.getElementById('debit');
+    var radioPaypal = document.getElementById('paypal');
+    var checkbox = document.getElementById('invalidCheck');
+    var submitButton = document.getElementById('finalizar');
+
+    // Verificar si todos los campos de texto están llenos
+    let inputLleno =  input1Value.trim() !== '' && input2Value.trim() !== '' && input3Value.trim() !== ''  && input5Value.trim() !== '';
+    
+    // Verificar que el campo de fecha esté lleno
+    var fechaLlena = fechaValue.trim() !== '';
+    
+    // Verificar si al menos una opción de radio está seleccionada
+    let radioLleno = radioDebit.checked || radioPaypal.checked;
+        
+    // Verificar si la checkbox está seleccionado
+    let checkboxLleno = checkbox.checked;
+
+    // Habilitar el botón solo si todos los criterios se cumplen
+    submitButton.disabled = !(inputLleno && fechaLlena && radioLleno && checkboxLleno);
+}
+
 
 const finalizarPago = document.getElementById("finalizar");
 
 finalizarPago.addEventListener("click", (event) => {
-    // Obtener el formulario por su ID (ajusta según tu HTML)
-    
     const formulario = document.getElementById("formulario");
-
-    if (formulario.classList.contains("was-validated") || formulario.classList.contains("needs-validation")) {
+    if (formulario.classList.contains("was-validated")) {
         // Si tiene la clase, mostrar la popcard
         popupConfirmacion();
         event.preventDefault();
+    }else{
+        validacion();
+        popupConfirmacion();
     }
 });
 
@@ -93,7 +120,7 @@ function popupConfirmacion() {
         // modal.style.display = 'none';
         // overlay.style.display = 'none';
         const formulario = document.getElementById("formulario");
-        if (formulario.classList.contains("was-validated")|| formulario.classList.contains("needs-validation")) {
+        if (formulario.classList.contains("was-validated")) {
             localStorage.clear();
             sessionStorage.clear();
             window.location.href = "../../home.html";    

@@ -135,7 +135,7 @@
                     <div class="row-md-4">
                         <label for="validationCustom01" class="form-label">Email</label>
                         <input type="email" class="form-control" id="validationCustom01" required
-                            placeholder="sucorreo@dominio.com">
+                            placeholder="sucorreo@dominio.com" oninput="habilitarBoton()">
                         <div class="valid-feedback">
                             ¡Correcto!
                         </div>
@@ -143,16 +143,16 @@
                     <div class="row-md-4">
                         <label for="validationCustom02" class="form-label">Nombre completo</label>
                         <input type="text" class="form-control" id="validationCustom02"
-                            placeholder="Nombre Apellido Apellido" required>
+                            placeholder="Nombre Apellido Apellido" required oninput="habilitarBoton()">
                         <div class="valid-feedback">
                             ¡Correcto!
                         </div>
                     </div>
 
                     <div class="row-md-4">
-                        <label for="validationCustom02" class="form-label">Teléfono móvil</label>
-                        <input type="tel" class="form-control" id="validationCustom02" placeholder="55 55555555"
-                            required>
+                        <label for="validationCustom03" class="form-label">Teléfono móvil</label>
+                        <input type="tel" class="form-control" id="validationCustom03" placeholder="55 55555555"
+                            required oninput="habilitarBoton()">
                         <div class="valid-feedback">
                             ¡Correcto!
                         </div>
@@ -163,17 +163,17 @@
                     </div>
 
                     <div class="row-md-4">
-                        <label for="validationCustom02" class="form-label">Fecha</label>
-                        <input type="date" class="form-control" id="validationCustom02" required>
+                        <label for="validationCustom04" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="validationCustom04" required onchange="habilitarBoton()">
                         <div class="valid-feedback">
                             ¡Correcto!
                         </div>
                     </div>
 
                     <div class="row-md-4">
-                        <label for="validationCustom02" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" id="validationCustom02"
-                            placeholder="Calle XXX entre Calle XXX #555 Col. XXX C.P. 11111" required>
+                        <label for="validationCustom05" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="validationCustom05"
+                            placeholder="Calle XXX entre Calle XXX #555 Col. XXX C.P. 11111" required oninput="habilitarBoton()">
                         <div class="valid-feedback">
                             ¡Correcto!
                         </div>
@@ -193,11 +193,11 @@
                     <div class="my-3">
 
                         <div class="form-check">
-                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required onclick="habilitarBoton()">
                             <label class="form-check-label" for="debit">Pago contra entrega</label>
                         </div>
                         <div class="form-check">
-                            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required onclick="habilitarBoton()">
                             <label class="form-check-label" for="paypal">PayPal</label>
                         </div>
                     </div>
@@ -205,7 +205,7 @@
 
                     <div class="col-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required onclick="habilitarBoton()">
                             <label class="form-check-label" for="invalidCheck">
                                 Aceptar términos y condiciones
                             </label>
@@ -216,7 +216,7 @@
                     </div>
                     <hr class="my-4">
                     <div class="col-12">
-                        <button class="btn btn-primary" type="submit" id="finalizar">Finalizar compra</button>
+                        <button class="btn btn-primary" type="submit" id="finalizar" disabled>Finalizar compra</button>
                     </div>
 
                 </form>
