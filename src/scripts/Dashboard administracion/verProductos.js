@@ -180,23 +180,22 @@ function popupEdit(producto) {
             <div class="edit">
                 <form class="formulario needs-validation" novalidate>
                 <div class="fila">
-                    <div class="mb-4">
-                    <label for="newId" class="form-label">Ingrese un nuevo id: </label>
-                    <input placeholder="${producto.id}" type="number" min="1" class="form-control" id="newId" required autocomplete="off"></input>
-                        <div class="invalid-feedback">
-                            Ingrese un número
-                        </div>
-                    </div>
+                    
                     <div class="mb-4">
                         <label for="newName" class="form-label">Ingrese un nuevo nombre: </label>
-                        <input placeholder="${producto.nombre}" type="name" class="form-control" id="newName" required autocomplete="off"></input>
+                        <input value="${producto.nombre}" type="name" class="form-control" id="newName" required autocomplete="off"></input>
                             <div class="invalid-feedback">
                                 Ingrese un nombre válido
                             </div>
                     </div>
                     <div class="mb-4">
                         <label for="newType" class="form-label">Ingrese nuevo tipo de producto: </label>
-                        <input placeholder="${producto.tipo}" type="text" class="form-control" id="newType" required autocomplete="off"></input>
+                        <select value="${producto.tipo}" type="text" class="form-control" id="newType" required autocomplete="off">
+                        <option value="Charms">Charms</option>
+                            <option value="Pulseras">Pulseras</option>
+                            <option value="Aretes">Aretes</option>
+                            <option value="Collares">Collares</option>
+                            </select>
                             <div class="invalid-feedback">
                                 Válido solo charm, aretes, collares, pulseras 
                             </div>
@@ -206,14 +205,14 @@ function popupEdit(producto) {
                 <div class="fila">
                     <div class="mb-4">
                         <label for="newStock" class="form-label">Ingrese cantidad de piezas en stock: </label>
-                        <input placeholder="${producto.stock} piezas actuales" type="number" min="1" class="form-control" id="newStock" required autocomplete="off"></input>
+                        <input value="${producto.stock}" type="number" min="1" class="form-control" id="newStock" required autocomplete="off"></input>
                             <div class="invalid-feedback">
                                 Ingrese una cantidad válida
                             </div>
                     </div>
                     <div class="mb-4">
                         <label for="newPrice" class="form-label">Ingrese precio en MXN y con dos decimales: </label>
-                        <input placeholder="$${producto.precio} actualmente" type="number" min="150" class="form-control" id="newPrice" required autocomplete="off"></input>
+                        <input value="${producto.precio}" type="number" min="150" class="form-control" id="newPrice" required autocomplete="off"></input>
                             <div class="invalid-feedback">
                                 Ingrese un precio válido
                             </div>
@@ -221,11 +220,23 @@ function popupEdit(producto) {
                 </div>
                     <div class="mb-4">
                         <label for="newDescription" class="form-label">Ingrese nueva descripción: </label>
-                        <input placeholder="${producto.descripcion}" type="text" class="form-control" id="newDescription" required autocomplete="off"></input>
+                        <input value="${producto.descripcion}" type="text" class="form-control" id="newDescription" required autocomplete="off"></input>
                     </div>
+                    <div class="mb-4">
+                    <label for="newMaterial" class="form-label">Ingrese nueva descripción: </label>
+                    <input value="${producto.material}" type="text" class="form-control" id="newMaterial" required autocomplete="off"></input>
+                </div>
+                    <div class="mb-4">
+                    <label for="newCategory" class="form-label">Ingrese nueva categoria: </label>
+                    <select value="${producto.categoria}" type="text" class="form-control" id="newCategory" required autocomplete="off">
+                        <option value="mascotas">mascotas</option>
+                            <option value="profesiones">profesiones</option>
+                            <option value="Handmade">Handmade</option>
+                            <option value="otros">otros</option></select>
+                </div>
                     <div class="mb-4">                        
-                        <label for="newImage" class="form-label">Cargar una nueva imagen con medidas 509px x 540px: </label><br>
-                        <input type="file" id="newImage" accept="image/*" required>
+                        <label for="newImage" class="form-label">Escribe nueva URL de imagen </label>
+                        <input type="text" id="newImage" value="${producto.imagen}" class="form-control" required>
                     </div>
                         <button id="update" type="submit" name="contact" class="btn btn-success">Actualizar</Button>
                         <button id="noEdit" type="button" class="btn btn-secondary">Cancelar</button>
@@ -253,23 +264,48 @@ function popupEdit(producto) {
     document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
         // Obtener el valor del input
-        let newId = document.getElementById('newId').value;
+        
         let newName = document.getElementById('newName').value;
         let newPrice = document.getElementById('newPrice').value;
         let newDescription = document.getElementById('newDescription').value;
         let newType = document.getElementById('newType').value;
+        let newCategory = document.getElementById('newCategory').value
+        let newMaterial = document.getElementById('newMaterial').value
         let newImage = document.getElementById('newImage').value;
         let newStock = document.getElementById('newStock').value;
         // Actualizar el objeto JSON con la nueva información
-        producto.id = newId;
+        
         producto.nombre = newName;
         producto.precio = newPrice;
         producto.descripcion = newDescription;
         producto.tipo = newType;
+        producto.categoria = newCategory;
+        producto.material = newMaterial;
         producto.imagen = newImage;
         producto.stock = newStock;
+
+        const url = `http://localhost:8080/admin/products/${producto.id}`
+        async function updateData(url, newData) {
+            try {
+                const response = await fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                        // Add other headers if needed
+                    },
+                    body: JSON.stringify(newData)
+                });
+                const data = await response.json();
+                console.log('Update successful:', data);
+                await verProductos()
+            } catch (error) {
+                console.error('Error updating data:', error);
+            }
+        }
+        updateData(url , producto);
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
     });
-    console.log(listaProductos);
+   
 }
 
-console.log(listaProductos);

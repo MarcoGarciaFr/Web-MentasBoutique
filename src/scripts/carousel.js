@@ -282,28 +282,94 @@ nota: el else statement hace exactamente lo mismo pero adaptado para la ultima c
                       <p class="product--type">Tipo: ${productData.tipo}</p>
                       <div class="price">$${productData.precio}</div>
                       <div class="preview--buttons">
-                          <button class="cart">Agregar al carrito</button>
+                      <button class="cart" id="${productData.id}">Agregar al carrito</button>
                       </div>
                   </div>
                 </div>
             `;
            
+            let botonesAgregar = document.querySelectorAll(".cart");
+            const numerito = document.querySelector("#numerito");
+        
+        
+            function actualizarBotonesAgregar() {
+                botonesAgregar = document.querySelectorAll(".cart");
+        
+                botonesAgregar.forEach(boton => {
+                    boton.addEventListener("click", agregarAlCarrito);
+                });
+            }
+        
+            actualizarBotonesAgregar();
+        
+        
+        
+        
+            let productosEnCarrito;
+        
+            let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+        
+            if (productosEnCarritoLS) {
+                productosEnCarrito = JSON.parse(productosEnCarritoLS);
+                //actualizarNumerito();
+            } else {
+                productosEnCarrito = [];
+            }
+        
+        
+        
+            function agregarAlCarrito(e) {
+                const idBoton = e.currentTarget.id;
+                console.log(idBoton);
+                const productoAgregado = listaProductos.find(producto => producto.id === parseInt(idBoton));
+        
+                if (productoAgregado) {
+                    let productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito")) || [];
+        
+                    // Verificar si el producto ya está en el carrito
+                    const productoExistente = productosEnCarrito.find(producto => producto.id === productoAgregado.id);
+        
+                    if (productoExistente) {
+                        // Si el producto ya está en el carrito, aumenta la cantidad
+                        productoExistente.cantidad++;
+                    } else {
+                        // Si es un nuevo producto, agrégalo al carrito con cantidad 1
+                        productoAgregado.cantidad = 1;
+                        productosEnCarrito.push(productoAgregado);
+                    }
+        
+                    // Guardar el carrito actualizado en el almacenamiento local
+                    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+                    //Al presionar el botón agregar carrito se cierra el modal y overlay
+                    modal.style.display = 'none';
+                    overlay.style.display = 'none';
+                }
+        
+        
+            }
+            /*function actualizarNumerito() {
+                let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+                numerito.innerText = nuevoNumerito;
+            }*/
+        
+            /*************************************************************************** */
             // Mostrar el modal y el overlay
             modal.style.display = 'inline-block';
             overlay.style.display = 'inline-block';
-           
+        
             // Agregar un evento de clic al overlay para cerrar el modal
-            overlay.addEventListener('click', function() {
-              modal.style.display = 'none';
-              overlay.style.display = 'none';
+            overlay.addEventListener('click', function () {
+                modal.style.display = 'none';
+                overlay.style.display = 'none';
             });
-           
+        
             // Agregar un evento de clic al modal para evitar el cierre al hacer clic dentro de él
-            modal.addEventListener('click', function(event) {
-              event.stopPropagation(); // Evita que el clic se propague al overlay
+            modal.addEventListener('click', function (event) {
+                event.stopPropagation(); // Evita que el clic se propague al overlay
             });
-           }
 
+
+}
 
 }
 

@@ -124,7 +124,7 @@
 
                     <div class="mb-3">
                         <label for="lastName" class="form-label">Precio del producto</label>
-                        <input type="text" class="form-control" id="lastName" min="1" max="100" required
+                        <input type="number" class="form-control" id="lastName" min="1" max="100" required
                             autocomplete="off">
                         <div class="invalid-feedback">
                             Este campo es requerido
@@ -196,7 +196,7 @@
 
                     <div class="mb-3">
                         <label for="productImage" class="form-label">Imagen</label>
-                        <input type="text" id="productImage" class="form-control" required autocomplete="off">
+                        <input type="text" id="productImage" class="form-control" min="1" max="250"required autocomplete="off">
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
@@ -207,7 +207,7 @@
 
                     <div class="mb-3">
                         <label for="productStock" class="form-label">Stock</label>
-                        <input type="number" id="productStock" class="form-control" required autocomplete="off">
+                        <input type="number" id="productStock" class="form-control" min="1" max="1000" required autocomplete="off">
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
