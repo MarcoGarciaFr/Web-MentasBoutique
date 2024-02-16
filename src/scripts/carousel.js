@@ -1,46 +1,14 @@
-const lista = localStorage.getItem("listaProductos");
+let listaProductos = [];
+async function getProducts() {
+  const response = await fetch("http://localhost:8080/admin/products");
+  const data = await response.json();
+  listaProductos = data;
+}
 let previousNumbers = [];
-fillCarousel(lista);
 
-function showPopup(productData){
-    // Obtener el modal y el overlay
-    let modal = document.querySelector('.modal-info');
-    let overlay = document.querySelector('.overlay');
-   
-    // Actualizar el contenido del modal con la información del producto
-    modal.innerHTML = `
-        <div class="container">
-          <div id="imagen--product">
-              <img id="img-product" src="${productData.imagen}" alt="${productData.nombre}">
-          </div>
-          <div class="more--info">
-              <h3 class="product--name">${productData.nombre}</h3>
-              <p class="product--description">${productData.descripcion}</p>
-              <p class="product--material">Material: ${productData.material}</p>
-              <p class="product--type">Tipo: ${productData.tipo}</p>
-              <div class="price">$${productData.precio}</div>
-              <div class="preview--buttons">
-                  <button class="cart">Agregar al carrito</button>
-              </div>
-          </div>
-        </div>
-    `;
-   
-    // Mostrar el modal y el overlay
-    modal.style.display = 'inline-block';
-    overlay.style.display = 'inline-block';
-   
-    // Agregar un evento de clic al overlay para cerrar el modal
-    overlay.addEventListener('click', function() {
-      modal.style.display = 'none';
-      overlay.style.display = 'none';
-    });
-   
-    // Agregar un evento de clic al modal para evitar el cierre al hacer clic dentro de él
-    modal.addEventListener('click', function(event) {
-      event.stopPropagation(); // Evita que el clic se propague al overlay
-    });
-   }
+fillCarousel();
+
+
    
 
 
@@ -90,6 +58,92 @@ cardMascotas.addEventListener("click", () =>{
     const url = "./src/html/listaProductos.html#mascotas";
     window.open(url, '_blank');
 })
+
+
+
+async function fillCarousel(){
+    await getProducts();
+ const data= listaProductos;
+ console.log(data);
+ //creacion del div que contiene las cards
+const cardContainer = document.createElement("div")
+cardContainer.classList.add("card-container")
+
+//creacion de las cards
+const card = document.createElement("div")
+card.classList.add("card")
+//creacion de botones
+const btnPrev = `<button type="button" class="carousel__btn-prev">
+<img src="./assets/home-assets/triangle.png" class="arrow-prev" alt="prev">
+</button>`
+const btnNext = `<button type="button" class="carousel__btn-next">
+<img src="./assets/home-assets/triangle.png" class="arrow-next" alt="next">
+</button>`
+
+//llamar al carusel para insertar los elementos
+let carousel = document.querySelector(".carousel-container")
+
+carousel.innerHTML += btnPrev
+
+//se agregan 3 contenedores
+for (let i = 0; i < 3; i++) {
+    carousel.appendChild(cardContainer.cloneNode(true))
+}
+
+let containers = carousel.querySelectorAll(".card-container");
+containers[0].classList += " active";
+    // Loop through each card container
+    containers.forEach((container) => {
+        //insert 3 cards in each container
+        for (let i = 0; i < 3; i++) {
+            //append the new card
+            const newCard = card.cloneNode(true)
+            container.appendChild(newCard)
+        }
+    });
+
+//Element array off all the cards
+let allCards = carousel.querySelectorAll(".card")
+console.log(allCards);
+//loop through each card
+allCards.forEach((card) => {
+    let i = getRandomNumber(0, (allCards.length-1), previousNumbers)
+            // Set inner HTML of the card
+            card.innerHTML = `
+                <div class="card-link" id="${data[i].id}">
+                    <img src="${data[i].imagen}" alt="${data[i].nombre}" class="img-card">
+                </div>
+                <p class="product">${data[i].nombre}</p>
+                <p class="price">$${data[i].precio}.00</p>`;
+
+                
+});
+
+//fue necesario 
+setTimeout(() => {
+    const cardLinks = document.querySelectorAll(".card-link")
+    cardLinks.forEach( (link)=>{
+        let productId = parseInt(link.getAttribute("id"))
+        let index;
+        for(let i = 0; i < listaProductos.length; i++){
+            if(productId == listaProductos[i].id){
+                index = i;
+            }
+        }
+
+        
+        link.addEventListener("click", () =>{
+            showPopup(data[index]);
+        })
+    })
+    
+}, 2000);
+
+
+carousel.innerHTML += btnNext
+
+
+
 
 //array de contenedores de cards
 let cardContainers= document.querySelectorAll(".card-container");
@@ -210,81 +264,45 @@ nota: el else statement hace exactamente lo mismo pero adaptado para la ultima c
         }
         }
 
-
-
-function fillCarousel(lista){
- const data= JSON.parse(lista)
- //creacion del div que contiene las cards
-const cardContainer = document.createElement("div")
-cardContainer.classList.add("card-container")
-
-//creacion de las cards
-const card = document.createElement("div")
-card.classList.add("card")
-//creacion de botones
-const btnPrev = `<button type="button" class="carousel__btn-prev">
-<img src="./assets/home-assets/triangle.png" class="arrow-prev" alt="prev">
-</button>`
-const btnNext = `<button type="button" class="carousel__btn-next">
-<img src="./assets/home-assets/triangle.png" class="arrow-next" alt="next">
-</button>`
-
-//llamar al carusel para insertar los elementos
-let carousel = document.querySelector(".carousel-container")
-
-carousel.innerHTML += btnPrev
-
-//se agregan 3 contenedores
-for (let i = 0; i < 3; i++) {
-    carousel.appendChild(cardContainer.cloneNode(true))
-}
-
-let containers = carousel.querySelectorAll(".card-container");
-containers[0].classList += " active";
-    // Loop through each card container
-    containers.forEach((container) => {
-        //insert 3 cards in each container
-        for (let i = 0; i < 3; i++) {
-            //append the new card
-            const newCard = card.cloneNode(true)
-            container.appendChild(newCard)
-        }
-    });
-
-//Element array off all the cards
-let allCards = carousel.querySelectorAll(".card")
-console.log(allCards);
-//loop through each card
-allCards.forEach((card) => {
-    let i = getRandomNumber(0, (allCards.length-1), previousNumbers)
-            // Set inner HTML of the card
-            card.innerHTML = `
-                <div class="card-link" id="${data[i].id}">
-                    <img src="${data[i].imagen}" alt="${data[i].nombre}" class="img-card">
+        function showPopup(productData){
+            // Obtener el modal y el overlay
+            let modal = document.querySelector('.modal-info');
+            let overlay = document.querySelector('.overlay');
+           
+            // Actualizar el contenido del modal con la información del producto
+            modal.innerHTML = `
+                <div class="container">
+                  <div id="imagen--product">
+                      <img id="img-product" src="${productData.imagen}" alt="${productData.nombre}">
+                  </div>
+                  <div class="more--info">
+                      <h3 class="product--name">${productData.nombre}</h3>
+                      <p class="product--description">${productData.descripcion}</p>
+                      <p class="product--material">Material: ${productData.material}</p>
+                      <p class="product--type">Tipo: ${productData.tipo}</p>
+                      <div class="price">$${productData.precio}</div>
+                      <div class="preview--buttons">
+                          <button class="cart">Agregar al carrito</button>
+                      </div>
+                  </div>
                 </div>
-                <p class="product">${data[i].nombre}</p>
-                <p class="price">$${data[i].precio}.00</p>`;
-
-                
-});
-
-//fue necesario 
-setTimeout(() => {
-    const cardLinks = document.querySelectorAll(".card-link")
-    cardLinks.forEach( (link)=>{
-        let index = parseInt(link.getAttribute("id"))
-
-        
-        link.addEventListener("click", () =>{
-            showPopup(data[index-1]);
-        })
-    })
-    
-}, 2000);
-
-
-carousel.innerHTML += btnNext
-
+            `;
+           
+            // Mostrar el modal y el overlay
+            modal.style.display = 'inline-block';
+            overlay.style.display = 'inline-block';
+           
+            // Agregar un evento de clic al overlay para cerrar el modal
+            overlay.addEventListener('click', function() {
+              modal.style.display = 'none';
+              overlay.style.display = 'none';
+            });
+           
+            // Agregar un evento de clic al modal para evitar el cierre al hacer clic dentro de él
+            modal.addEventListener('click', function(event) {
+              event.stopPropagation(); // Evita que el clic se propague al overlay
+            });
+           }
 
 
 }
