@@ -39,15 +39,14 @@
 /**Grid layout de proceso de pago */
 
 .contenedor {
+    margin-top: 75px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr;
     grid-template-areas:
-        "navegacion navegacion navegacion"
         "contenedor-form contenedor-form resumen"
         "contenedor-form contenedor-form resumen"
-        "contenedor-form contenedor-form resumen"
-        "footer footer footer";
+        "contenedor-form contenedor-form resumen";
 }
 
 .navegacion {
@@ -131,6 +130,8 @@
 
 .separador {
     background-color: var(--color-quinary);
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .resumen {
@@ -178,12 +179,17 @@
     width: 100px;
     background-color: var(--color-primary);
     border: var(--color-secundary) solid 1px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 #aceptar:hover{
     height: 32px;
     width: 105px;
+}
+
+.gracias p{
+    margin: 0;
 }
 
 @media only screen and (max-width:5000px){
@@ -216,7 +222,7 @@
         position: fixed;
         transform: translate(-50%, -50%);
         margin: 20px;
-        height: 220px;
+        height: 230px;
         border-radius: 15px;
     }
 

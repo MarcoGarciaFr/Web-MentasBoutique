@@ -13,15 +13,18 @@
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    
+        <!--Estilos propios-->
     <link href="../../styles/navbar-styles.css" rel="stylesheet">
-    <!--Estilos propios-->
     <link rel="stylesheet" href="../../styles/lista-productos.css">
+    <link rel="stylesheet" href="../../styles/footer-styles.css">
 
     <!--Fuentes de Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Borel&family=Onest:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap"
+        rel="stylesheet">
 
     <!--SCRIPTS LINKS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
@@ -30,67 +33,74 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
         defer></script>
     <script src="../scripts/navbarf-script.js" defer></script>
-
     <!--Script que traerá los productos de object-list.js-->
     <script src="../scripts/productList.js" defer></script>
 </head>
 
 <body>
-      <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
 
-    <!-- Botón del menú responsivo para dispositivos pequeños -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+            <!-- Botón del menú responsivo para dispositivos pequeños -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Icono de Menta's Boutique -->
-      
-    <!-- Logo de Menta's Boutique en el centro -->
-    <a class="navbar-brand" href="../../home.html">
-      <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Icono Menta's Boutique" style="width: 100px; height: 40px;">
-    </a>
+            <!-- Icono de Menta's Boutique -->
 
-      <!-- Elementos del menú -->
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="charmsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Charms</a>
-            <hr class="dropdown-divider"> <!-- Línea de separación -->
-            <div class="dropdown-menu dropdown-menu-center" aria-labelledby="charmsDropdown">
-              <a class="dropdown-item" href="./listaProductos.html#handmade" target="_blank">Handmade</a>
-              <hr class="dropdown-divider"> <!-- Línea de separación -->
-              <a class="dropdown-item" href="./listaProductos.html#mascotas" target="_blank">Mascotas</a>
-              <hr class="dropdown-divider"> <!-- Línea de separación -->
-              <a class="dropdown-item" href="./listaProductos.html#profesiones" target="_blank">Profesiones</a>
-              <hr class="dropdown-divider"> <!-- Línea de separación -->
-              <a class="dropdown-item" href="./listaProductos.html#otros" target="_blank">Otros</a>
+            <!-- Logo de Menta's Boutique en el centro -->
+            <a class="navbar-brand" href="../../home.html">
+                <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Icono Menta's Boutique"
+                    style="width: 100px; height: 40px;">
+            </a>
+
+            <!-- Elementos del menú -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="charmsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Charms</a>
+                        <hr class="dropdown-divider"> <!-- Línea de separación -->
+                        <div class="dropdown-menu dropdown-menu-center" aria-labelledby="charmsDropdown">
+                            <a class="dropdown-item" href="./listaProductos.html#handmade" target="_blank">Handmade</a>
+                            <hr class="dropdown-divider"> <!-- Línea de separación -->
+                            <a class="dropdown-item" href="./listaProductos.html#mascotas" target="_blank">Mascotas</a>
+                            <hr class="dropdown-divider"> <!-- Línea de separación -->
+                            <a class="dropdown-item" href="./listaProductos.html#profesiones"
+                                target="_blank">Profesiones</a>
+                            <hr class="dropdown-divider"> <!-- Línea de separación -->
+                            <a class="dropdown-item" href="./listaProductos.html#otros" target="_blank">Otros</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./listaProductos.html#pulseras" id="pulserasDropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false" target="_blank">Pulseras</a>
+                        <hr class="dropdown-divider"> <!-- Línea de separación -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./listaProductos.html#aretes" id="aretesDropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false" target="_blank">Aretes</a>
+                        <hr class="dropdown-divider"> <!-- Línea de separación -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./listaProductos.html#collares" id="collaresDropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false" target="_blank">Collares</a>
+                        <hr class="dropdown-divider"> <!-- Línea de separación -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about:blank" id="carrito" role="button" aria-haspopup="true"
+                            aria-expanded="false" target="_blank">Carrito</a> <!--PENDIENTE REFERENCIAR A CARRITO-->
+                    </li>
+                </ul>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./listaProductos.html#pulseras" id="pulserasDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Pulseras</a>
-            <hr class="dropdown-divider"> <!-- Línea de separación -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./listaProductos.html#aretes" id="aretesDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Aretes</a>
-            <hr class="dropdown-divider"> <!-- Línea de separación -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./listaProductos.html#collares" id="collaresDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Collares</a>
-            <hr class="dropdown-divider"> <!-- Línea de separación -->
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about:blank" id="carrito" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Carrito</a> <!--PENDIENTE REFERENCIAR A CARRITO-->
-          </li>
-        </ul>
-      </div>
 
-      <!-- Iconos a la derecha -->
-      <div class="navbar-nav">
+            <!-- Iconos a la derecha -->
+            <div class="navbar-nav">
 
-        <!-- Barra de búsqueda -->
-        <!-- <form class="d-flex mx-auto">
+                <!-- Barra de búsqueda -->
+                <!-- <form class="d-flex mx-auto">
           <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
           <button class="btn btn-outline-light" type="submit">Buscar</button>
         </form>
@@ -98,21 +108,24 @@
          <a class="nav-item nav-link search-icon" href="#">
           <img src="./assets/Search.png" alt="Busqueda" style="width: 20px; height: 20px;"> 
         </a> -->
-        <a class="nav-item nav-link user-icon" href="./login.html" target="_blank">
-          <img src="../../assets/navbarf-assets/User.png" alt="Usuario" style="width: 20px; height: 20px;">
-        </a>
-        <a class="nav-item nav-link payments-icon" href="./Pago.html" target="_blank">
-          <img src="../../assets/navbarf-assets/Pay.png" alt="Pagos" style="width: 20px; height: 20px;">
-        </a>
-        <a class="nav-item nav-link instagram-icon" href="https://www.instagram.com/mentasboutique" target="_blank">
-          <img src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo" style="width: 20px; height: 20px;">
-        </a>
-        <a class="nav-item nav-link tiktok-icon" href="https://www.tiktok.com/@mentas_boutique" target="_blank">
-          <img src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo" style="width: 20px; height: 20px;">
-        </a>
-      </div>
-    </div>
-  </nav>
+                <a class="nav-item nav-link user-icon" href="./login.html">
+                    <img src="../../assets/navbarf-assets/User.png" alt="Usuario" style="width: 20px; height: 20px;">
+                </a>
+                <a class="nav-item nav-link payments-icon" href="./carrito.html">
+                    <img src="../../assets/navbarf-assets/Pay.png" alt="Pagos" style="width: 20px; height: 20px;">
+                </a>
+                <a class="nav-item nav-link instagram-icon" href="https://www.instagram.com/mentasboutique"
+                    target="_blank">
+                    <img src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo"
+                        style="width: 20px; height: 20px;">
+                </a>
+                <a class="nav-item nav-link tiktok-icon" href="https://www.tiktok.com/@mentas_boutique" target="_blank">
+                    <img src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo"
+                        style="width: 20px; height: 20px;">
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <div class="contenedor"> <!--Inicio página de lista de productos-->
 
@@ -121,8 +134,9 @@
             <a href="#profesiones" class="category-card"> <!--Primera tarjeta de profesiones-->
                 <div class="category-card__text-image-container">
                     <h1 class="category-card__text-big">UN SÍMBOLO DE TU ESFUERZO Y PASIÓN</h1>
-                    <img src="../../assets/lista-productos-assets/Profesiones/dentista 2.jpg" alt="Imagen representativa de la categoría profesiones"
-                        class="category-card__image" id="img-profesiones">
+                    <img src="../../assets/lista-productos-assets/Profesiones/dentista 2.jpg"
+                        alt="Imagen representativa de la categoría profesiones" class="category-card__image"
+                        id="img-profesiones">
                 </div>
                 <div class="category-card__text-container">
                     <h1 class="title category-card__title">Profesiones</h1>
@@ -134,16 +148,17 @@
             <a href="#mascotas" class="category-card"> <!--Segunda tarjeta de mascotas-->
                 <div class="category-card__text-image-container">
                     <h1 class="category-card__text-big">LLEVA CONTIGO EL CARIÑO DE TU MASCOTA A TODAS PARTES</h1>
-                    <img src="../../assets/lista-productos-assets/Perros/Perros/perro 1.jpg" alt="Imagen representativa de la categoría profesiones" 
-                        class="category-card__image" id="img-mascotas">
+                    <img src="../../assets/lista-productos-assets/Perros/Perros/perro 1.jpg"
+                        alt="Imagen representativa de la categoría profesiones" class="category-card__image"
+                        id="img-mascotas">
                 </div>
                 <div class="category-card__text-container">
                     <h1 class="title category-card__title">Mascotas</h1>
                     <p class="texto--p">Charms de mascotas diseñados para capturar la esencia especial de tu fiel
-                            compañero, un perfecto detalle que celebra el lazo especial que se tiene con ellos.</p>
+                        compañero, un perfecto detalle que celebra el lazo especial que se tiene con ellos.</p>
                 </div>
             </a>
-            
+
         </div> <!--Fin primera sección de cards rosas-->
 
         <div class="cards"> <!--Segunda sección cards rosas-->
@@ -151,8 +166,9 @@
             <a href="#handmade" class="category-card"> <!--Tercera tarjeta de handmade-->
                 <div class="category-card__text-image-container">
                     <h1 class="category-card__text-big">CREADO CON AMOR DE NOSOTROS PARA TI</h1>
-                    <img src="../../assets/lista-productos-assets/Perros/Perros/perro 1.jpg" alt="Imagen representativa de la categoría profesiones"
-                        class="category-card__image" id="img-handmade">
+                    <img src="../../assets/lista-productos-assets/Perros/Perros/perro 1.jpg"
+                        alt="Imagen representativa de la categoría profesiones" class="category-card__image"
+                        id="img-handmade">
                 </div>
                 <div class="category-card__text-container">
                     <h1 class="title category-card__title">Handmade</h1>
@@ -164,8 +180,8 @@
             <a href="#otros" class="category-card"> <!--Cuarta tarjeta de otros-->
                 <div class="category-card__text-image-container">
                     <h1 class="category-card__text-big">EXPLORA MÁS OPCIONES Y ENCUENTRA TU FAVORITO</h1>
-                    <img src="../../assets/lista-productos-assets/Otros Charms/Charm-Buda-Plata-925.png" alt="Imagen representativa de la categoría otros" 
-                        class="category-card__image" id="img-otros">
+                    <img src="../../assets/lista-productos-assets/Otros Charms/Charm-Buda-Plata-925.png"
+                        alt="Imagen representativa de la categoría otros" class="category-card__image" id="img-otros">
                 </div>
                 <div class="category-card__text-container">
                     <h1 class="title category-card__title">Otros</h1>
@@ -181,15 +197,16 @@
     <div class="products"> <!--En esta sección empezará el despliegue de los productos-->
         <div class="titulos--tipo"> <!--Banner inicial que divide a los charms-->
             <div>Charms</div>
-        </div> 
-        <div class="titulos--categorias">Mascotas</div> <!--Banner que da inicio a la sección donde se encuentran los charms de mascotas-->
-            <div class="padding">
-                <div id="mascotas">
+        </div>
+        <div class="titulos--categorias">Mascotas</div>
+        <!--Banner que da inicio a la sección donde se encuentran los charms de mascotas-->
+        <div class="padding">
+            <div id="mascotas">
 
-                </div>
             </div>
         </div>
-        <!-- <div class="titulos--subcategorias">
+    </div>
+    <!-- <div class="titulos--subcategorias">
             <h3>Perros</h3>
         </div> Banner que divide a los charms de perritos
         <div class="padding">
@@ -222,15 +239,15 @@
         </div> -->
 
 
-        <div class="titulos--categorias">Profesiones</div>
-        <!--Banner que da inicio a la sección donde se encuentran los charms de profesiones-->
-            <div class="padding">
-                <div id="profesiones">
+    <div class="titulos--categorias">Profesiones</div>
+    <!--Banner que da inicio a la sección donde se encuentran los charms de profesiones-->
+    <div class="padding">
+        <div id="profesiones">
 
-                </div>
-            </div>
         </div>
-        <!-- <div class="titulos--subcategorias">
+    </div>
+    </div>
+    <!-- <div class="titulos--subcategorias">
             <h3>Ciencias Biológicas y de la Salud</h3>
         </div> Banner que divide a los charms de Ciencias Biológicas y de la Salud
         <div class="padding">
@@ -252,48 +269,48 @@
             </div>
         </div> -->
 
-        <div class="titulos--categorias" >Handmade</div> <!--Banner que divide a los charms de handmade-->
-        <div class="padding">
-            <div id="handmade">
+    <div class="titulos--categorias">Handmade</div> <!--Banner que divide a los charms de handmade-->
+    <div class="padding">
+        <div id="handmade">
 
-            </div>
         </div>
+    </div>
 
 
-        <div class="titulos--categorias">Otros</div> <!--Banner que divide a los charms de otros-->
-            <div class="padding">
-                <div id="otros">
+    <div class="titulos--categorias">Otros</div> <!--Banner que divide a los charms de otros-->
+    <div class="padding">
+        <div id="otros">
 
-                </div>
-            </div>
         </div>
+    </div>
+    </div>
 
-        <div class="titulos--tipo"> <!--Banner inicial que divide a los aretes-->
-            <h1>Aretes</h1>
-        </div> 
-            <div class="padding">
-                <div id="aretes">
+    <div class="titulos--tipo"> <!--Banner inicial que divide a los aretes-->
+        <h1>Aretes</h1>
+    </div>
+    <div class="padding">
+        <div id="aretes">
 
-                </div>
-            </div>
-
-        <div class="titulos--tipo"> <!--Banner inicial que divide a los charms-->
-            <h1>Collares</h1>
-        </div> 
-            <div class="padding">
-                <div id="collares">
-
-                </div>
-            </div>
-
-        <div class="titulos--tipo"> <!--Banner inicial que divide a los charms-->
-            <h1>Pulseras</h1>
-        </div> 
-        <div class="padding">
-            <div id="pulseras">
-
-            </div>
         </div>
+    </div>
+
+    <div class="titulos--tipo"> <!--Banner inicial que divide a los charms-->
+        <h1>Collares</h1>
+    </div>
+    <div class="padding">
+        <div id="collares">
+
+        </div>
+    </div>
+
+    <div class="titulos--tipo"> <!--Banner inicial que divide a los charms-->
+        <h1>Pulseras</h1>
+    </div>
+    <div class="padding">
+        <div id="pulseras">
+
+        </div>
+    </div>
 
     </div>
 
@@ -311,8 +328,44 @@
 
 
 
-  <!-- FOOTER SECCION -->
-  <iframe class="footer" src="../html/footer.html" frameborder="0"></iframe>
+    <!-- Footer -->
+    <footer class="footer pt-4 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <!-- Logo de Menta's Boutique -->
+                    <a href="../../home.html" target="_blank"> <!-- Agrega este enlace -->
+                        <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Logo Menta's Boutique"
+                            style="width: 100px; height: 40px;">
+                        <span class="ml-2"></span>
+                    </a>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="../html/conocenos.html" class="ml-2" target="_blank">Conócenos</a>
+                    <a href="../html/contacto.html" class="ml-2" target="_blank">Contacto</a>
+                    <a href="../html/listaProductos.html" class="ml-2" target="_blank">Productos</a>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <p class="small">Hecho con amor. &copy;<a href="../html/sobreNosotros.html" target="_blank">Little
+                            Devs</a>2023.</p>
+                    <!--<hr class="dropdown-divider">  Línea de separación -->
+                </div>
+                <div class="col-md-6 text-right mobile-footer">
+                    <p class="small">Síguenos:
+                        <a href="https://www.instagram.com/mentasboutique" target="_blank"><img
+                                src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo"
+                                style="width: 20px; height: 20px;"></a>
+                        <a href="https://www.tiktok.com/@mentas_boutique" target="_blank"><img
+                                src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo"
+                                style="width: 20px; height: 20px;"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 </body>
