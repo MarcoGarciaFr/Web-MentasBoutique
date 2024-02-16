@@ -1,0 +1,46 @@
+:root {
+  --font-onest: 'Onest', sans-serif;
+  --font-yeseva: 'Yeseva One', serif;
+  --font-borel: 'Borel', cursive;
+  --color1: #f5e7e9;
+  --color2: #f4afcf;
+  --color3: #a8dae3;
+  --color4: #cab8f2;
+  --color5: #54248f;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+  font-family: var(--font-onest);
+  position: relative; /* Cambiado a posición relativa */
+  
+}
+
+/* Estilos para el footer */
+.footer {
+  background-color: var(--color4);
+  color: black;
+  position: relative;
+  justify-content: space-between; /* Alinea los elementos a ambos lados del contenedor */
+  overflow: hidden;
+}
+
+/* Ajusta el espacio entre los elementos del menú en el footer */
+.footer a {
+
+  color: black !important; /* Usa !important para asegurar que esta regla prevalezca */
+  margin-right: 5px;
+  font-weight: bold; /* Establece el peso de la fuente a negrita */
+  text-decoration: none;
+}
+
+.footer .footer:last-child {
+  margin-right: 20px; /* Ajusta el margen del último ícono */
+}
+
+.footer .col-md-6.text-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+

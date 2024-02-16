@@ -1,71 +1,138 @@
-/**Reiniciando espacios de mi página*/
-* {
+*{
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
+   
 
-/**Fuentes para usar en mi página*/
+
+
+/**Declarando variables de fuentes y color*/
 :root {
-    --font-primary: "Borel", sans-serif;
+    --font-primary: 'Borel', sans-serif;
+    /*Logo y otros elementos*/
+    --font-secundary: 'Onest', sans-serif;
+    /*Textos*/
+    --font-tertiary: 'Yeseva One', sans-serif;
+    /*Encabezados*/
+    --color-primary: #f5e7e9;
+    --color-secundary: #f4afcf;
+    --color-tertiary: #a8dae3;
+    --color-quaternary: #54248f;
 
-    --font-secondary: "Onest", sans-serif;
-
-    --font-tertiary: "Yeseva One", sans-serif;
 }
 
-/* *Estructura de la página con GRID */
-.contenedor {
+.footer{
+    padding-top: 10px;
+    position: absolute;
+    width: 100% !important;
+    height: 155px !important;
+}
+
+.contenedor{
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: -1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header" 
+    "mensaje mensaje mensaje"
+    "redes formulario formulario"
+    "redes formulario formulario"
+    "redes formulario formulario"
+    "redes formulario formulario"
+    "redes formulario formulario"
+    "footer footer footer";
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas:
-        "header            header"
-        "message           message"
-        "smedia            contenedor-formulario"
-        "smedia            contenedor-formulario"
-        "footer            footer";
+  
+    text-align: center;
+  
+    
 }
 
-/**Estilos de header*/
-.contenedor .header {
-  
+.contenedor{
+    background-color: white;
+}
+.header{
     grid-area: header;
 }
 
-/**Estilos para contenedor de mensaje de contáctanos*/
-.contenedor .message {
-    background: rgb(244, 175, 207);
-    background: linear-gradient(180deg, rgba(244, 175, 207, 1) 2%, rgba(202, 184, 242, 1) 73%, rgba(202, 184, 242, 0) 100%);
-    height: 300px;
-   /* margin: 20px 20px 20px 20px;*/
+.mensaje {
+    grid-area: mensaje;
     font-family: var(--font-primary);
     font-size: 40px;
-    grid-area: message;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    background: rgb(244, 175, 207);
+    background: linear-gradient(180deg, rgba(244, 175, 207, 1) 2%, rgba(202, 184, 242, 1) 73%, rgba(202, 184, 242, 0) 100%);
+   
 }
 
-.contenedor .smedia {
-    font-family: var(--font-primary);
+.mensaje {
+    display: flex; /* Usa flexbox para el diseño */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 30vh; /* Establece la altura al 100% del viewport */
 }
 
-/**Estilos para contenedor de redes*/
-.contenedor .smedia {
-    background: white;
-    font-family: var(--font-secondary);
+.message {
+    text-align: center; /* Centra el texto dentro del div */
+}
+
+
+.redes {
+    grid-area: redes;
+    padding-top: 50px;
+}
+
+.formulario{
+    grid-area: formulario;
+    padding-top: 10px;
+    font-family: var(--font-secundary);
+    font-size: 18px;
+}
+
+.formulario h2{
+    font-family: var(--font-secundary);
     font-size: 30px;
-    grid-area: smedia;
-    margin: 20px 20px 20px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
 }
+.formulario {
+    overflow: hidden; /* Evitar que el contenido se desborde del contenedor */
+}
+.encabezado-formulario {
+    color: var(--color-quaternary); /* Cambiar el color del texto a azul */
+    text-align: left; /* Alinear el texto a la izquierda */
+    margin-left: 150px; /* Opcional: agregar un margen izquierdo */
+    margin-bottom: 30px;
+    font-size: var(--font-secundary);
+}
+
+
+::placeholder {
+    color: var(--color-quaternary); /* Color morado para el texto del placeholder */
+}
+
+input[type="text"],
+textarea {
+    border-color: var(--color-quaternary); /* Color morado para los bordes de inputs y textarea */
+    color: var(--color-quaternary); /* Color morado para el texto dentro de inputs y textarea */
+}
+
+label {
+    color: var(--color-quaternary); /* Color morado para los labels */
+}
+
+textarea.form-control {
+    border-color: var(--color-quaternary); /* Cambiar el color del borde del textarea a azul */
+}
+
+
+  /* Estilos para el botón */
+  .formulario .btn-primary-custom {
+    background-color: var(--color-quaternary); /* Color morado para el botón */
+    border-color: var(--color-quaternary); /* Color morado para el borde del botón */
+    color: white; /* Color blanco para el texto del botón */
+    font-family: var(--font-secundary);
+}
+
+
+
 
 .smedia {
     padding: 0 200px;
@@ -85,18 +152,6 @@
     margin-bottom: 10px;
 }
 
-h4 {
-    margin: 0;
-    padding: 10px 10px;
-    font-family: var(--font-primary);
-
-}
-
-.smedia h1 {
-
-    margin: 10px;
-    font-family: var(--font-primary);
-}
 
 /* Alinea el logo a la izquierda y ajusta el espacio entre el logo y el texto */
 .logo-row .facebook-logo,
@@ -157,172 +212,65 @@ h4 {
     cursor: pointer;
 }
 
-/**Estilos Formulario*/
 
-.form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.formulario {
+    grid-area: formulario;
     height: auto;
-    
 }
 
-
-form {
-    font-family: var(--font-secondary);
-}
-
-.col-md-4 input {
-    width: 250px;
-    padding: 10px;
-    color: #54248f;
-    border: 1px solid #54248f;
-}
-
-.contenedor-formulario h2 {
-    font: 40px;
-    color: #54248f;
-    margin-bottom: 10px;
-    padding-right: 300px;
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: var(--font-secondary);
-    
-
-}
-
-textarea {
-    max-width: 499px;
-    
-    
-}
-
-
-.btn.btn-primary {
-    padding: 17px 15px;
-    width: 180px;
-    align-self: center;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    background:#54248f;
-    margin-top: 10px;
-    border: none;
-    margin: 15px 15px 15px 15px;
-
-}
-
-.contenedor-btn .col-12 {
-    display: flex;
-    justify-content: center;
-    align-items:last baseline; 
-    height: 10vh; 
-   padding-right: 240px;
-}
-  
-label{
-    color: #54248f;
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.form-control{
-    background-color: white;
-    color:#54248f;
-}
-
-
-/**Estilos para footer*/
-
-.contenedor .footer {
-
-    /* Cambia a tu color preferido */
+.footer{
     grid-area: footer;
+}
+a img {
+    width: 100px;
+    height: 40px;
+    float: left;
+    margin-right: 10px; 
+}
+.small{
+   
+    height: 40px;
+    float: left;
+    margin-right: 10px; 
+}
+
+.contenedor a {
+    text-decoration: none;
+}
+
+  /**Responsividad*/
+  /* Tablets */
+  @media (max-width: 768px) {
+    .contenedor {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: -1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "header header"
+        "mensaje mensaje"
+        "formulario formulario"
+        "formulario formulario"
+        "formulario formulario"
+        "formulario formulario"
+        "redes redes"
+        "footer footer";
+    }
     
-
-}
-
-/* *Responsive */
-/* Estilos para pantallas de escritorio mayores a 768px */
-@media only screen and (min-width: 769px) {
-    .contenedor {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(5, auto);
-      grid-template-areas:
-          "header            header"
-          "message           message"
-          "smedia            contenedor-formulario"
-          "smedia            contenedor-formulario"
-          "footer            footer";
-  
-      width: auto;
-      height: 500px;
-      margin: 10px;
-      font-size: 18px;
-      margin: 0 0 0 0;
-      
-    }
   }
   
-  /* Estilos para tablets con un ancho máximo de 768px */
-  @media only screen and (max-width: 768px) {
+  /* Smartphone */
+  @media (max-width: 480px) {
     .contenedor {
-      display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, auto);
+      grid-template-rows: -1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-areas:
-          "header"
-          "message"
-          "contenedor-formulario"
-          "contenedor-formularior"
-          "smedia"
-          "footer";
-  
-      width: auto;
-      height: 500px;
-      margin: 10px;
-      font-size: 18px;
-        padding-top: 200px;
-        margin: 0 0 0 0;
-    }
-    /* Estilos para los campos de entrada dentro de contenedor-formulario */
-    .contenedor-formulario input {
-        width: 85%; /* O ajusta el ancho  */
-        padding: 10px; /* O ajusta el espacio de relleno  */
-        box-sizing: border-box;
-        margin-bottom: 10px; /* Agrega espacio entre los campos de entrada */
-  }
-}
-  
-  /* Estilos para smartphones con un ancho máximo de 480px */
-  @media only screen and (max-width: 480px) {
-    .contenedor {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, auto);
-      grid-template-areas:
-          "header"
-          "message"
-          "contenedor-formulario"
-          "contenedor-formulario"
-          "smedia"
-          "footer";
-  
-      width: auto;
-      height: 500px;
-      margin: 10px;
-      font-size: 18px;
-      padding-top: 200px;
-      margin: 0 0 0 0;
-    }
-  
-    /* Estilos para los campos de entrada dentro de contenedor-formulario */
-    .contenedor-formulario input {
-      width: 85%; /* O ajusta el ancho  */
-      padding: 10px; /* O ajusta el espacio de relleno  */
-      box-sizing: border-box;
-      margin-bottom: 10px; /* Agrega espacio entre los campos de entrada */
+        "header"
+        "mensaje"
+        "formulario"
+        "formulario"
+        "formulario"
+        "formulario"
+        "redes"
+        "footer";
     }
   }
   

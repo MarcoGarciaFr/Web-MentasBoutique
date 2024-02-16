@@ -24,6 +24,12 @@ body {
     background-color: white;
 }
 
+.footer{
+    position: absolute;
+    width: 100% !important;
+    height: 145px !important;
+}
+
 /**Grid layout*/
 .contenedor {
     display: grid;
@@ -68,6 +74,10 @@ body {
 
 .footer {
     grid-area: footer;
+}
+
+.contenedor a {
+    text-decoration: none;
 }
 
 .section-1,
@@ -228,7 +238,9 @@ body {
     height: 100%;
     box-sizing: border-box;
     border: 1px solid #D3D3D3;
-    padding: 10px;
+   
+    border-radius: 10px;
+   
 
 
 }
@@ -243,6 +255,7 @@ body {
     padding: 20px;
     background-color: var(--color-secundary);
     position: relative;
+    margin-bottom: 20px;
 }
 
 .aside h4 {
@@ -305,7 +318,7 @@ body {
 }
 
 #mostrarTarjeta {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-quaternary);
     /* Color de fondo del botón */
     color: #fff;
     /* Color del texto del botón */
@@ -322,7 +335,7 @@ body {
 }
 
 #mostrarTarjeta:hover {
-    background-color: var(--color-primary);
+    background-color: #cab8f2;
     /* Cambia el color de fondo al pasar el ratón sobre el botón */
 }
 
@@ -342,6 +355,10 @@ body {
         margin-top: 200px;
     }
 }
+.foto-menta.imagenes {
+    border-radius: 10px;
+    
+}
 
 /* Media query para pantallas de 480px a 767px */
 @media (min-width: 480px) and (max-width: 767px) {
@@ -356,6 +373,11 @@ body {
     .titulo{
         padding-top: 100px;
         margin-top: 200px;
+    }
+    .mision{
+        display: flex;
+        
+        height: 720px;
     }
     
 }
@@ -377,5 +399,6 @@ body {
                 margin-top: 200px;
             }
     }
+    
     
 }

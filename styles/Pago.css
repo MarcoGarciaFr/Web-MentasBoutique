@@ -27,18 +27,26 @@
     
 }
 
+
+
+.footer{
+    padding-top: 10px;
+    position: absolute;
+    width: 100% !important;
+    height: 155px !important;
+}
+
 /**Grid layout de proceso de pago */
 
 .contenedor {
+    margin-top: 75px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 2fr 2fr 2fr;
     grid-template-areas:
-        "navegacion navegacion navegacion"
         "contenedor-form contenedor-form resumen"
         "contenedor-form contenedor-form resumen"
-        "contenedor-form contenedor-form resumen"
-        "footer footer footer";
+        "contenedor-form contenedor-form resumen";
 }
 
 .navegacion {
@@ -122,12 +130,100 @@
 
 .separador {
     background-color: var(--color-quinary);
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .resumen {
     grid-area: resumen;
+    margin: 50px;
+    padding: 20px;
 }
 
 .footer {
     grid-area: footer;
+}
+
+.resumen-pagos{
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: #a8dae3;
+    height: 250px;
+    width: clamp(100px, 100%, 550px);
+    position: relative;
+    top: 20%;
+}
+
+.gracias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.icon{
+    width: 50px;
+}
+
+.icon i{
+    font-size: 50px;
+    color:#f4afcf;
+}
+
+#aceptar{
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    background-color: var(--color-primary);
+    border: var(--color-secundary) solid 1px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#aceptar:hover{
+    height: 32px;
+    width: 105px;
+}
+
+.gracias p{
+    margin: 0;
+}
+
+@media only screen and (max-width:5000px){
+    .pago-preview {
+        /*Este contenedor hará que la preview tenga un fondo oscuro*/
+        position: fixed;
+        /*Toda la sección de preview estará en posición fija en la pantalla del navegador*/
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100%;
+        display: none;
+        /*Por defecto estará desactivada esta sección, la activación se hace por manipulación del DOM*/
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: black;
+        /*Es el fondo de la review, es con el fin de centrar la atención del usuario en el contenido de la review*/
+    }
+    
+    
+    .preview {
+        display: none;
+        width: 300px;
+        gap: 0;
+        text-align: center;
+        background: white;
+        top: 50%;
+        left:50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        margin: 20px;
+        height: 230px;
+        border-radius: 15px;
+    }
+
 }

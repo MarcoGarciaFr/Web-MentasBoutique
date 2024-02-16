@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proceso de pago</title>
 
+    <!-- Icon de la página -->
+    <link rel="icon" href="../../assets/navbarf-assets/Mentas.png" type="image/png">
+    <!--Icons online-->
+    <script src="https://kit.fontawesome.com/2d064f382f.js" crossorigin="anonymous" defer></script>
     <!--Google Fonts Borel-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,16 +37,92 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!--Hoja de estilos de proceso de pago-->
     <link rel="stylesheet" href="../../styles/Pago.css">
+    <link rel="stylesheet" href="../../styles/navbar-styles.css">
+    <link rel="stylesheet" href="../../styles/footer-styles.css">
 
 </head>
 
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
 
-    <div class="contenedor">
+    <!-- Botón del menú responsivo para dispositivos pequeños -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <header class="navegacion">
-            AQUÍ VA LA NAVBAR
-        </header>
+        <!-- Icono de Menta's Boutique -->
+      
+    <!-- Logo de Menta's Boutique en el centro -->
+    <a class="navbar-brand" href="../../home.html">
+      <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Icono Menta's Boutique" style="width: 100px; height: 40px;">
+    </a>
+
+      <!-- Elementos del menú -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="charmsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Charms</a>
+            <hr class="dropdown-divider"> <!-- Línea de separación -->
+            <div class="dropdown-menu dropdown-menu-center" aria-labelledby="charmsDropdown">
+              <a class="dropdown-item" href="./listaProductos.html#handmade" target="_blank">Handmade</a>
+              <hr class="dropdown-divider"> <!-- Línea de separación -->
+              <a class="dropdown-item" href="./listaProductos.html#mascotas" target="_blank">Mascotas</a>
+              <hr class="dropdown-divider"> <!-- Línea de separación -->
+              <a class="dropdown-item" href="./listaProductos.html#profesiones" target="_blank">Profesiones</a>
+              <hr class="dropdown-divider"> <!-- Línea de separación -->
+              <a class="dropdown-item" href="./listaProductos.html#otros" target="_blank">Otros</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./listaProductos.html#pulseras" id="pulserasDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Pulseras</a>
+            <hr class="dropdown-divider"> <!-- Línea de separación -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./listaProductos.html#aretes" id="aretesDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Aretes</a>
+            <hr class="dropdown-divider"> <!-- Línea de separación -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./listaProductos.html#collares" id="collaresDropdown" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Collares</a>
+            <hr class="dropdown-divider"> <!-- Línea de separación -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about:blank" id="carrito" role="button" aria-haspopup="true" aria-expanded="false" target="_blank">Carrito</a> <!--PENDIENTE REFERENCIAR A CARRITO-->
+          </li>
+        </ul>
+      </div>
+
+      <!-- Iconos a la derecha -->
+      <div class="navbar-nav">
+
+        <!-- Barra de búsqueda -->
+        <!-- <form class="d-flex mx-auto">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
+
+         <a class="nav-item nav-link search-icon" href="#">
+          <img src="./assets/Search.png" alt="Busqueda" style="width: 20px; height: 20px;"> 
+        </a> -->
+        <a class="nav-item nav-link user-icon" href="./login.html">
+          <img src="../../assets/navbarf-assets/User.png" alt="Usuario" style="width: 20px; height: 20px;">
+        </a>
+        <a class="nav-item nav-link payments-icon" href="./carrito.html">
+          <img src="../../assets/navbarf-assets/Pay.png" alt="Pagos" style="width: 20px; height: 20px;">
+        </a>
+        <a class="nav-item nav-link instagram-icon" href="https://www.instagram.com/mentasboutique" target="_blank">
+          <img src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo" style="width: 20px; height: 20px;">
+        </a>
+        <a class="nav-item nav-link tiktok-icon" href="https://www.tiktok.com/@mentas_boutique" target="_blank">
+          <img src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo" style="width: 20px; height: 20px;">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="contenedor">
 
         <section class="contenedor-form">
             <div class="subcontenedor-form">
@@ -50,13 +130,13 @@
                     Identificación
                 </div>
                 <div class="alerta">
-                    <p>*Solicitamos únicamente la información esencial para la finalización de la compra.</p>
+                    <p>Solicitamos únicamente la información esencial para la finalización de la compra. Es importante que llene los campos con datos válidos, debidos a que estos se utilizaran para el envío de su pedido.</p>
                 </div>
-                <form class="row g-3 needs-validation" novalidate>
+                <form class="row g-3 needs-validation" novalidate id="formulario">
                     <div class="row-md-4">
                         <label for="validationCustom01" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="validationCustom01" required
-                            placeholder="sucorreo@dominio.com">
+                        <input type="email" class="form-control" id="validationCustom01" required
+                            placeholder="sucorreo@dominio.com" oninput="habilitarBoton()">
                         <div class="valid-feedback">
                             ¡Correcto!
                         </div>
@@ -64,37 +144,37 @@
                     <div class="row-md-4">
                         <label for="validationCustom02" class="form-label">Nombre completo</label>
                         <input type="text" class="form-control" id="validationCustom02"
-                            placeholder="Nombre Apellido Apellido" required>
+                            placeholder="Nombre Apellido Apellido" required oninput="habilitarBoton()">
                         <div class="valid-feedback">
                             ¡Correcto!
                         </div>
                     </div>
 
                     <div class="row-md-4">
-                        <label for="validationCustom02" class="form-label">Teléfono móvil</label>
-                        <input type="tel" class="form-control" id="validationCustom02" placeholder="55 55555555"
-                            required>
+                        <label for="validationCustom03" class="form-label">Teléfono móvil</label>
+                        <input type="tel" class="form-control" id="validationCustom03" placeholder="55 55555555"
+                            required oninput="habilitarBoton()">
                         <div class="valid-feedback">
                             ¡Correcto!
                         </div>
                     </div>
 
                     <div class="separador">
-                        Envio
+                        Envío
                     </div>
 
                     <div class="row-md-4">
-                        <label for="validationCustom02" class="form-label">Fecha</label>
-                        <input type="date" class="form-control" id="validationCustom02" required>
+                        <label for="validationCustom04" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="validationCustom04" required onchange="habilitarBoton()">
                         <div class="valid-feedback">
                             ¡Correcto!
                         </div>
                     </div>
 
                     <div class="row-md-4">
-                        <label for="validationCustom02" class="form-label">Dirección</label>
-                        <input type="tel" class="form-control" id="validationCustom02"
-                            placeholder="Calle XXX entre Calle XXX #555 Col. XXX C.P. 11111" required>
+                        <label for="validationCustom05" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="validationCustom05"
+                            placeholder="Calle XXX entre Calle XXX #555 Col. XXX C.P. 11111" required oninput="habilitarBoton()">
                         <div class="valid-feedback">
                             ¡Correcto!
                         </div>
@@ -104,25 +184,23 @@
                         Pago
                     </div>
 
-
-
-                    <hr class="my-4">
-
-                    <h4 class="mb-3">Método de pago</h4>
-
-
                     <div class="my-3">
 
                         <div class="form-check">
-                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required onclick="habilitarBoton()">
                             <label class="form-check-label" for="debit">Pago contra entrega</label>
                         </div>
+                        <div class="form-check">
+                            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required onclick="habilitarBoton()">
+                            <label class="form-check-label" for="paypal">PayPal</label>
+                        </div>
+                        <iframe class="metodoPaypal paypal"src="../html/standard-integration/client/checkout.html" frameborder="0"></iframe>
                     </div>
 
 
                     <div class="col-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required onclick="habilitarBoton()">
                             <label class="form-check-label" for="invalidCheck">
                                 Aceptar términos y condiciones
                             </label>
@@ -133,30 +211,70 @@
                     </div>
                     <hr class="my-4">
                     <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Finalizar compra</button>
+                        <button class="btn btn-primary" type="submit" id="finalizar" disabled>Finalizar compra</button>
                     </div>
-                    <iframe class="paypal"src="../html/standard-integration/client/checkout.html" frameborder="0"></iframe>
+                    
                 </form>
             </div>
         </section>
 
-        <aside class="resumen">
-            AQUÍ VA EL RESUMEN DE PROCESO DE APGO
+        <aside id="total-cobro" class="resumen">
+
         </aside>
 
-        <footer class="footer">
-            AQUÍ VA EL FOOTER
-        </footer>
+</div>
+
+    <!-- Overlay -->
+    <div class="pago-preview">
 
     </div>
-    <script src="https://www.paypal.com/sdk/js?client-id=AdJVk4V4AfEx12_-QR2DASTgQ2D8ddL9fjW468Ocy8ptWLYJB_BbFvzDYBiYdM8HcPfoYvoKr1TogIh9"></script>
-    <script src="../html/standard-integration/client/app.js"></script>
+
+
+    <!-- Modal -->
+    <div class="preview">
+
+    </div>
+
+      <!-- FOOTER SECCION -->
+<footer class="footer pt-4 pb-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-left">
+        <!-- Logo de Menta's Boutique -->
+        <a href="../../home.html" target="_blank"> <!-- Agrega este enlace -->
+          <img src="../../assets/navbarf-assets/Mentas_logo.png" alt="Logo Menta's Boutique" style="width: 100px; height: 40px;">
+          <span class="ml-2"></span>
+        </a>
+      </div>
+      <div class="col-md-6 text-right">
+        <a href="../html/conocenos.html" class="ml-2" target="_blank">Conócenos</a>
+        <a href="../html/contacto.html" class="ml-2" target="_blank">Contacto</a>
+        <a href="../html/listaProductos.html" class="ml-2" target="_blank">Productos</a>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-6 text-left">
+        <p class="small">Hecho con amor. &copy;<a href="../html/sobreNosotros.html" target="_blank">Little Devs</a>2023.</p>
+        <!--<hr class="dropdown-divider">  Línea de separación -->
+      </div>
+      <div class="col-md-6 text-right mobile-footer">
+        <p class="small">Síguenos:
+          <a href="https://www.instagram.com/mentasboutique" target="_blank"><img src="../../assets/navbarf-assets/Ig.png" alt="Instagram_logo" style="width: 20px; height: 20px;"></a>
+          <a href="https://www.tiktok.com/@mentas_boutique" target="_blank"><img src="../../assets/navbarf-assets/Tiktok.png" alt="Tiktok_logo" style="width: 20px; height: 20px;"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
     <!--Link Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-
+    <script src="https://www.paypal.com/sdk/js?client-id=AdJVk4V4AfEx12_-QR2DASTgQ2D8ddL9fjW468Ocy8ptWLYJB_BbFvzDYBiYdM8HcPfoYvoKr1TogIh9"></script>
+    <script src="../html/standard-integration/client/app.js"></script>
     <script src="../scripts/Pago.js"></script>
+    <script src="../scripts/carrito.js"></script>
 </body>
 
 </html>

@@ -1,148 +1,19 @@
-class Producto {
-    constructor(id, name, price, description, material, type, category, subcategory, img, stock) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.description = description;
-        this.material = material;
-        this.type = type;
-        this.category = category;
-        this.subcategory = subcategory;
-        this.img = img;
-        this.stock = stock;
-    }
+let listaProductos = [];
+async function getProducts() {
+  const response = await fetch("http://localhost:8080/admin/products");
+  const data = await response.json();
+  listaProductos = data;
 }
 
-let listaProductos = [
-    new Producto(
-    "01",
-    "Charm Husky",
-    390,
-    "Charm Husky elaborado en plata 925 compatible con pulseras de charms varias marcas.",
-    "Plata 925",
-    "Charm",
-    "mascotas",
-    "perros",
-    "../../../assets/lista-productos-assets/Perros/Perros/husky.jpg",
-    "20"
-    ),
-    new Producto(
-        "02",
-        "La Noche Estrellada",
-        390,
-        "Charm elaborado en plata 925 quintado, compatible con pulseras de charms.",
-        "Plata 925",
-        "Charm",
-        "otros",
-        "arte",
-        "../../../assets/lista-productos-assets/Otros Charms/noche-estrellada.png",
-        "20"
-    ),
-    new Producto(
-        "03",
-        "Corazón Anatómico",
-        390,
-        "Charm Corazón anatómico, elaborado en plata 925 compatible con pulseras de charms varias marcas.",
-        "Plata 925",
-        "Charm",
-        "profesiones",
-        ["salud", "Medicina"],
-        "../../../assets/lista-productos-assets/Profesiones/medicina corazon.jpg",
-        "20"
-    ),
-    new Producto(
-        "04",
-        "French Poodle",
-        390,
-        "Charm French Poodle, elaborado en plata 925 compatible con pulseras de charms varias marcas.",
-        "Plata 925",
-        "Charm",
-        "mascotas",
-        "perros",
-        "../../../assets/lista-productos-assets/Perros/Perros/poodle 3.jpg",
-        "20"
-    ),
-    new Producto(
-        "05",
-        "Cerebro Anatomico",
-        390,
-        "Charm Cerebro anatómico, elaborado en plata 925 compatible con pulseras de charms varias marcas.",
-        "Plata 925",
-        "Charm",
-        "profesiones",
-        ["salud", "Medicina", "Psicologia"],
-        "../../../assets/lista-productos-assets/Profesiones/cerebro.png",
-        "20"
-    ),
-    new Producto(
-        "06",
-        "Pulmon Anatómico",
-        370,
-        "Charm Pulmón anatómico, elaborado en plata 925 compatible con pulseras de charms varias marcas.",
-        "Plata 925",
-        "Charm",
-        "profesiones",
-        ["salud", "Medicina"],
-        "../../../assets/lista-productos-assets/Profesiones/medicina pulmon.jpg",
-        "20"
-    ),
-    new Producto(
-        "07",
-        "Maestra",
-        370,
-        "Charm educación, elaborado en plata 925 compatible con pulseras de charms varias marcas.",
-        "Plata 925",
-        "Charm",
-        "profesiones",
-        "diversosProfesiones",
-        "../../../assets/lista-productos-assets/Profesiones/educacion.jpg",
-        "20"
-    ),
-    new Producto(
-        "08",
-        "Microscopio",
-        370,
-        "Charm microscopio, elaborado en plata 925 compatible con pulseras de charms varias marcas.",
-        "Plata 925",
-        "Charm",
-        "Profesiones",
-        ["salud", "Quimico", "Ciencia", "Biologia"],
-        "../../../assets/lista-productos-assets/Profesiones/microscopio.jpg",
-        "20"
-    ),
-    new Producto(
-        "09",
-        "Schnauzer",
-        390,
-        "Charm schnauzer, elaborado en plata 925 compatible con pulseras de charms varias marcas.",
-        "Plata 925",
-        "Charm",
-        "mascotas",
-        ["perros"],
-        "../../../assets/lista-productos-assets/Perros/Perros/schnauzer.jpg",
-        "20"
-    ),
-    new Producto(
-        "10", //id
-        "Collar ADN", //name
-        350, //price
-        "Collar ADN elaborado en plata 925.", //description
-        "Plata 925", //material
-        "Collar", //type
-        "profesiones", //category
-        ["Ciencia", "Quimico", "Biologia", "salud"], //subcategory
-        "../../../assets/lista-productos-assets/Collar/collar.jpg", //img
-        "20" //stock
-    )
 
-];
 
 
 /*2. MANIPULAR EL DOM PARA INSERTAR LOS OBJETOS DENTRO DE HTML*/
 
 var tablaBody = document.getElementById('tabla-body');
 
-function verProductos() {
+async function verProductos() {
+    await getProducts();
 /*Para evitar que la tabla se acumule al hacer clic en el botón de eliminar, se crea una nueva tabla y se reemplaza la existente por completo */
     const tabla = document.getElementById('miTabla');
     const tablaBody = tabla.getElementsByTagName('tbody')[0];
@@ -167,11 +38,11 @@ listaProductos.forEach(producto => {
 
     // Añadir datos a las celdas
     celdaId.textContent = producto.id;
-    celdaName.textContent = producto.name;
-    celdaPrice.textContent = producto.price;
-    celdaDescription.textContent = producto.description;
+    celdaName.textContent = producto.nombre;
+    celdaPrice.textContent = producto.precio;
+    celdaDescription.textContent = producto.descripcion;
     celdaMaterial.textContent = producto.material;
-    celdaType.textContent = producto.type;
+    celdaType.textContent = producto.tipo;
     celdaStock.textContent = producto.stock;
     celdaEdit.innerHTML = `<button type="button" class="btn btn-secondary">Editar</button>`; //Se agrega botón de editar
     celdaDelete.innerHTML = `<button type="button" class="btn btn-danger">Eliminar</button>`; //Se agrega botón de eliminar
@@ -179,8 +50,8 @@ listaProductos.forEach(producto => {
 
     // Crear un elemento de imagen y establecer la fuente (src) desde el JSON
     let imagen = document.createElement('img');
-    imagen.src = producto.img;
-    imagen.alt = producto.name;
+    imagen.src = producto.imagen;
+    imagen.alt = producto.nombre;
     celdaImagen.appendChild(imagen);
     //Darle un tamaño pequeño a la imagen
     imagen.style.height = "60px";
@@ -228,10 +99,10 @@ function popupDelete(producto) {
     // Actualizar el contenido del modal con la información del producto
     modal.innerHTML = `
         <div class="alinearDelete">
-            <h5>¿Desea eliminar ${producto.name}?</h5>
+            <h5>¿Desea eliminar ${producto.nombre}?</h5>
             <div class="confirmation">
-                <button id="yes">Sí</button>
-                <button id="no">No</button>
+                <button id="yes" class="btn btn-success">Sí</button>
+                <button id="no" class="btn btn-secondary">No</button>
             </div>
         </div>
     `;
@@ -255,7 +126,8 @@ function popupDelete(producto) {
     const botonEliminar = document.getElementById("yes");
     botonEliminar.addEventListener('click', function() {
         eliminarProducto(producto.id);
-
+        modal.style.display = 'none';
+        overlay.style.display = 'none'
     });
     
 };
@@ -263,10 +135,30 @@ function popupDelete(producto) {
 
 //Función para eliminar un producto con base en su id
 function eliminarProducto(id){
-listaProductos = listaProductos.filter(function(producto){
-    return producto.id !== id
-});
-verProductos(); // Vuelve a llenar la tabla después de eliminar el objeto
+// listaProductos = listaProductos.filter(function(producto){
+//     return producto.id !== id
+const deleteProducto = async () => {
+    const url = `http://localhost:8080/admin/products/${id}`;
+    try {
+        const response = await fetch(url, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        if (response.status === 200) {
+            console.log('Product deleted successfully.');
+            await verProductos();
+        }
+    } catch (error) {
+        console.log(error);
+        console.log("Failed to delete product");
+    }
+}
+deleteProducto()
+
+
+ // actualiza la tabla después de eliminar el objeto
 }
 
 
@@ -284,27 +176,26 @@ function popupEdit(producto) {
     // Actualizar el contenido del modal con la información del producto
     modal.innerHTML = `
         <div class="alinearEdit">
-            <h5>Edición de ${producto.name}</h5>
+            <h5>Edición de ${producto.nombre}</h5>
             <div class="edit">
                 <form class="formulario needs-validation" novalidate>
                 <div class="fila">
-                    <div class="mb-4">
-                    <label for="newId" class="form-label">Ingrese un nuevo id: </label>
-                    <input placeholder="${producto.id}" type="number" min="1" class="form-control" id="newId" required autocomplete="off"></input>
-                        <div class="invalid-feedback">
-                            Ingrese un número
-                        </div>
-                    </div>
+                    
                     <div class="mb-4">
                         <label for="newName" class="form-label">Ingrese un nuevo nombre: </label>
-                        <input placeholder="${producto.name}" type="name" class="form-control" id="newName" required autocomplete="off"></input>
+                        <input value="${producto.nombre}" type="name" class="form-control" id="newName" required autocomplete="off"></input>
                             <div class="invalid-feedback">
                                 Ingrese un nombre válido
                             </div>
                     </div>
                     <div class="mb-4">
                         <label for="newType" class="form-label">Ingrese nuevo tipo de producto: </label>
-                        <input placeholder="${producto.type}" type="text" class="form-control" id="newType" required autocomplete="off"></input>
+                        <select value="${producto.tipo}" type="text" class="form-control" id="newType" required autocomplete="off">
+                        <option value="Charms">Charms</option>
+                            <option value="Pulseras">Pulseras</option>
+                            <option value="Aretes">Aretes</option>
+                            <option value="Collares">Collares</option>
+                            </select>
                             <div class="invalid-feedback">
                                 Válido solo charm, aretes, collares, pulseras 
                             </div>
@@ -314,14 +205,14 @@ function popupEdit(producto) {
                 <div class="fila">
                     <div class="mb-4">
                         <label for="newStock" class="form-label">Ingrese cantidad de piezas en stock: </label>
-                        <input placeholder="${producto.stock} piezas actuales" type="number" min="1" class="form-control" id="newStock" required autocomplete="off"></input>
+                        <input value="${producto.stock}" type="number" min="1" class="form-control" id="newStock" required autocomplete="off"></input>
                             <div class="invalid-feedback">
                                 Ingrese una cantidad válida
                             </div>
                     </div>
                     <div class="mb-4">
                         <label for="newPrice" class="form-label">Ingrese precio en MXN y con dos decimales: </label>
-                        <input placeholder="$${producto.price} actualmente" type="number" min="150" class="form-control" id="newPrice" required autocomplete="off"></input>
+                        <input value="${producto.precio}" type="number" min="150" class="form-control" id="newPrice" required autocomplete="off"></input>
                             <div class="invalid-feedback">
                                 Ingrese un precio válido
                             </div>
@@ -329,11 +220,23 @@ function popupEdit(producto) {
                 </div>
                     <div class="mb-4">
                         <label for="newDescription" class="form-label">Ingrese nueva descripción: </label>
-                        <input placeholder="${producto.description}" type="text" class="form-control" id="newDescription" required autocomplete="off"></input>
+                        <input value="${producto.descripcion}" type="text" class="form-control" id="newDescription" required autocomplete="off"></input>
                     </div>
+                    <div class="mb-4">
+                    <label for="newMaterial" class="form-label">Ingrese nueva descripción: </label>
+                    <input value="${producto.material}" type="text" class="form-control" id="newMaterial" required autocomplete="off"></input>
+                </div>
+                    <div class="mb-4">
+                    <label for="newCategory" class="form-label">Ingrese nueva categoria: </label>
+                    <select value="${producto.categoria}" type="text" class="form-control" id="newCategory" required autocomplete="off">
+                        <option value="mascotas">mascotas</option>
+                            <option value="profesiones">profesiones</option>
+                            <option value="Handmade">Handmade</option>
+                            <option value="otros">otros</option></select>
+                </div>
                     <div class="mb-4">                        
-                        <label for="newImage" class="form-label">Cargar una nueva imagen con medidas 509px x 540px: </label><br>
-                        <input type="file" id="newImage" accept="image/*" required>
+                        <label for="newImage" class="form-label">Escribe nueva URL de imagen </label>
+                        <input type="text" id="newImage" value="${producto.imagen}" class="form-control" required>
                     </div>
                         <button id="update" type="submit" name="contact" class="btn btn-success">Actualizar</Button>
                         <button id="noEdit" type="button" class="btn btn-secondary">Cancelar</button>
@@ -361,23 +264,48 @@ function popupEdit(producto) {
     document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
         // Obtener el valor del input
-        let newId = document.getElementById('newId').value;
+        
         let newName = document.getElementById('newName').value;
         let newPrice = document.getElementById('newPrice').value;
         let newDescription = document.getElementById('newDescription').value;
         let newType = document.getElementById('newType').value;
+        let newCategory = document.getElementById('newCategory').value
+        let newMaterial = document.getElementById('newMaterial').value
         let newImage = document.getElementById('newImage').value;
         let newStock = document.getElementById('newStock').value;
         // Actualizar el objeto JSON con la nueva información
-        producto.id = newId;
-        producto.name = newName;
-        producto.price = newPrice;
-        producto.description = newDescription;
-        producto.type = newType;
-        producto.img = newImage;
+        
+        producto.nombre = newName;
+        producto.precio = newPrice;
+        producto.descripcion = newDescription;
+        producto.tipo = newType;
+        producto.categoria = newCategory;
+        producto.material = newMaterial;
+        producto.imagen = newImage;
         producto.stock = newStock;
+
+        const url = `http://localhost:8080/admin/products/${producto.id}`
+        async function updateData(url, newData) {
+            try {
+                const response = await fetch(url, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                        // Add other headers if needed
+                    },
+                    body: JSON.stringify(newData)
+                });
+                const data = await response.json();
+                console.log('Update successful:', data);
+                await verProductos()
+            } catch (error) {
+                console.error('Error updating data:', error);
+            }
+        }
+        updateData(url , producto);
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
     });
-    console.log(listaProductos);
+   
 }
 
-console.log(listaProductos);
