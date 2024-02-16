@@ -1,15 +1,13 @@
-let productosData = [];
-async function getProducts() {
-  const response = await fetch("http://localhost:8080/admin/products");
-  const data = await response.json();
-  productosData = data;
-  console.log(data);
-    localStorage.setItem("listaProductos", JSON.stringify(productosData));
+// let productosData = [];
+// async function getProducts() {
+//   const response = await fetch("http://localhost:8080/admin/products");
+//   const data = await response.json();
+//   productosData = data;
+//   // console.log(data);
+//   //   localStorage.setItem("listaProductos", JSON.stringify(productosData));
 
-}
-
-
-getProducts();
+// }
+// getProducts();
 
 
 
